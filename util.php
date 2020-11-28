@@ -1,6 +1,9 @@
 <?php
 
-assert_options(ASSERT_BAIL, true);
+error_reporting(E_ALL);
+ini_set('display_errors', true);
+ini_set('assert.exception', '1');
+
 
 function get_error_enum($errno)
 {
@@ -132,6 +135,21 @@ function iterator_map(Iterator $it, Callable $callback)
 	return new CallbackMapIterator($it, $callback);
 }
 
+/**
+ * Filter anything iterable (array, iterator, stack, list, etc) using a callback.
+ * Does not preserve keys.
+ */
+function filter($iterable, Callable $callback)
+{
+	$filtered = [];
+
+	foreach ($iterable as $key => $value)
+		if (call_user_func($callback, $value, $key))
+			$filtered[] = $value;
+
+	return $filtered;
+}
+
 function unequals($a, $b)
 {
 	return $a != $b;
@@ -168,11 +186,6 @@ class Map implements ArrayAccess, IteratorAggregate
 	public function __construct($default_value = null)
 	{
 		$this->default_value = $default_value;
-	}
-
-	public function __clone()
-	{
-		$this->data = array_merge($this->data);
 	}
 	
 	public function offsetExists($key)
@@ -236,11 +249,6 @@ class Set implements IteratorAggregate, Countable
 		$this->values = array();
 	}
 
-	public function __clone()
-	{
-		$this->values = array_merge($this->values);
-	}
-
 	public function contains($value)
 	{
 		return in_array($value, $this->values);
@@ -270,6 +278,11 @@ class Set implements IteratorAggregate, Countable
 	public function getIterator()
 	{
 		return new ArrayIterator($this->values);
+	}
+
+	public function map(Callable $callback)
+	{
+		return new CallbackMapIterator($this->getIterator(), $callback);
 	}
 
 	public function count()
@@ -373,11 +386,14 @@ class Template
 
 	private $__DATA__;
 
-	public function __construct($file)
+	private $__PARENT__;
+
+	private $__BLOCK__;
+
+	public function __construct($file, array $data = [])
 	{
 		$this->__TEMPLATE__ = $file;
-
-		$this->__DATA__ = array();
+		$this->__DATA__ = $data;
 	}
 
 	public function __set($key, $value)
@@ -390,7 +406,42 @@ class Template
 		ob_start();
 		extract($this->__DATA__);
 		include $this->__TEMPLATE__;
-		return ob_get_clean();
+		
+		if ($this->__PARENT__) {
+			ob_end_clean();
+			return $this->__PARENT__->render();
+		} else {
+			return ob_get_clean();
+		}
+	}
+
+	protected function extends($template)
+	{
+		if ($this->__PARENT__)
+			throw new LogicException('Cannot call Template::extend twice from the same template');
+
+		$this->__PARENT__ = new Template(dirname($this->__TEMPLATE__) . '/' . $template, $this->__DATA__);
+	}
+
+	protected function begin($block_name)
+	{
+		if (!$this->__PARENT__)
+			throw new LogicException('You cannot begin a block while not extending a parent template');
+
+		if ($this->__BLOCK__)
+			throw new LogicException('You cannot have a block inside a block in templates');
+
+		$this->__BLOCK__ = $block_name;
+		ob_start();
+	}
+
+	protected function end()
+	{
+		if (!$this->__BLOCK__)
+			throw new LogicException('Calling Template::end while not in a block. Template::begin missing?');
+
+		$this->__PARENT__->__set($this->__BLOCK__, ob_get_clean());
+		$this->__BLOCK__ = null;
 	}
 
 	static public function html($data)
@@ -446,14 +497,6 @@ function first_found_path(array $possible_paths)
 	return null;
 }
 
-function simplify(Condition $condition)
-{
-	while (($simplified = $condition->simplify()) != $condition)
-		$condition = $simplified;
-
-	return $condition;
-}
-
 function to_debug_string($value)
 {
 	if ($value instanceof Traversable)
@@ -465,11 +508,11 @@ function to_debug_string($value)
 	return strval($value);
 }
 
-function dict_to_string($dict, $pair_format = '%s: %s')
+function dict_to_string($dict, $pair_format = '%s => %s', $dict_format = '[%s]')
 {
-	return implode(', ', array_map(function($key, $value) use ($pair_format) {
+	return sprintf($dict_format, implode(', ', array_map(function($key, $value) use ($pair_format) {
 		return sprintf($pair_format, $key, $value);
-	}, array_keys($dict), array_values($dict)));
+	}, array_keys($dict), array_values($dict))));
 }
 
 define('LOG_LEVEL_WARNING', 3);

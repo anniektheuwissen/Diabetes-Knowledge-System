@@ -34,7 +34,7 @@ function main($argc, $argv)
 {
 	if ($argc < 2 || $argc > 3)
 		usage($argv[0]);
-	
+
 	// Als '-vN' is meegegeven tijdens het starten, ga in verbose mode
 	if (preg_match('/^-v(\d?)$/', $argv[1], $match))
 	{
@@ -56,28 +56,38 @@ function main($argc, $argv)
 
 	// leid alle goals in de knowledge base af.
 	$goals = $state->goals;
-	
+
 	// Begin met de doelen die we hebben op de goal stack te zetten
 	foreach($goals as $goal)
 	{
 		$state->goalStack->push($goal->name);
-		
+
 		// Also push any answer values that are variables as goals to be solved.
 		foreach ($goal->answers as $answer)
 			if (KnowledgeState::is_variable($answer->value))
-				$state->goalStack->push(KnowledgeState::variable_name($answer->value));	
+				$state->goalStack->push(KnowledgeState::variable_name($answer->value));
 	}
 
 	// Zo lang we nog vragen kunnen stellen, stel ze
-	while (($question = $solver->solveAll($state)) instanceof AskedQuestion)
+	while (($question = $solver->backwardChain($state)) instanceof AskedQuestion)
 	{
-		$answer = cli_ask($question);
+		if ($question->multsel)
+			$answers = mult_cli_ask($question);
 
-		if ($answer instanceof Option)
-			$state->apply($answer->consequences,
-				Yes::because("User answered '{$answer->description}' to '{$question->description}'"));
+      		for ($x = 0; $x < count($answers); ++$x)
+				$answer = $answers[$x];
+				if ($answer instanceof Option)
+					$state->apply($answer->consequences,
+						Yes::because("User answered '{$answer->description}' to '{$question->description}'"));
+
+		else //elsif question-->numVal ......... else
+			$answer = cli_ask($question);
+
+			if ($answer instanceof Option)
+				$state->apply($answer->consequences,
+					Yes::because("User answered '{$answer->description}' to '{$question->description}'"));
 	}
-	
+
 	// Geen vragen meer, print de gevonden oplossingen.
 	foreach ($goals as $goal)
 	{
@@ -90,7 +100,7 @@ function main($argc, $argv)
 /**
  * Stelt een vraag op de terminal, en blijf net zo lang wachten totdat
  * we een zinnig antwoord krijgen.
- * 
+ *
  * @return Option
  */
 function cli_ask(Question $question)
@@ -99,10 +109,10 @@ function cli_ask(Question $question)
 
 	for ($i = 0; $i < count($question->options); ++$i)
 		printf("%2d) %s\n", $i + 1, $question->options[$i]->description);
-	
+
 	if ($question->skippable)
 		printf("%2d) weet ik niet\n", ++$i);
-	
+
 	do {
 		$response = fgetc(STDIN);
 
@@ -110,12 +120,49 @@ function cli_ask(Question $question)
 
 		if ($choice > 0 && $choice <= count($question->options))
 			return $question->options[$choice - 1];
-		
+
 		if ($question->skippable && $choice == $i)
 			return null;
 
 	} while (true);
 }
 
-main($argc, $argv);
+/**
+ * Stelt een vraag op de terminal, en blijf net zo lang wachten totdat
+ * we 1 of meerdere zinnige antwoorden krijgen.
+ *
+ * @return Array of Option
+ */
+function mult_cli_ask(Question $question)
+{
+	echo $question->description . "\n";
 
+  	$responsens = array();
+
+	for ($i = 0; $i < count($question->options); ++$i)
+		printf("%2d) %s\n", $i + 1, $question->options[$i]->description);
+
+	if ($question->skippable)
+		printf("%2d) weet ik niet\n", ++$i);
+
+	printf("%2d) continue \n", ++$i);
+
+	do {
+		$response = fgetc(STDIN);
+
+		$choice = @intval(trim($response));
+
+		if ($choice > 0 && $choice <= count($question->options))
+			$responses[] = $question->options[$choice - 1];
+
+		if ($question->skippable && $choice == $i-1)
+			return null;
+
+		if ($question->multsel && $choice == $i)
+			return $responses;
+
+	} while (true);
+
+}
+
+main($argc, $argv);

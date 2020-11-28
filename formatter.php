@@ -12,10 +12,10 @@ class HTMLFormatter
 	public function formatRule(Rule $rule)
 	{
 		return sprintf('
-			<table class="kb-rule">
+			<table class="kb-rule" id="rule_%d">
 				<tr>
 					<th colspan="2" class="kb-rule-description">
-						<span class="line-number">line %d</span>
+						<span class="line-number">line %1$d</span>
 						%s
 					</th>
 				</tr>
@@ -47,23 +47,23 @@ class HTMLFormatter
 
 	public function formatCondition(Condition $condition)
 	{
-		switch (get_class($condition))
-		{
-			case 'WhenAllCondition':
-				return $this->formatWhenAllCondition($condition);
+		if ($condition instanceof WhenAllCondition)
+			return $this->formatWhenAllCondition($condition);
 
-			case 'WhenAnyCondition':
-				return $this->formatWhenAnyCondition($condition);
+		if ($condition instanceof WhenAnyCondition)
+			return $this->formatWhenAnyCondition($condition);
 
-			case 'NegationCondition':
-				return $this->formatNegationCondition($condition);
+		if ($condition instanceof WhenSomeCondition)
+			return $this->formatWhenSomeCondition($condition);
 
-			case 'FactCondition':
-				return $this->formatFactCondition($condition);
+		if ($condition instanceof NegationCondition)
+			return $this->formatNegationCondition($condition);
 
-			default:
-				return $this->formatUnknownCondition($condition);
-		}
+		if ($condition instanceof FactCondition)
+			return $this->formatFactCondition($condition);
+
+			
+		return $this->formatUnknownCondition($condition);
 	}
 
 	protected function formatUnknownCondition(Condition $condition)
@@ -93,6 +93,17 @@ class HTMLFormatter
 					iterator_to_array($condition->conditions))));
 	}
 
+	protected function formatWhenSomeCondition(WhenSomeCondition $condition)
+	{
+		return sprintf('<table class="kb-when-any-condition kb-condition evaluation-%s"><tr><th>%d OF</th><td><table>%s</table></td></tr></table>',
+			$this->evaluatedValue($condition),
+			$condition->threshold,
+			implode("\n",
+				array_map(
+					function($condition) { return '<tr><td>' . $this->formatCondition($condition) . '</td></tr>'; },
+					iterator_to_array($condition->conditions))));
+	}
+
 	protected function formatNegationCondition(NegationCondition $condition)
 	{
 		return sprintf('<table class="kb-negation-condition kb-condition evaluation-%s"><tr><th>NOT</th><td>%s</td></tr></table>',
@@ -102,10 +113,24 @@ class HTMLFormatter
 
 	protected function formatFactCondition(FactCondition $condition)
 	{
-		return sprintf('<table class="kb-fact-condition kb-condition evaluation-%s"><tr><td>%s</td><th>=</th><td>%s</td></tr></table>',
+		return sprintf('<table class="kb-fact-condition kb-condition evaluation-%s"><tr><td>%s</td><th>%s</th><td>%s</td></tr></table>',
 			$this->evaluatedValue($condition),
 			$this->escape($condition->name),
+			$this->escape($this->formatTest($condition->test)),
 			$this->escape($condition->value));
+	}
+
+	protected function formatTest($test)
+	{
+		$mapping = [
+			'gt' => '>',
+			'gte' => '>=',
+			'lt' => '<',
+			'lte' => '<=',
+			'eq' => '='
+		];
+
+		return isset($mapping[$test]) ? $mapping[$test] : $test;
 	}
 
 	protected function evaluatedValue(Condition $condition)
