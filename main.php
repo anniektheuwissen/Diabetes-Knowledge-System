@@ -32,7 +32,7 @@ function usage($path)
 }
 
 function main($argc, $argv)
-{ }
+{ } hoi
 	if ($argc < 2 || $argc > 3)
 		usage($argv[0]);
 
