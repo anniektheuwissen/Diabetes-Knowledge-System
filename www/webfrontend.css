@@ -271,7 +271,7 @@ table {
 
 .action a:hover,
 .action button:hover {
-	background: rgb(160, 26, 26);
+	background: #ddd;
 }
 
 .delete button {
@@ -337,7 +337,7 @@ form > div > label {
 
 .kb-rule .evaluation-true {
 	color: white;
-	background: green;
+	background: rgb(49, 39, 187);
 }
 
 .kb-rule .evaluation-false {
