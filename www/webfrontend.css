@@ -271,7 +271,7 @@ table {
 
 .action a:hover,
 .action button:hover {
-	background: #ddd;
+	background: rgb(160, 26, 26);
 }
 
 .delete button {
