@@ -31,7 +31,7 @@ function usage($path)
 }
 
 function main($argc, $argv)
-{
+{ }
 	if ($argc < 2 || $argc > 3)
 		usage($argv[0]);
 
