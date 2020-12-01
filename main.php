@@ -7,6 +7,7 @@ ini_set('display_errors', true);
 include 'util.php';
 include 'solver.php';
 include 'reader.php';
+include knowledgebases;
 
 class CliLogger implements Logger
 {
