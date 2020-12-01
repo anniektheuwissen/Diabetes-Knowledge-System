@@ -32,7 +32,7 @@ function usage($path)
 }
 
 function main($argc, $argv)
-{
+{ }
 	if ($argc < 2 || $argc > 3)
 		usage($argv[0]);
 
@@ -126,7 +126,7 @@ function cli_ask(Question $question)
 			return null;
 
 	} while (true);
-}
+
 
 /**
  * Stelt een vraag op de terminal, en blijf net zo lang wachten totdat
