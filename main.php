@@ -45,7 +45,7 @@ function main($argc, $argv)
 	}
 	else
 		$logger = null;
-
+}
 	// Reader voor de XML-bestanden
 	$reader = new KnowledgeBaseReader();
 
