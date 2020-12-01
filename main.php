@@ -50,7 +50,7 @@ function main($argc, $argv)
 	$reader = new KnowledgeBaseReader();
 
 	// Parse een xml-bestand (het eerste argument) tot knowledge base
-	$state = $reader->parse('knowledge.xml');
+	$state = $reader->parse($argv[0]);
 
 	// Start de solver, dat ding dat kan infereren
 	$solver = new Solver($logger);
