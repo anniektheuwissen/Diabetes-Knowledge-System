@@ -32,7 +32,7 @@ function usage($path)
 }
 
 function main($argc, $argv)
-{ } hoi
+{
 	if ($argc < 2 || $argc > 3)
 		usage($argv[0]);
 
@@ -50,7 +50,7 @@ function main($argc, $argv)
 	$reader = new KnowledgeBaseReader();
 
 	// Parse een xml-bestand (het eerste argument) tot knowledge base
-	$state = $reader->parse($argv[0]);
+	$state = $reader->parse($argv[1]);
 
 	// Start de solver, dat ding dat kan infereren
 	$solver = new Solver($logger);
