@@ -337,7 +337,7 @@ form > div > label {
 
 .kb-rule .evaluation-true {
 	color: white;
-	background: rgb(49, 39, 187);
+	background: green;
 }
 
 .kb-rule .evaluation-false {
