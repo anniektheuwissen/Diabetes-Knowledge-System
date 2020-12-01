@@ -47,10 +47,10 @@ function main($argc, $argv)
 
 	// Reader voor de XML-bestanden
 	$reader = new KnowledgeBaseReader();
-	$state = $reader->parse('knowledge.xml');
-  assert($state instanceof KnowledgeDomain);
+	//$state = $reader->parse('knowledgebases/knowledge.xml');
+  	//assert($state instanceof KnowledgeDomain);
 	// Parse een xml-bestand (het eerste argument) tot knowledge base
-	//$state = $reader->parse($argv[1]);
+	$state = $reader->parse($argv[1]);
 
 	// Start de solver, dat ding dat kan infereren
 	$solver = new Solver($logger);
