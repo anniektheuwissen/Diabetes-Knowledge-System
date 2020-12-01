@@ -13,6 +13,10 @@
  *   assert($kb instanceof KnowledgeDomain);
  * </code>
  */
+ $reader = new KnowledgeBaseReader;
+ $kb = $reader->parse('knowledge.xml');
+ assert($kb instanceof KnowledgeDomain);
+
 class KnowledgeBaseReader
 {
 	/**
@@ -58,7 +62,7 @@ class KnowledgeBaseReader
 
 		$previous_assert_mode = assert_options(ASSERT_BAIL);
 		assert_options(ASSERT_BAIL, false);
-		
+
 		set_error_handler(function($number, $message, $file, $line) use (&$errors) {
 			if (preg_match('/^assert\(\): (.+?)$/', $message, $match))
 				$message = html_entity_decode($match[1]);
@@ -112,17 +116,17 @@ class KnowledgeBaseReader
 					$rule = $this->parseRule($childNode);
 					$kb->rules->push($rule);
 					break;
-				
+
 				case 'question':
 					$question = $this->parseQuestion($childNode);
 					$kb->questions->push($question);
 					break;
-				
+
 				case 'goal':
 					$goal = $this->parseGoal($childNode);
 					$kb->goals->push($goal);
 					break;
-				
+
 				/*
 				case 'constraint':
 					$constraint = $this->parseConstraint($childNode);
@@ -138,7 +142,7 @@ class KnowledgeBaseReader
 				case 'title':
 					$kb->title = $this->parseText($childNode);
 					break;
-				
+
 				case 'description':
 					$kb->description = $this->parseText($childNode);
 					break;
@@ -168,15 +172,15 @@ class KnowledgeBaseReader
 				case 'description':
 					$rule->description = $this->parseText($childNode);
 					break;
-				
+
 				case 'if':
 					$rule->condition = $this->parseRuleCondition($childNode);
 					break;
-				
+
 				case 'then':
 					$rule->consequences = $this->parseConsequences($childNode);
 					break;
-				
+
 				default:
 					$this->logError("KnowledgeBaseReader::parseRule: "
 						. "Skipping unknown element {$childNode->nodeName}",
@@ -218,11 +222,11 @@ class KnowledgeBaseReader
 				case 'description':
 					$question->description = $this->parseText($childNode);
 					break;
-				
+
 				case 'option':
 					$question->options[] = $this->parseOption($childNode);
 					break;
-				
+
 				default:
 					$this->logError("KnowledgeBaseReader::parseQuestion: "
 						. "Skipping unknown element '{$childNode->nodeName}'",
@@ -252,7 +256,7 @@ class KnowledgeBaseReader
 		foreach ($question->options as $option)
 			foreach (array_keys($option->consequences) as $inferred_fact)
 				$question->inferred_facts->push($inferred_fact);
-		
+
 		return $question;
 	}
 
@@ -269,11 +273,11 @@ class KnowledgeBaseReader
 				case 'description':
 					$goal->description = $this->parseText($childNode);
 					break;
-				
+
 				case 'answer':
 					$goal->answers->push($this->parseAnswer($childNode));
 					break;
-				
+
 				default:
 					$this->logError("KnowledgeBaseReader::parseGoal: "
 						. "Skipping unknown element '{$childNode->nodeName}'",
@@ -293,7 +297,7 @@ class KnowledgeBaseReader
 	private function parseRuleCondition($node)
 	{
 		$childNodes = iterator_to_array($this->childElements($node));
-		
+
 		if (count($childNodes) !== 1)
 			$this->logError("KnowledgeBaseReader::parseRuleCondition: "
 				. "'" . $node->nodeName . "' node on line " . $node->getLineNo()
@@ -306,7 +310,7 @@ class KnowledgeBaseReader
 	private function createContainer($containerClass, \DOMElement $node)
 	{
 		// Look at the constructor of the container class to see which attributes
-		// are available, e.g. the threshold parameter for the <some> condition. 
+		// are available, e.g. the threshold parameter for the <some> condition.
 		$refl = new \ReflectionClass($containerClass);
 		$constructor = $refl->getConstructor();
 
@@ -331,7 +335,7 @@ class KnowledgeBaseReader
 		}
 		else
 			$values = [];
-		
+
 		return $refl->newInstanceArgs($values);
 	}
 
@@ -363,11 +367,11 @@ class KnowledgeBaseReader
 			case 'fact':
 				$condition = $this->parseFactCondition($node);
 				break;
-			
+
 			case 'not':
 				$condition = $this->parseNegationCondition($node);
 				break;
-			
+
 			case 'some':
 				$condition = $this->parseConditionSet($node, WhenSomeCondition::class);
 				break;
@@ -440,7 +444,7 @@ class KnowledgeBaseReader
 				$name = $node->getAttribute('name');
 				$value = $this->parseText($node);
 				return array($name, $value);
-							
+
 			default:
 				$this->logError("KnowledgeBaseReader::parseFact: "
 					. "Skipping unknown element '{$node->nodeName}'",
@@ -460,11 +464,11 @@ class KnowledgeBaseReader
 				case 'description':
 					$option->description = $this->parseText($childNode);
 					break;
-				
+
 				case 'then':
 					$option->consequences = $this->parseConsequences($childNode);
 					break;
-				
+
 				default:
 					$this->logError("KnowledgeBaseReader::parseOption: "
 						. "Skipping unknown element '{$childNode->nodeName}'",
@@ -495,7 +499,7 @@ class KnowledgeBaseReader
 		$answer->value = $node->hasAttribute('value')
 			? $node->getAttribute('value')
 			: null;
-		
+
 		$answer->description = $this->parseText($node);
 
 		return $answer;
@@ -510,7 +514,7 @@ class KnowledgeBaseReader
 	{
 		while ($node && $node->nodeType != XML_ELEMENT_NODE)
 			$node = $node->nextSibling;
-		
+
 		return $node;
 	}
 
