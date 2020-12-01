@@ -13,9 +13,6 @@
  *   assert($kb instanceof KnowledgeDomain);
  * </code>
  */
- $reader = new KnowledgeBaseReader;
- $kb = $reader->parse('knowledge.xml');
- assert($kb instanceof KnowledgeDomain);
 
 class KnowledgeBaseReader
 {
