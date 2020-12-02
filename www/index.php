@@ -48,7 +48,7 @@ function process_file($file, array &$errors = array())
 	return $unique_name;
 }
 
-$template = new Template('templates/layout.phtml');
+$template = new Template('templates/single.phtml');
 $template->errors = $errors;
 
 echo $template->render();
