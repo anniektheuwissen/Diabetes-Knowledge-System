@@ -1,0 +1,124 @@
+<knowledge>
+	<title>Hello World Diabetes</title>
+	<description>Assessing risk of diabetes and lifestyle advice.</description>
+
+	<!-- Goals -->
+	<goal name="risk">
+	<!-- description>What is your risk of Diabetes?</description> -->
+	<answer value="high">You have a high risk of having diabetes, go see a docter!</answer>
+	<answer value="medium">You have some risk of having diabetes</answer>
+	<answer value="low">You have a small risk of having diabetes</answer>
+	<answer value="$undefined">I don't know what you should do, sorry…</answer>
+	<answer>Something else, namely $program.</answer>
+	</goal>
+
+	<!-- Rules -->
+	<rule>
+		<description>Qualifications for high risk</description>
+		<if>
+			<and>
+				<fact name="eating">bad</fact>
+				<or>
+					<fact name="sport">never</fact>
+					<fact name="sport">once a week</fact>
+				</or>
+			</and>
+		</if>
+		<then>
+			<fact name="risk">high</fact>
+		</then>
+	</rule>
+
+	<rule>
+		<description>Qualifications for medium risk</description>
+		<if>
+			<and>
+				<fact name="eating">medium</fact>
+				<or>
+					<fact name="sport">twice</fact>
+				</or>
+			</and>
+		</if>
+		<then>
+			<fact name="risk">medium</fact>
+		</then>
+	</rule>
+
+	<rule>
+		<description>Qualifications for low risk</description>
+		<if>
+			<and>
+				<fact name="eating">good</fact>
+				<or>
+					<fact name="sport">everyday</fact>
+					<fact name="sport">multipletimes</fact>
+				</or>
+			</and>
+		</if>
+		<then>
+			<fact name="risk">low</fact>
+		</then>
+	</rule>
+
+	<!-- Questions -->
+
+	<question>
+		<description>How are your healthy eating habits??</description>
+		<option>
+			<description>Very healthy</description>
+			<then>
+				<fact name="eating">good</fact>
+			</then>
+		</option>
+		<option>
+			<description>I try to eat vegetables and fruit</description>
+			<then>
+				<fact name="eating">medium</fact>
+			</then>
+		</option>
+		<option>
+			<description>I don't watch what I eat.</description>
+			<then>
+				<fact name="eating">bad</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>How much do you sport in a week?</description>
+		<option>
+			<description>Everyday</description>
+			<then>
+				<fact name="sport">everyday</fact>
+			</then>
+		</option>
+		<option>
+			<description>Multiple times a week</description>
+			<then>
+				<fact name="sport">multipletimes</fact>
+			</then>
+		</option>
+		<option>
+			<description>Twice a week</description>
+			<then>
+				<fact name="sport">twice</fact>
+			</then>
+		</option>
+		<option>
+			<description>Once a week</description>
+			<then>
+				<fact name="sport">once a week</fact>
+			</then>
+		</option>
+		<option>
+			<description>No sporting</description>
+			<then>
+				<fact name="sport">never</fact>
+			</then>
+		</option>
+	</question>
+
+
+	<!-- And yes, you can use this syntax to add
+	     comments to your knowledge base :) -->
+</knowledge>
