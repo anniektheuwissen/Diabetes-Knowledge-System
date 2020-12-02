@@ -150,5 +150,5 @@ if (!isset($_GET['kb']) || !preg_match('/^[a-zA-Z0-9_\-\.]+\.xml$/i', $_GET['kb'
 }
 
 header('Content-Type: text/html; charset=UTF-8');
-$frontend = new WebFrontend('D:\Documenten\AI\Year3\Period1b\Knowledge Technology Practical\Diabetes-Knowledge-System\knowledgebases\knowledge.xml');
+$frontend = new WebFrontend('..\knowledgebases\knowledge.xml');
 $frontend->main();
