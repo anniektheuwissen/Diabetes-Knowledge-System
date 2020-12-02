@@ -32,8 +32,8 @@ function usage($path)
 
 function main($argc, $argv)
 {
-	//if ($argc < 2 || $argc > 3)
-	//	usage($argv[0]);
+	if ($argc < 2 || $argc > 3)
+		usage($argv[0]);
 
 	// Als '-vN' is meegegeven tijdens het starten, ga in verbose mode
 	if (preg_match('/^-v(\d?)$/', $argv[1], $match))
