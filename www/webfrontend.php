@@ -150,5 +150,8 @@ if (!isset($_GET['kb']) || !preg_match('/^[a-zA-Z0-9_\-\.]+\.xml$/i', $_GET['kb'
 }
 
 header('Content-Type: text/html; charset=UTF-8');
-$frontend = new WebFrontend('knowledgebases/knowledge.xml');
+$frontend = new WebFrontend(first_found_path(array(
+	'./' . $_GET['kb'],
+	'../knowledgebases/' . $_GET['kb']
+)));
 $frontend->main();
