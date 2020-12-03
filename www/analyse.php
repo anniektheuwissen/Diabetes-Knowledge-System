@@ -88,8 +88,8 @@ foreach ($state->goals as $goal)
 			->dependingGoals
 			->push($goal);
 
-$template = new Template('templates/analyse.phtml');
-$template->kb = $state;
-$template->stats = $stats;
+//$template = new Template('templates/analyse.phtml');
+//$template->kb = $state;
+//$template->stats = $stats;
 
-echo $template->render();
+//echo $template->render();
