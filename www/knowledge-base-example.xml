@@ -3,7 +3,7 @@
 	<title>Which program should I enter?</title>
 	<description>This is an example to show you some of the features of the inference engine.</description>
 
-	<!-- 
+	<!--
 	The goal of our program is to give one advice: which program should you follow.
 
 	Note the goal name parameter: this is the name of the fact that the solver will try to deduce. Each answer has a value which that fact can have.
