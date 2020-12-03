@@ -9,7 +9,7 @@
 			<a href="webfrontend.php?kb=<?=urlencode($_GET['kb'])?>">Run <?=self::html(basename($file))?></a>
         	<a href="index.php">Upload</a>
 		</nav>
-        
+
         <section class="xml-readout">
 	        <code class="numbered">
 		        <pre data-lineno="1">&lt;?xml version="1.0"?&gt;</pre>
@@ -24,7 +24,7 @@
 			<?php endforeach ?>
 			<code class="numbered"><?=self::format_code('</knowledge>')?></pre></code>
 		</section>
-        
+
 		<footer>
 			<p>Source code available on <a href="https://github.com/jelmervdl/kennissysteem">Github</a>.</p>
 		</footer>
