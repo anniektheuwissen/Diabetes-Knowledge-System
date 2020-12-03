@@ -7,7 +7,6 @@ form {
 body {
 	font: 14px/1.6 "Lucida Grande", Lucida, Verdana, sans-serif;
 	margin-top: 36px;
-	background-color: coral;
 }
 
 @media(min-width: 800px) {
