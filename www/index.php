@@ -8,23 +8,25 @@ date_default_timezone_set('Europe/Amsterdam');
 
 $errors = array();
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'
-	&& isset($_FILES['knowledgebase'])
-	&& $file = process_file($_FILES['knowledgebase'], $errors))
-{
-	switch ($_POST['action'])
-	{
-		case 'analyse':
-			header('Location: analyse.php?kb=' . rawurlencode($file));
-			break;
+header('Location: webfrontend.php?kb=' . rawurlencode($file));
 
-		case 'run':
-			header('Location: webfrontend.php?kb=' . rawurlencode($file));
-			break;
-	}
+//if ($_SERVER['REQUEST_METHOD'] == 'POST'
+//	&& isset($_FILES['knowledgebase'])
+	//&& $file = process_file($_FILES['knowledgebase'], $errors))
+//{
+	//switch ($_POST['action'])
+	//{
+		//case 'analyse':
+			//header('Location: analyse.php?kb=' . rawurlencode($file));
+		//	break;
 
-	exit;
-}
+		//case 'run':
+		//	header('Location: webfrontend.php?kb=' . rawurlencode($file));
+		//	break;
+//	}
+
+//	exit;
+//}
 
 function process_file($file, array &$errors = array())
 {
@@ -44,7 +46,7 @@ function process_file($file, array &$errors = array())
 		$errors[] = "De knowledge-base kon niet worden opgeslagen op de server.";
 		return false;
 	}
-	
+
 	return $unique_name;
 }
 
