@@ -148,6 +148,6 @@ class WebFrontend
 //	header('Location: index.php');
 //	exit;
 //header('Location: webfrontend.php?kb=' . rawurlencode($file));
-//header('Content-Type: text/html; charset=UTF-8');
+header('Content-Type: text/html; charset=UTF-8');
 $frontend = new WebFrontend("helloworld.xml");
 $frontend->main();
