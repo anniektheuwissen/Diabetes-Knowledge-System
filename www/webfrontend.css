@@ -7,8 +7,6 @@ form {
 body {
 	font: 14px/1.6 "Lucida Grande", Lucida, Verdana, sans-serif;
 	margin-top: 36px;
-	background-color: lightgrey;
-	color: red;
 }
 
 @media(min-width: 800px) {
@@ -77,7 +75,7 @@ footer p {
 }
 
 footer p, footer p > * {
-	color: red;
+	color: silver;
 }
 
 table {
@@ -160,9 +158,9 @@ table {
 	padding: 0.5em 1em;
 	color: #444;
 	text-shadow: 0 1px 0 white;
-	border: 1px solid #D81616 !important;
+	border: 1px solid #D8D8D8 !important;
 	background: #F2F2F2;
-	background: -webkit-linear-gradient(top, #F8F8F8, #F1F1F1);
+	background: -webkit-linear-gradient(top, whiteSmoke, #F1F1F1);
 	border-radius: 2px;
 }
 
@@ -367,7 +365,7 @@ body > .page-nav {
 	padding: 0.1em 1em;
 	border-radius: 2px;
 	cursor: pointer;
-	color: red;
+	color: black;
 	font: inherit;
 	display: inline-block;
 	text-decoration: none;

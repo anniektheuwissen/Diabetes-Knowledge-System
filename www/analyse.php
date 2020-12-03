@@ -9,10 +9,7 @@ if (!preg_match('/^[a-zA-Z0-9_\-\.]+\.xml$/i', $_GET['kb']))
 	die('Doe eens niet!');
 
 $reader = new KnowledgeBaseReader;
-$state = $reader->parse(first_found_path(array(
-	'./' . $_GET['kb'],
-	'../knowledgebases/' . $_GET['kb']
-)));
+$state = $reader->parse("helloworld.xml");
 
 class FactStatistics
 {
@@ -60,13 +57,13 @@ foreach ($state->rules as $rule)
 {
 	$fact_conditions = array_filter_type('FactCondition',
 		array_flatten($rule->condition->asArray()));
-	
+
 	foreach ($fact_conditions as $condition)
 		$stats[$condition->name]
 			->values[$condition->value]
 			->dependingRules
 			->push($rule);
-	
+
 	foreach ($rule->consequences as $fact_name => $value)
 		$stats[$fact_name]
 			->values[$value]
