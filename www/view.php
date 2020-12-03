@@ -11,7 +11,7 @@ $file = "helloworld.xml";
 if (!$file)
 	die('File not found');
 
-$doc = new DOMDocument();
+$doc = new DOMDocument()
 $doc->load($file, LIBXML_NOCDATA & LIBXML_NOBLANKS);
 
 $template = new Template('templates/view.phtml');
