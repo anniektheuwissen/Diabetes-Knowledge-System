@@ -6,10 +6,7 @@ include '../reader.php';
 if (!preg_match('/^[a-zA-Z0-9_\-\.]+\.xml$/i', $_GET['kb']))
 	die('Doe eens niet!');
 
-$file = first_found_path(array(
-	'./' . $_GET['kb'],
-	'../knowledgebases/' . $_GET['kb']
-));
+$file = "helloworld.xml";
 
 if (!$file)
 	die('File not found');

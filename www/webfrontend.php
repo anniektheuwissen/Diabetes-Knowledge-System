@@ -56,7 +56,7 @@ class WebFrontend
 		$state = null;
 
 		$log = $this->getLog();
-		
+
 		$solver = new Solver($log);
 
 		try
@@ -148,7 +148,7 @@ if (!isset($_GET['kb']) || !preg_match('/^[a-zA-Z0-9_\-\.]+\.xml$/i', $_GET['kb'
 	header('Location: index.php');
 	exit;
 }
-
-header('Content-Type: text/html; charset=UTF-8');
+header('Location: index.php');
+//header('Content-Type: text/html; charset=UTF-8');
 $frontend = new WebFrontend("helloworld.xml");
 $frontend->main();

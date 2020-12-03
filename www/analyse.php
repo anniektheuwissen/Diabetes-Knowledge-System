@@ -9,7 +9,10 @@ if (!preg_match('/^[a-zA-Z0-9_\-\.]+\.xml$/i', $_GET['kb']))
 	die('Doe eens niet!');
 
 $reader = new KnowledgeBaseReader;
-$state = $reader->parse("helloworld.xml");
+$state = $reader->parse("helloworld.xml"first_found_path(array(
+	'./' . $_GET['kb'],
+	'../knowledgebases/' . $_GET['kb']
+)));
 
 class FactStatistics
 {
