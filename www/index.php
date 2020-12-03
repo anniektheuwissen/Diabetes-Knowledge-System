@@ -8,7 +8,7 @@ date_default_timezone_set('Europe/Amsterdam');
 
 $errors = array();
 
-header('Location: webfrontend.php?kb=' . rawurlencode($file));
+header('Location: webfrontend.php?kb=helloworld.xml');
 
 //if ($_SERVER['REQUEST_METHOD'] == 'POST'
 //	&& isset($_FILES['knowledgebase'])
