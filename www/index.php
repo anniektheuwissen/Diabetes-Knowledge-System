@@ -10,9 +10,7 @@ $errors = array();
 
 //header('Location: webfrontend.php?kb=helloworld.xml');
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'
-	&& isset($_FILES['knowledgebase'])
-  && $file = process_file($_FILES['knowledgebase'], $errors))
+if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	switch ($_POST['action'])
 	{
@@ -21,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'
 			//break;
 
 		case 'run':
-		  header(header('Location: webfrontend.php?kb=helloworld.xml')
+		  header('Location: webfrontend.php?kb=helloworld.xml')
 			break;
 	}
 
