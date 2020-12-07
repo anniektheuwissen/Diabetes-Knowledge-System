@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'
 			//break;
 
 		case 'run':
-		  header('Location: webfrontend.php?kb=' . rawurlencode($file));
+		  header(header('Location: webfrontend.php?kb=helloworld.xml')
 			break;
 	}
 
@@ -51,6 +51,6 @@ function process_file($file, array &$errors = array())
 }
 
 $template = new Template('templates/single.phtml');
-$template->errors = $errors;
+//$template->errors = $errors;
 
 echo $template->render();
