@@ -27,11 +27,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'
 
 function process_file($file, array &$errors = array())
 {
-	if ($file['error'] != 0)
-		return "Er is een fout opgetreden bij het uploaden.";
+	//if ($file['error'] != 0)
+		//return "Er is een fout opgetreden bij het uploaden.";
 
 	$reader = new KnowledgeBaseReader;
-	$errors = $reader->lint($file['tmp_name']);
+	//$errors = $reader->lint($file['tmp_name']);
 
 	$unique_name = sha1(microtime() . uniqid('kb', true)) . '.xml';
 
