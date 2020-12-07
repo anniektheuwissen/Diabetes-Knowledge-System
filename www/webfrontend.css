@@ -14,7 +14,6 @@ body {
 	body {
 		font-size: 16px;
 		line-height:1.6;
-		background-color: blue;
 	}
 }
 
@@ -39,6 +38,7 @@ pre {
 	text-shadow: 0 1px 0 #333;
 	text-decoration: none;
 	padding: 0 12px;
+	background-color: red;
 }
 
 header > * {
@@ -104,7 +104,7 @@ table {
 }
 
 .analysis-table td strong {
-	color: red;
+	color: blue;
 }
 
 .knowledge-bases th:nth-child(1),
@@ -258,13 +258,13 @@ table {
 
 .action a,
 .action button {
-	border: 1px solid silver;
+	border: 1px solid blue;
 	background: #eee;
 	margin: 0.2em;
 	padding: 0.1em 1em;
 	border-radius: 2px;
 	cursor: pointer;
-	color: black;
+	color: white;
 	font: inherit;
 	display: inline-block;
 	text-decoration: none;
