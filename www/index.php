@@ -11,22 +11,12 @@ $errors = array();
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'
-	&& isset($_FILES['knowledgebase'])
-  && $file = process_file($_FILES['knowledgebase'], $errors))
+	&& $_POST['action'] == 'run')
 {
-	switch ($_POST['action'])
-	{
-		//case 'analyse':
-			///header('Location: analyse.php?kb=' . rawurlencode($file));
-			//break;
-
-		case 'run':
-		  header('Location: webfrontend.php?kb=helloworld.xml');
-			break;
-	}
-
-	exit;
+	header('Location: webfrontend.php?kb=helloworld.xml');
+	break;
 }
+
 
 function process_file($file, array &$errors = array())
 {
