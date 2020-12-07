@@ -10,13 +10,19 @@ $errors = array();
 
 //header('Location: webfrontend.php?kb=helloworld.xml');
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST')
+if ($_SERVER['REQUEST_METHOD'] == 'POST'
+  && $file = process_file("helloworld.xml", $errors))
 {
-	if ($_POST['action'] == 'run')
+	switch ($_POST['action'])
 	{
-		header('Location: webfrontend.php?kb=' . rawurlencode("helloworld.xml"));
+		//case 'analyse':
+			///header('Location: analyse.php?kb=' . rawurlencode($file));
+			//break;
+
+		case 'run':
+		  header('Location: webfrontend.php?kb' . rawurlencode($file));
+			exit;
 	}
-	exit;
 }
 
 function process_file($file, array &$errors = array())
