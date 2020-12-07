@@ -149,6 +149,6 @@ if (!isset($_GET['kb']) || !preg_match('/^[a-zA-Z0-9_\-\.]+\.xml$/i', $_GET['kb'
 	exit;
 
 ////header('Location: webfrontend.php?kb=' . rawurlencode($file));
-//header('Content-Type: text/html; charset=UTF-8');
+header('Content-Type: text/html; charset=UTF-8');
 $frontend = new WebFrontend("helloworld.xml");
 $frontend->main();

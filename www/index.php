@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	if ($_POST['action'] == 'run')
 	{
-		header('Location: webfrontend.php');
+		header('Location: webfrontend.php?kb=' . rawurlencode("helloworld.xml"));
 	}
 	exit;
 }
