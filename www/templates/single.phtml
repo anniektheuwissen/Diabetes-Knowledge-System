@@ -12,16 +12,6 @@
 			<h1>Inference engine</h1>
 		</header>
 
-		<?php if ($errors): ?>
-		<section class="status-update">
-			<p>The following errors occurred:</p>
-			<ul>
-				<?php foreach ($errors as $error): ?>
-				<li title="<?=$this->attr(sprintf('%s:%d', $error->file, $error->line))?>"><?=$this->html($error->message)?></li>
-				<?php endforeach ?>
-			</ul>
-		</section>
-		<?php endif ?>
 
 		<section class="upload-knowledge-base-form">
 			<h2>Diabetes Risk Assessment and Lifestyle Advice System</h2>
