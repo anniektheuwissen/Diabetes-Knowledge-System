@@ -51,6 +51,6 @@ function process_file($file, array &$errors = array())
 }
 
 $template = new Template('templates/single.phtml');
-//$template->errors = $errors;
+$template->errors = $errors;
 
 echo $template->render();
