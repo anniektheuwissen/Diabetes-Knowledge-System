@@ -28,7 +28,7 @@
 			<form method="post" enctype="application/x-www-form-urlencoded">
 				<div>
 					<label for="input-knowledgebase">This system will blah blah blah AANVULLEN</label>
-				 	<!-- <input type="file" name="knowledgebase" id="input-knowledgebase"> --> 
+				 	<!-- <input type="file" name="knowledgebase" id="input-knowledgebase"> -->
 				</div>
 
 				<div class="controls">
@@ -43,26 +43,5 @@
 		<footer>
 			<p>Source code available on: <a href="https://https://github.com/anniektheuwissen/Diabetes-Knowledge-System">Github</a>.</p>
 		</footer>
-
-	<script>
-			Array.prototype.forEach.call(
-				document.querySelectorAll("a[href^='#']"),
-				function(el) {
-					console.log(el);
-					el.addEventListener('click', function() {
-						var hash = el.href.substring(el.href.indexOf('#') + 1);
-						var ref = document.getElementById(hash);
-
-						Array.prototype.forEach.call(
-							document.querySelectorAll('.highlight'),
-							function(node) {
-								node.classList.remove('highlight')
-							});
-
-						if (ref)
-							ref.classList.add('highlight');
-					});
-				});
-		</script>
 	</body>
 </html>
