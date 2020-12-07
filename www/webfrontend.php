@@ -144,10 +144,7 @@ class WebFrontend
 	}
 }
 
-$first = 0;
-
-if ($first == 0) {
-	$first =1;
+if (!isset($_GET['kb']) || !preg_match('/^[a-zA-Z0-9_\-\.]+\.xml$/i', $_GET['kb'])) {
 	header('Location: index.php');
 	exit;
 }

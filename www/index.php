@@ -8,15 +8,14 @@ date_default_timezone_set('Europe/Amsterdam');
 
 $errors = array();
 
-
+$file = "helloworld.xml";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'
-	&& $_POST['action'] == 'run')
+	&& $_POST['action'] = 'run')
 {
-	header('Location: webfrontend.php?kb=helloworld.xml');
+	header('Location: webfrontend.php?kb=' . rawurlencode($file));
 	break;
 }
-
 
 function process_file($file, array &$errors = array())
 {
