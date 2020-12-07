@@ -53,6 +53,15 @@
 						var hash = el.href.substring(el.href.indexOf('#') + 1);
 						var ref = document.getElementById(hash);
 
+						Array.prototype.forEach.call(
+							document.querySelectorAll('.highlight'),
+							function(node) {
+								node.classList.remove('highlight')
+							});
+
+						if (ref)
+							ref.classList.add('highlight');
+					});
 				});
 		</script>
 	</body>
