@@ -18,6 +18,10 @@ body {
 	}
 }
 
+div {
+  background-color: lightblue;
+}
+
 pre {
 	tab-size: 4;
 }
