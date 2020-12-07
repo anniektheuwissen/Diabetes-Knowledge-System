@@ -12,17 +12,10 @@ $errors = array();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
-	switch ($_POST['action'])
+	if ($_POST['action'] == 'run')
 	{
-		//case 'analyse':
-			///header('Location: analyse.php?kb=' . rawurlencode($file));
-			//break;
-
-		case 'run':
-		  header('Location: webfrontend.php');
-			break;
+		header('Location: webfrontend.php');
 	}
-
 	exit;
 }
 
