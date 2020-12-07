@@ -11,7 +11,7 @@ $errors = array();
 //header('Location: webfrontend.php?kb=helloworld.xml');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'
-  && $file = process_file("helloworld.xml", $errors))
+  && $file = "helloworld.xml")
 {
 	switch ($_POST['action'])
 	{
@@ -48,6 +48,6 @@ function process_file($file, array &$errors = array())
 }
 
 $template = new Template('templates/single.phtml');
-$template->errors = $errors;
+//$template->errors = $errors;
 
 echo $template->render();
