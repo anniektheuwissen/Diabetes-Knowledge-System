@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 			//break;
 
 		case 'run':
-		  header('Location: webfrontend.php?kb=helloworld.xml');
+		  header('Location: webfrontend.php');
 			break;
 	}
 
