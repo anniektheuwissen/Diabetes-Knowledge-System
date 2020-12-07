@@ -8,13 +8,24 @@ date_default_timezone_set('Europe/Amsterdam');
 
 $errors = array();
 
-$file = "helloworld.xml";
+//header('Location: webfrontend.php?kb=helloworld.xml');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'
-	&& $_POST['action'] = 'run')
+	&& isset($_FILES['knowledgebase'])
+  && $file = process_file($_FILES['knowledgebase'], $errors))
 {
-	header('Location: webfrontend.php?kb=' . rawurlencode($file));
-	break;
+	switch ($_POST['action'])
+	{
+		//case 'analyse':
+			///header('Location: analyse.php?kb=' . rawurlencode($file));
+			//break;
+
+		case 'run':
+		  header('Location: webfrontend.php?kb=' . rawurlencode($file));
+			break;
+	}
+
+	exit;
 }
 
 function process_file($file, array &$errors = array())
