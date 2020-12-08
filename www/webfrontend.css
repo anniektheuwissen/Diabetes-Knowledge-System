@@ -63,9 +63,9 @@ header > h1 {
 }
 
 .site-nav a:hover {
-	background: #eee;
+	background: rgb(216, 74, 74);
 	color: #444;
-	text-shadow: 0 1px 0 white;
+	text-shadow: 0 1px 0 #333;
 }
 
 footer {
