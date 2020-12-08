@@ -47,7 +47,8 @@ pre {
 }
 
 .site-nav b {
-	display: inline-block;
+	position: fixed;
+	top: 0;
 	right: 0;
 	color: #eee;
 	text-shadow: 0 1px 0 #333;
