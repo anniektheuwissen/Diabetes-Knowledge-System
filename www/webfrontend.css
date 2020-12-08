@@ -165,14 +165,14 @@ table {
 	padding: 0.5em 1em;
 	color: #444;
 	text-shadow: 0 1px 0 white;
-	border: 1px solid rgb(216, 74, 74) !important;
+	border: 1px solid #C6C6C6 !important;
 	background: #F2F2F2;
 	background: -webkit-linear-gradient(top, whiteSmoke, #F1F1F1);
 	border-radius: 2px;
 }
 
 .question .options label:hover {
-	border: 1px solid #C6C6C6 !important;
+	border: 1px solid rgb(216, 74, 74) !important;
 	background: #F3F3F3;
 	background: -webkit-linear-gradient(top, #F8F8F8, #F1F1F1);
 }
