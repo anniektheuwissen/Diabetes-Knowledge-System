@@ -142,7 +142,7 @@ table {
 
 .question {
 	max-width: 600px;
-	margin: 0 auto;
+	margin: 4 auto;
 }
 
 .question p {
@@ -161,11 +161,11 @@ table {
 
 .question .options label {
 	display: block;
-	margin: 0.2em;
+	margin: 0.5em;
 	padding: 0.5em 1em;
 	color: #444;
 	text-shadow: 0 1px 0 white;
-	border: 1px solid #D8D8D8 !important;
+	border: 1px solid rgb(216, 74, 74) !important;
 	background: #F2F2F2;
 	background: -webkit-linear-gradient(top, whiteSmoke, #F1F1F1);
 	border-radius: 2px;
