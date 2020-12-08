@@ -20,6 +20,7 @@ body {
 
 div {
   background-color: rgb(98, 139, 216);
+  border: #333;
 }
 
 pre {
@@ -43,7 +44,7 @@ pre {
 	text-shadow: 0 1px 0 #333;
 	text-decoration: none;
 	padding: 0 12px;
-	background-color: red;
+	background-color: rgb(245, 109, 109);
 }
 
 header > * {
