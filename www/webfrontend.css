@@ -7,7 +7,7 @@ form {
 body {
 	font: 14px/1.6 "Lucida Grande", Lucida, Verdana, sans-serif;
 	margin-top: 36px;
-	background-color: lightgray;
+	background-color: rgb(163, 175, 197);
 }
 
 @media screen and (min-width: 800px) {
@@ -19,7 +19,7 @@ body {
 }
 
 div {
-  background-color:lightgray;
+  background-color:rgb(163, 175, 197);
 }
 
 pre {
@@ -43,7 +43,7 @@ pre {
 	text-shadow: 0 1px 0 #333;
 	text-decoration: none;
 	padding: 0 12px;
-	background-color: rgb(245, 109, 109);
+	background-color: rgb(216, 74, 74);
 }
 
 header > * {
