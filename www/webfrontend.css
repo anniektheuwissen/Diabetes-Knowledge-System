@@ -47,8 +47,8 @@ pre {
 }
 
 .site-nav b {
-	display: block;
-	right: 0px;
+	display: inline-block;
+	right: 0;
 	color: #eee;
 	text-shadow: 0 1px 0 #333;
 	text-decoration: none;
