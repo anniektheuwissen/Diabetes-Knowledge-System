@@ -486,6 +486,17 @@ class Template
 
 		return implode("\n", $wrapped_lines);
 	}
+
+	public function showCampaign() {
+		$currentImgPath = $currentImg->getimg_path();
+
+        //build html to output to the template  
+        $html .= "<div class=\"image\">";
+        $html .= "<img src=\"" . $currentImgPath . "\" alt=\"\" />";
+		$html .= "</div>";
+		
+        return $html;
+	}
 }
 
 function first_found_path(array $possible_paths)
