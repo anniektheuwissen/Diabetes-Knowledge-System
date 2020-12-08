@@ -7,7 +7,7 @@ form {
 body {
 	font: 14px/1.6 "Lucida Grande", Lucida, Verdana, sans-serif;
 	margin-top: 36px;
-	background-color: lightskyblue;
+	background-color: rgb(151, 198, 228);
 }
 
 @media screen and (min-width: 800px) {
@@ -19,8 +19,7 @@ body {
 }
 
 div {
-  background-color: lightskyblue;
-  border: grey;
+  background-color: rgb(151, 198, 228);
 }
 
 pre {
@@ -366,7 +365,7 @@ body > .page-nav {
 }
 
 .upload-knowledge-base-form button {
-	font-size: 2.5em;
+	font-size: 4em;
 	border: 1px solid silver;
 	background: #eee;
 	margin: 1em;
