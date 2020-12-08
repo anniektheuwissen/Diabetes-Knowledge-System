@@ -7,14 +7,14 @@ form {
 body {
 	font: 14px/1.6 "Lucida Grande", Lucida, Verdana, sans-serif;
 	margin-top: 36px;
-	background-color: rgb(162, 162, 167);
+	background-color: rgb(98, 139, 216);
 }
 
 @media screen and (min-width: 800px) {
 	body {
 		font-size: 16px;
 		line-height:1.6;
-		background-color: blue;
+		background-color: rgb(98, 139, 216);
 	}
 }
 
