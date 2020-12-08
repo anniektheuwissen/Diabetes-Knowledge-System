@@ -379,6 +379,10 @@ body > .page-nav {
 	text-shadow: white 0 1px 0;
 }
 
+.upload-knowledge-base-form button:hover {
+	background: rgb(134, 134, 134);
+}
+
 section.help section {
 	margin: -1em;
 	padding: 1em;
