@@ -19,7 +19,7 @@ body {
 }
 
 div {
-  background-color: rgb(151, 198, 228);
+  background-color:rgb(188, 213, 229);
 }
 
 pre {
@@ -32,7 +32,7 @@ pre {
 	left: 0;
 	width: 100%;
 	height: 24px;
-	background: whiteSmoke;
+	background: rgb(216, 74, 74);
 	box-shadow: 0 0 4px #333;
 	z-index: 10;
 }
@@ -365,7 +365,6 @@ body > .page-nav {
 }
 
 .upload-knowledge-base-form button {
-	font-size: 75%;
 	border: 1px solid silver;
 	background: #eee;
 	margin: 1em;
@@ -374,6 +373,7 @@ body > .page-nav {
 	cursor: pointer;
 	color: black;
 	font: inherit;
+	font-size: 75%;
 	display: inline-block;
 	text-decoration: none;
 	text-shadow: white 0 1px 0;
