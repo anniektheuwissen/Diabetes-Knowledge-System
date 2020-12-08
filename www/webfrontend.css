@@ -7,7 +7,7 @@ form {
 body {
 	font: 14px/1.6 "Lucida Grande", Lucida, Verdana, sans-serif;
 	margin-top: 36px;
-	background-color: rgb(196, 207, 226);
+	background-color: rgb(202, 205, 209);
 }
 
 @media screen and (min-width: 800px) {
@@ -82,7 +82,7 @@ footer p {
 }
 
 footer p, footer p > * {
-	color: silver;
+	color: rgb(255, 255, 255);
 }
 
 table {
