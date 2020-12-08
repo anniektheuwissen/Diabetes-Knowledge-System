@@ -380,7 +380,8 @@ body > .page-nav {
 }
 
 .upload-knowledge-base-form button:hover {
-	background: rgb(134, 134, 134);
+	border: 1px solid rgb(216, 74, 74);
+	background: #eee;
 }
 
 section.help section {
