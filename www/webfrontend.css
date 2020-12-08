@@ -48,7 +48,7 @@ pre {
 
 .site-nav b {
 	display: block;
-	right: 12px;
+	right: 0px;
 	color: #eee;
 	text-shadow: 0 1px 0 #333;
 	text-decoration: none;
@@ -64,7 +64,7 @@ header > h1 {
 	display: inline-block;
 	position: fixed;
 	top: 0;
-	right: 0px;
+	right: 12px;
 	font-size: 1em;
 	margin: 0;
 	padding: 0;
