@@ -94,7 +94,7 @@ footer {
 	position: fixed;
 	bottom: 0;
 	right: 0;
-	padding: 0.2em;
+	/*padding: 0.2em;*/
 }
 
 footer p {
@@ -185,7 +185,7 @@ table {
 	display: block;
 	margin: 0.5em;
 	padding: 0.5em 1em;
-	color: #444;
+	color: rgb(15, 48, 82);
 	text-shadow: 0 1px 0 white;
 	border: 1px solid #C6C6C6 !important;
 	background: #F2F2F2;
