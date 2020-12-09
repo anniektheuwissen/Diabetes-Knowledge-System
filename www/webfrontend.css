@@ -55,7 +55,7 @@ pre {
 	text-decoration: none;
 	padding: 0 12px;
 	background-color: rgb(187, 30, 16);
-	box-shadow: 0 0 4px #333;
+	box-shadow: 0 4px 0 #333;
 }
 
 .site-nav b {
@@ -67,7 +67,7 @@ pre {
 	text-decoration: none;
 	padding: 0 12px;
 	background-color: rgb(187, 30, 16);
-	box-shadow: 0 0 4px #333;
+	box-shadow: 0 4px 0 #333;
 }
 
 header > * {
