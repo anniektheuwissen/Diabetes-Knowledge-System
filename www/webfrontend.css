@@ -9,6 +9,8 @@ body {
 	margin-top: 36px;
 	background-color: rgb(224, 225, 226);
 	background-image: url(diabetesfonds.png);
+	background-position: bottom;
+	height: 500px;
 	background-repeat: no-repeat;
 }
 
