@@ -11,8 +11,7 @@ body {
 	background-image: url(diabetesfonds.png);
 	background-repeat: no-repeat;
 	background-position: bottom;
-	background-position: right;
-	height: 1000px;
+	height: 600px;
 }
 
 @media screen and (min-width: 800px) {
