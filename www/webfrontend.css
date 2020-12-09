@@ -86,7 +86,7 @@ header > h1 {
 
 .site-nav a:hover {
 	background: rgb(187, 30, 16);
-	color: #444;
+	color: rgb(15, 48, 82);
 	text-shadow: 0 1px 0 #333;
 }
 
@@ -394,7 +394,7 @@ body > .page-nav {
 	padding: 1em 2em;
 	border-radius: 2px;
 	cursor: pointer;
-	color: black;
+	color: rgb(15, 48, 82);
 	font: inherit;
 	display: inline-block;
 	text-decoration: none;
