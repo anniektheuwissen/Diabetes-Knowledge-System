@@ -55,6 +55,7 @@ pre {
 	text-decoration: none;
 	padding: 0 12px;
 	background-color: rgb(187, 30, 16);
+	box-shadow: 0 0 4px #333;
 }
 
 .site-nav b {
@@ -66,6 +67,7 @@ pre {
 	text-decoration: none;
 	padding: 0 12px;
 	background-color: rgb(187, 30, 16);
+	box-shadow: 0 0 4px #333;
 }
 
 header > * {
@@ -388,7 +390,7 @@ body > .page-nav {
 
 .upload-knowledge-base-form button {
 	font-size: 4em;
-	border: 1px solid silver;
+	border: 2px solid silver;
 	background: #eee;
 	margin: 1em;
 	padding: 1em 2em;
@@ -402,7 +404,7 @@ body > .page-nav {
 }
 
 .upload-knowledge-base-form button:hover {
-	border: 1px solid rgb(216, 74, 74);
+	border: 2px solid rgb(216, 74, 74);
 	background: #eee;
 }
 
