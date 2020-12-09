@@ -12,7 +12,7 @@ body {
 	background-repeat: no-repeat;
 	background-position-y: bottom;
 	background-position-x: right;
-	height: 600px;
+	height: 700px;
 }
 
 @media screen and (min-width: 800px) {
