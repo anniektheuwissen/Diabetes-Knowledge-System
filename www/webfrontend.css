@@ -10,9 +10,9 @@ body {
 	background-color: rgb(224, 225, 226);
 	background-image: url(diabetesfonds.png);
 	background-repeat: no-repeat;
-	background-position: fixed;
-	bottom: 0;
-	right: 0;
+	background-position: bottom;
+	background-position: right;
+	height: 1000px;
 }
 
 @media screen and (min-width: 800px) {
