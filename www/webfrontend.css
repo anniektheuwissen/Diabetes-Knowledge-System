@@ -7,11 +7,9 @@ form {
 body {
 	font: 14px/1.6 "Lucida Grande", Lucida, Verdana, sans-serif;
 	margin-top: 36px;
-	background-color: rgb(37, 138, 240);
+	background-color: rgb(224, 225, 226);
 	background-image: url(diabetesfonds.png);
 	background-position: bottom;
-	background-position: right;
-	background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 800px) {
