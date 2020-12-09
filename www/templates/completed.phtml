@@ -1,8 +1,10 @@
-<?php $this->extends('layout.phtml') ?>
 
+<?php $this->extends('layout.phtml') ?>
+<html>
+<body id="completed">
 <?php $this->begin('content') ?>
 <nav class="site-nav">
-	<a href="<?=header('Location: index.php')?>">Home</a>
+  <a href="<?=header('Location: index.php')?>">Home</a>
 
 <!-- dit nog aanpassen dat ie naar de begin pagina gaat-->
 </nav>
@@ -22,3 +24,6 @@
 	</dl>
 </section>
 <?php $this->end() ?>
+
+</body>
+</html>
