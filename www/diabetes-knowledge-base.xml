@@ -1,24 +1,24 @@
 <knowledge>
 	<title>Diagnosing Diabetes</title>
 	<description>This system assesses the risk of people having diabetes and also
-   presents the user with lifestyle improvements to lower the risk of diabetes and 
+   presents the user with lifestyle improvements to lower the risk of diabetes and
    to help people to live a healthier life.</description>
 
   <goal name="LifestyleAdvices">
  	<description>Lifestyle Advice</description>
       	<!-- Based on the answers to the lifestyle questions, we offer specific advice to users. There are many different answer values, as there are many different forms of advice-->
-      	<!-- MAYBE SPLIT EACH FORM OF ADVICE IN SEPERATE GOALS??? -->
-	 	<answer value="SportMore">Since you do not experience any of the diabetes related symptoms, you have no risk of diabetes. Your answers do seem to indicate that you could improve your lifestyle by increasing the amount of exercise you do.</answer>
+      	<!-- MAYBE SPLIT EACH FORM OF ADVICE IN SEPERATE GOALS??? kan je op meerdere goals komen??? -->
+	 	  <answer value="SportMore"> You could improve your lifestyle by increasing the amount of exercise you do.</answer>
 	    <answer value="EatMoreVegetables">You could improve your eating habits by adding more vegatables to your diet. The Dutch Institute for Food advices to eat at least 250 gram of vegatables each day.</answer>
 	    <answer value="EatLessSuger">It is best to lower your intake of sugar. Food sources that contain a lot of sugar are for example soft drinks, juices, candy, cookies and many types of processed foods. Try to check the amount of sugar on the products that you regularly buy and use this website .. to search for alternative food sources that contain less sugar.</answer>
-	    <answer value="no">Your answer seem to indicate that you have a perfect lifestyle! Keep up the good work!</answer>
+	    <answer value="no">Your answer seems to indicate that you have a good lifestyle! Keep up the good work!</answer>
   </goal>
 
   <goal name="RiskDiabetesType2">
  	<description>Diabetes type 2 risk</description>
         <!-- These are the goal values of diagnosing diabetes type 2. There are 3 risk assessment values, as adviced by our expert.  -->
         <answer value="lowRisk2">You have a low risk of having diabetes type 2. </answer>
-        <answer value="mediumRisk2">You have a medium risk of having diabetes type 2. YWe advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. It will be especially valuable to follow the lifestyle tips that the systems gives, as a good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also improve your life if you suffer from diabetes. 
+        <answer value="mediumRisk2">You have a medium risk of having diabetes type 2. We advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. It will be especially valuable to follow the lifestyle tips that the systems gives, as a good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also improve your life if you suffer from diabetes.
         </answer>
         <answer value="highRisk2">You have a high risk of having diabetes type 1. YWe advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. It will be especially valuable to follow the lifestyle tips that the systems gives, as a good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also improve your life if you suffer from diabetes.
         </answer>
@@ -39,7 +39,7 @@
   </goal>
 
 
-<!-- Rules for lifestyle --> 
+<!-- Rules for lifestyle -->
   	<rule>
 	  	<description>Sport</description>
 	  	<if>
@@ -91,7 +91,7 @@
 	  	</if>
 	  	<then>
 		  	<fact name="RiskDiabetesType1">highRisk1</fact>
-		  	<fact name="LifestyleAdvices">undefined</fact>		  	
+		  	<fact name="LifestyleAdvices">undefined</fact>
 	  </then>
   	</rule>
 
@@ -189,7 +189,7 @@
 		  	<fact name="RiskDiabetesType2">mediumRisk2</fact>
 	  </then>
   	</rule>
- 
+
     <rule>
 	  	<description>Diagnose low Risk type 2</description>
 	  	<if>
@@ -387,7 +387,7 @@
 			<then>
 				<fact name="BMI">low</fact>
 			</then>
-		</option> 
+		</option>
 	</question>
 
 	<question>
