@@ -87,7 +87,7 @@ header > h1 {
 }
 
 .site-nav a:hover {
-	background-color: rgb(224, 225, 226);
+	background: rgb(224, 225, 226);
 	color: rgb(187, 30, 16);
 	text-shadow: 0 1px 0 #333;
 }
