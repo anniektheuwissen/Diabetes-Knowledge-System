@@ -29,7 +29,7 @@
  	<description>Lifestyle Advice: Smoking</description>
       	<!-- Based on the answers to the lifestyle questions, we offer specific advice to users. There are many different answer values, as there are many different forms of advice-->
       	<!-- MAYBE SPLIT EACH FORM OF ADVICE IN SEPERATE GOALS??? -->
-	 	<answer value="QuitSmoking">Smoking can cause all types of disaeases and is heavility related to the risk of forming diabates. We advice you to try and stop smoking, this website contians a lot of useful tips to help you quit: www..... .</answer>
+	 	<answer value="QuitSmoking">Smoking can cause all types of disaeases and is heavility related to the risk of forming diabates. We advice you to try and stop smoking, this website contians a lot of useful tips to help you quit: https://www.lung.org/quit-smoking/i-want-to-quit.</answer>
 	    <answer value="no">Smoking can cause all types of disaeases, it is therefore great that you do not smoke. Keep it up!</answer>
   </goal>
 
