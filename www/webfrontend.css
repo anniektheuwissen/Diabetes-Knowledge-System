@@ -20,17 +20,17 @@ body {
 		font-size: 16px;
 		line-height:1.6;
 		background-color: rgb(224, 225, 226);
-		background-image: url(diabetesfonds.png);
-		background-repeat: no-repeat;
-		background-position: fixed;
-		background-position-y: bottom;
-		background-position-x: right;
 	}
 }
 /* rgb(224, 225, 226) */
 
 div {
-  background-color: rgb(224, 225, 226);
+	background-color: rgb(224, 225, 226);
+	background-image: url(diabetesfonds.png);
+	background-repeat: no-repeat;
+	background-position: fixed;
+	background-position-y: bottom;
+	background-position-x: right;
 }
 
 pre {
