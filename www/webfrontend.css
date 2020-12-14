@@ -9,10 +9,11 @@ body {
 	color: rgb(15, 48, 82);
 	margin-top: 36px;
 	background-color: rgb(224, 225, 226);
-	
-	/*background-position-y: 100%;
-	background-position-x: 100%;*/
-	/*height: 680px;*/
+	background-repeat: no-repeat;
+	background-position: fixed;
+	background-position-y: 100%;
+	background-position-x: 100%;
+	height: 680px;
 }
 
 @media screen and (min-width: 800px) {
@@ -25,12 +26,8 @@ body {
 /* rgb(224, 225, 226) */
 
 div {
-	background-color: rgb(34, 107, 180);
-	background-image: url(diabetesfonds.png);
-	background-repeat: no-repeat;
-	background-position: fixed;
-	background-position-y: bottom;
-	background-position-x: right;
+  background-color: rgb(224, 225, 226);
+  background-image: url(diabetesfonds.png);
 }
 
 pre {
