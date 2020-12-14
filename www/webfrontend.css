@@ -9,6 +9,7 @@ body {
 	color: rgb(15, 48, 82);
 	margin-top: 36px;
 	background-color: rgb(224, 225, 226);
+	background-image: url(diabetesfonds.png);
 	background-repeat: no-repeat;
 	background-position: fixed;
 	background-position-y: 100%;
@@ -27,7 +28,6 @@ body {
 
 div {
   background-color: rgb(224, 225, 226);
-  background-image: url(diabetesfonds.png);
 }
 
 pre {
