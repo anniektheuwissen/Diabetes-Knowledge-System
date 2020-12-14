@@ -12,10 +12,10 @@ body {
 	background-image: url(diabetesfonds.png);
 	background-repeat: no-repeat;
 	background-position: fixed;
-	/*background-position-y: bottom;
-	background-position-x: right;*/
-	background-position-y: 100%;
-	background-position-x: 100%;
+	background-position-y: bottom;
+	background-position-x: right;
+	/*background-position-y: 100%;
+	background-position-x: 100%;*/
 	/*height: 680px;*/
 }
 
