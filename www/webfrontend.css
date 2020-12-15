@@ -96,6 +96,12 @@ footer {
 	/*padding: 0.2em;*/
 }
 
+footer q {
+	background-image: url(diabetesfonds.png);
+	background-repeat: no-repeat;
+	background-position: fixed;
+}
+
 footer p {
 	font-size: 0.8em;
 	padding: 0;
