@@ -99,6 +99,12 @@ header > h1 {
 	text-shadow: 0 1px 0 #333;
 }
 
+.site-nav b:hover {
+	background: rgb(224, 225, 226);
+	color: rgb(187, 30, 16);
+	text-shadow: 0 1px 0 #333;
+}
+
 footer {
 	position: fixed;
 	bottom: 0;
