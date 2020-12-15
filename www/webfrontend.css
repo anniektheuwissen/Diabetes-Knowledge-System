@@ -14,7 +14,7 @@ body {
 	background-position: fixed;
 	background-position-y: 100%;
 	background-position-x: 100%;
-	height: max-content;
+	height: 100vh;
 }
 
 @media screen and (min-width: 800px) {
