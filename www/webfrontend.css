@@ -56,6 +56,16 @@ pre {
 }
 
 .site-nav b {
+	display: inline-block;
+	color: #eee;
+	text-shadow: 0 1px 0 #333;
+	text-decoration: none;
+	padding: 0 12px;
+	/*background-color: rgb(187, 30, 16);*/
+
+}
+
+.site-nav c {
 	position: fixed;
 	top: 0;
 	right: 0;
