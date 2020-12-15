@@ -56,16 +56,6 @@ pre {
 }
 
 .site-nav b {
-	display: inline-block;
-	color: #eee;
-	text-shadow: 0 1px 0 #333;
-	text-decoration: none;
-	padding: 0 12px;
-	/*background-color: rgb(187, 30, 16);*/
-
-}
-
-.site-nav c {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -78,12 +68,6 @@ pre {
 }
 
 .site-nav a:hover {
-	background: rgb(224, 225, 226);
-	color: rgb(187, 30, 16);
-	text-shadow: 0 1px 0 #333;
-}
-
-.site-nav b:hover {
 	background: rgb(224, 225, 226);
 	color: rgb(187, 30, 16);
 	text-shadow: 0 1px 0 #333;
@@ -314,26 +298,6 @@ table {
 }
 
 .action a:hover,
-.action button:hover {
-	background: #ddd;
-}
-
-.action b,
-.action button {
-	border: 1px solid silver;
-	background: #eee;
-	margin: 0.2em;
-	padding: 0.1em 1em;
-	border-radius: 2px;
-	cursor: pointer;
-	color: black;
-	font: inherit;
-	display: inline-block;
-	text-decoration: none;
-	text-shadow: white 0 1px 0;
-}
-
-.action b:hover,
 .action button:hover {
 	background: #ddd;
 }
