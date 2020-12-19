@@ -223,8 +223,9 @@ class KnowledgeBaseReader
 					$question->options[] = $this->parseOption($childNode);
 					break;
 
-				case 'multipl2e':
+				case 'multiple':
 					$question->multiple_choice = 1;
+					break;
 
 				default:
 					$this->logError("KnowledgeBaseReader::parseQuestion: "
