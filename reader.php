@@ -225,6 +225,8 @@ class KnowledgeBaseReader
 
 				case 'multiple':
 					$question->multiple_choice = 1;
+					$this->logError("hij komt wel hier",
+						E_USER_NOTICE);
 					break;
 
 				default:
