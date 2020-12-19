@@ -68,7 +68,7 @@ class Question
 
 	public $line_number;
 
-	public $multipleChoice = 0;
+	public $multiple_choice = 0;
 
 	public function __construct()
 	{
