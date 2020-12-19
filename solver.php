@@ -68,6 +68,8 @@ class Question
 
 	public $line_number;
 
+	public $multipleChoice = 0;
+
 	public function __construct()
 	{
 		$this->inferred_facts = new Set();
@@ -127,7 +129,7 @@ interface Condition
 
 /**
  * N of the conditions have to be true
- * 
+ *
  * <some threshold="n">
  *     Conditions, e.g. <fact/>
  * </some>
@@ -158,12 +160,12 @@ class WhenSomeCondition implements Condition
 		$values = array();
 		foreach ($this->conditions as $condition)
 			$values[] = $condition->evaluate($state);
-		
+
 		// If threre is at least one Yes, then this condition is met!
 		$yesses = array_filter_type('Yes', $values);
 		if (count($yesses) >= $this->threshold)
 			return Yes::because($yesses);
-		
+
 		// If there are still maybe's, then maybe there is still chance
 		// for a Yes. So return Maybe.
 		$maybes = array_filter_type('Maybe', $values);
@@ -182,7 +184,7 @@ class WhenSomeCondition implements Condition
 
 /**
  * All conditions need to be true
- * 
+ *
  * <and>
  *     Conditions, e.g. <fact/>
  * </and>
@@ -204,7 +206,7 @@ class WhenAllCondition extends WhenSomeCondition
 
 /**
  * Just one of the conditions has to be true
- * 
+ *
  * <or>
  *     Conditions, e.g. <fact/>
  * </or>
@@ -223,7 +225,7 @@ class WhenAnyCondition extends WhenSomeCondition
  *   Yes -> No
  *   No -> Yes
  *   Maybe -> Maybe
- * 
+ *
  * <not>
  *     Condition, e.g. <fact/>
  * </not>
@@ -253,7 +255,7 @@ class NegationCondition implements Condition
  *   Fact is known and value is the same -> Yes
  *   Fact is known but value is different -> No
  *   Fact is not known -> Maybe
- * 
+ *
  * <fact name="fact_name">value</fact>
  */
 class FactCondition implements Condition
@@ -308,7 +310,7 @@ class FactCondition implements Condition
 
 			case 'gte':
 				return intval($lhs) >= intval($rhs);
-			
+
 			case 'lt':
 				return intval($lhs) < intval($rhs);
 
@@ -352,7 +354,7 @@ class FactCondition implements Condition
 class Goal
 {
 	public $name;
-	
+
 	public $description;
 
 	public $answers;
@@ -372,7 +374,7 @@ class Goal
 		$name = $state->resolve($this->name);
 
 		$state_value = $state->value($name);
-		
+
 		foreach ($this->answers as $answer)
 		{
 			// If this is the default option, return it always.
@@ -408,7 +410,7 @@ class Answer
  * The added value of a truth value above a simple boolean or enum is that it
  * can also contain information about how it came to that value, which other
  * facts in this case where responsible for the result.
- */ 
+ */
 abstract class TruthState
 {
 	public $factors;
@@ -461,7 +463,7 @@ class No extends TruthState
 	}
 }
 
-class Maybe extends TruthState 
+class Maybe extends TruthState
 {
 	public function negate()
 	{
@@ -478,7 +480,7 @@ class Maybe extends TruthState
 		//
 		// Example: this maybe has 3 factors, and one of the factors is itself
 		// a Maybe with three factors. So first, this 1.0 will be divided among
-		// all causes, so every cause will have 0.33. Then, the cause that is 
+		// all causes, so every cause will have 0.33. Then, the cause that is
 		// also a Maybe with three factors will divide the 0.33 among its own
 		// factors, which will all receive 0.11 (0.33 / 3). Finally, all the
 		// factors will be summed: I.e. if the fact 'math_level' occurred
@@ -503,7 +505,7 @@ class Maybe extends TruthState
 		$factors = array_filter($factors, function($factor) {
 			return ($factor instanceof Maybe) or !($factor instanceof TruthState);
 		});
-		
+
 		// If there are no factors, just return that empty map
 		if (count($factors) == 0)
 			return $effects;
@@ -570,7 +572,7 @@ class KnowledgeState
 	/**
 	 * Past $consequences toe op de huidige $state, en geeft dat als nieuwe state terug.
 	 * Alle $consequences krijgen $reason als reden mee.
-	 * 
+	 *
 	 * @return KnowledgeState
 	 */
 	public function apply(array $consequences)
@@ -582,7 +584,7 @@ class KnowledgeState
 	 * Returns the value of a fact, or null if not found. Do not call with
 	 * variables as fact_name. If $fact_name is or could be a variable, first
 	 * use KnowledgeState::resolve on it.
-	 * 
+	 *
 	 * @param string $fact_name
 	 * @return mixed
 	 */
@@ -675,7 +677,7 @@ class KnowledgeDomain
 
 		$this->questions = new Set();
 
-		$this->goals = new Set();	
+		$this->goals = new Set();
 	}
 }
 
@@ -700,7 +702,7 @@ class Solver
 	 * goals op te lossen. Als een goal niet op te lossen is, kijkt hij naar
 	 * de meest primaire reden waarom (Maybe::$factors) en voegt hij die factor
 	 * op top van de goal stack.
-	 * Als een goal niet op te lossen is omdat er geen vragen/regels meer voor 
+	 * Als een goal niet op te lossen is omdat er geen vragen/regels meer voor
 	 * zijn geeft hij een Notice en gaat hij verder met de andere goals op de
 	 * stack.
 	 *
@@ -719,7 +721,7 @@ class Solver
 			// probeer het eerste goal op te lossen
 			$result = $this->solve($domain, $state, $goal);
 
-			// Oh, dat resulteerde in een vraag. Stel hem (of geef hem terug om 
+			// Oh, dat resulteerde in een vraag. Stel hem (of geef hem terug om
 			// de interface hem te laten stellen eigenlijk.)
 			if ($result instanceof AskedQuestion)
 			{
@@ -751,13 +753,13 @@ class Solver
 					// en dan dat opnieuw proberen te bewijzen?
 					if (iterator_contains($state->goalStack, $main_cause))
 						continue;
-					
+
 					// zet het te bewijzen fact bovenaan op de todo-lijst.
 					$state->goalStack->push($main_cause);
 					$this->log('Added %s to the goal stack; the stack is now %s', [$main_cause, $state->goalStack], LOG_LEVEL_VERBOSE);
 
 					// .. en spring terug naar volgende goal op goal-stack!
-					continue 2; 
+					continue 2;
 				}
 
 				// Er zijn geen redenen waarom het goal niet afgeleid kon worden? Ojee!
@@ -778,7 +780,7 @@ class Solver
 			else
 			{
 				$this->log('Found %s to be %s', [$state->goalStack->top(), $result]);
-				
+
 				// Assumption: the solved goal is now part of the knowledge state, and when asking
 				// its value it will not return maybe.
 				assert(!($state->resolve($state->goalStack->top()) instanceof Maybe));
@@ -837,7 +839,7 @@ class Solver
 		// Also keep a list of rules that were undecided, as we can use these
 		// later on to decide which goal to solve first
 		$maybes = [];
-		
+
 		foreach ($relevant_rules as $rule)
 		{
 			$rule_result = $rule->evaluate($state);
