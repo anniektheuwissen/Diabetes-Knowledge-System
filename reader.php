@@ -224,7 +224,7 @@ class KnowledgeBaseReader
 					break;
 
 				case 'multiple':
-					$question->multiple_choice = $this->parseText($childNode);
+					$question->multiple_choice = 1;
 					break;
 
 				default:

@@ -103,7 +103,7 @@ function cli_ask(Question $question)
 	if ($question->skippable)
 		printf("%2d) weet ik niet\n", ++$i);
 
-	if ($question->multiple_choice == 'yes')  {
+	if ($question->multiple_choice == 1)  {
 
 		printf("%2d) continue \n", ++$i);
 		$responses = array();
