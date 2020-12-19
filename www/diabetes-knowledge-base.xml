@@ -483,6 +483,7 @@
 
 	<question>
 		<description>Do you often feel tired or drained?</description>
+		<multipleChoice> Yes </multipleChoice>
 		<option>
 			<description> Yes </description>
 			<then>
