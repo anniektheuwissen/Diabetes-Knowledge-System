@@ -71,16 +71,16 @@ function main($argc, $argv)
 	// Zo lang we nog vragen kunnen stellen, stel ze
 	while (($question = $solver->backwardChain($state)) instanceof AskedQuestion)
 	{
-		if ($question->multiple_choice) {
-				$answers = mult_cli_ask($question);
+		//if ($question->multiple_choice) {
+			//	$answers = mult_cli_ask($question);
+//
+	//      		for ($x = 0; $x < count($answers); ++$x)
+		//			$answer = $answers[$x];
+			//		if ($answer instanceof Option)
+				//		$state->apply($answer->consequences,
+					//		Yes::because("User answered '{$answer->description}' to '{$question->description}'"));
 
-	      		for ($x = 0; $x < count($answers); ++$x)
-					$answer = $answers[$x];
-					if ($answer instanceof Option)
-						$state->apply($answer->consequences,
-							Yes::because("User answered '{$answer->description}' to '{$question->description}'"));
-
-			} else  { //elsif question-->numVal ......... else
+		//	} else  { //elsif question-->numVal ......... else
 				$answer = cli_ask($question);
 
 				if ($answer instanceof Option)
