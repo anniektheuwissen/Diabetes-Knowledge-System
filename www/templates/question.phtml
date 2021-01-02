@@ -21,8 +21,15 @@
 			</label>
 		</li>
 		<?php endif ?>
+		<?php if($question->multiple_choice = 1): ?>
+		<li class="mult-sel">
+			<label>
+				<input type="radio" name="answer" value="<?=_encode(array())?>">
+				Continue
+			</label>
+		</li>
+		<?php endif ?>
 	</ol>
 
-	<button type="submit">Continue…</button>
 </section>
 <?php $this->end() ?>
