@@ -3,14 +3,6 @@
 <?php $this->begin('content') ?>
 <section class="question">
 	<p><?=$state->substitute_variables($question->description, ['Template', 'html'])?></p>
-	<?php if($question->multiple_choice == 1): ?>
-	<li class="mult-sel">
-		<label>
-			<input type="radio" name="answer" value="<?=_encode(array())?>">
-			Continue
-		</label>
-	</li>
-	<?php else ?>
 		<ol class="options">
 			<?php foreach ($question->options as $option): ?>
 				<li>
@@ -29,6 +21,5 @@
 			</li>
 			<?php endif ?>
 		</ol>
-	<?php endif ?>
 </section>
 <?php $this->end() ?>
