@@ -6,12 +6,10 @@
 		<?php $selected_options = [] ?>
 		<ol class="options">
 			<?php foreach ($question->options as $option): ?>
-				<li>
 					<label>
 						<input type="checkbox" name="answer" value="<?=_encode($option->consequences)?>">
 						<?=$state->substitute_variables($option->description, ['Template', 'html'])?>
-					</label><br>
-				</li>
+					</label>
 			<?php endforeach ?>
 			<?php if($skippable): ?>
 			<li class="skip-option">
@@ -21,9 +19,7 @@
 				</label>
 			</li>
 			<?php endif ?>
-				<li class="mult-sel">
 					<input type="submit" value="Submit">
-				</li>
 		</ol>
 </section>
 <?php $this->end() ?>

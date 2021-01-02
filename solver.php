@@ -70,6 +70,8 @@ class Question
 
 	public $multiple_choice = 0;
 
+	public $number = 0;
+
 	public function __construct()
 	{
 		$this->inferred_facts = new Set();

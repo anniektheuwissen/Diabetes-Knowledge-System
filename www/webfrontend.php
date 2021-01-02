@@ -86,6 +86,8 @@ class WebFrontend
 			{
 				if($step->question->multiple_choice == 1)  {
 					$page = new Template('templates/multiplequestion.phtml');
+				}  elseif($step->question->number == 1) {
+					$page = new Template('templates/numberquestion.phtml');
 				}  else  {
 					$page = new Template('templates/question.phtml');
 			  }

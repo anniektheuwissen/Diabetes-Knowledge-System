@@ -461,6 +461,7 @@
 
 	<question>
 		<description> What is your BMI? </description>
+		<!-- <number> yes - hoe koppelen we het hieraan?? </number> -->
 		<option>
 			<description> More than 27.5 </description>
 			<then>
@@ -493,7 +494,7 @@
 		<option>
 			<description> Sometimes </description>
 			<then>
-				<fact name="BMI">low</fact>
+				<fact name="tired">sometimes</fact>
 			</then>
 		</option>
 		<option>
