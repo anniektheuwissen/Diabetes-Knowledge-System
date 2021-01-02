@@ -84,7 +84,7 @@ class WebFrontend
 
 			if ($step instanceof AskedQuestion)
 			{
-				if($page->question->multiple_choice == 1)  {
+				if($step->question->multiple_choice == 1)  {
 					$page = new Template('templates/multiplequestion.phtml');
 				}  else  {
 					$page = new Template('templates/question.phtml');
