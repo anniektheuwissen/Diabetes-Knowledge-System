@@ -10,7 +10,7 @@
 					<label>
 						<input type="checkbox" name="answer" value="<?=_encode($option->consequences)?>">
 						<?=$state->substitute_variables($option->description, ['Template', 'html'])?>
-					</label>
+					</label><br>
 				</li>
 			<?php endforeach ?>
 			<?php if($skippable): ?>
