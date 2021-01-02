@@ -8,7 +8,7 @@
 			<?php foreach ($question->options as $option): ?>
 				<li>
 					<label>
-						<input type="radio" name="answer" value="<?=$selected_options = $option->consequences ?>">
+						<input type="checkbox" name="answer" value="<?=_encode($option->consequences)?>">
 						<?=$state->substitute_variables($option->description, ['Template', 'html'])?>
 					</label>
 				</li>
