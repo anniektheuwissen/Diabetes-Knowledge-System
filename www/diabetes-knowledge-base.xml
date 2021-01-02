@@ -483,7 +483,6 @@
 
 	<question>
 		<description>Do you often feel tired or drained?</description>
-		<multiple> yes </multiple>
 		<option>
 			<description> Yes </description>
 			<then>
@@ -493,7 +492,7 @@
 		<option>
 			<description> Sometimes </description>
 			<then>
-				<fact name="tired">sometimes</fact>
+				<fact name="BMI">low</fact>
 			</then>
 		</option>
 		<option>
