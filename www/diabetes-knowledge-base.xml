@@ -20,20 +20,12 @@
 		<if>
 			<and>
 				<fact name="eating">good</fact>
+				<fact name="eating">medium</fact>
+				<fact name="eating">bad</fact>
 			</and>
 		</if>
 		<then>
 			<fact name="risk">weird</fact>
-		</then>
-	</rule>
-
-	<rule>
-		<description>Qualifications for low risk</description>
-		<if>
-			<fact name="eating">bad</fact>
-		</if>
-		<then>
-			<fact name="risk">outstanding</fact>
 		</then>
 	</rule>
 	
