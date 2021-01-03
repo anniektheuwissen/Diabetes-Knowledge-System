@@ -203,8 +203,11 @@ table {
 }
 
 .question .options .single-click input[type=radio] {
-	border: 2px solid rgb(187, 30, 16) !important;
 	display: none;
+}
+
+:checked {
+	border: 2px solid rgb(187, 30, 16) !important;
 }
 
 #debug-info {
