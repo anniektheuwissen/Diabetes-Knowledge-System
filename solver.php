@@ -122,6 +122,7 @@ class Option
 	public $consequences = array();
 }
 
+
 interface Condition
 {
 	public function evaluate(KnowledgeState $state);
