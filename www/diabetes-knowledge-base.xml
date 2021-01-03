@@ -463,9 +463,21 @@
 		<description> What is your BMI? </description>
 		<number> yes </number>
 		<option>
-			<quantity> >27.5 </quantity>
+			<description> Higher than 27.5 </description>
 			<then>
 				<fact name="BMI">high</fact>
+			</then>
+		</option>
+		<option>
+			<description> Between 25-27.5 </description>
+			<then>
+				<fact name="BMI">medium</fact>
+			</then>
+		</option>
+		<option>
+			<description> Lower than 25 </description>
+			<then>
+				<fact name="BMI">low</fact>
 			</then>
 		</option>
 	</question>
