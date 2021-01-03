@@ -26,6 +26,16 @@
 			<fact name="risk">outstanding</fact>
 		</then>
 	</rule>
+
+	<rule>
+		<description>Qualifications for low risk</description>
+		<if>
+			<fact name="eating">bad</fact>
+		</if>
+		<then>
+			<fact name="risk">outstanding</fact>
+		</then>
+	</rule>
 	
 	<!-- Questions -->
 
