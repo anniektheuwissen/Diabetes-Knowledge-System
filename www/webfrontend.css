@@ -206,7 +206,7 @@ table {
 	display: none;
 }
 
-.question .options input[type="radio"]:checked {
+.question .options input[type="checkbox"]:checked {
 	border: 2px solid rgb(187, 30, 16) !important;
 	background: #F3F3F3;
 	background: -webkit-linear-gradient(top, #F8F8F8, #F1F1F1);
