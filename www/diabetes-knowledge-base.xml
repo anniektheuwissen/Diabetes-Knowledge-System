@@ -9,6 +9,7 @@
 	<answer value="medium">You have some risk of having diabetes</answer>
 	<answer value="low">You have a small risk of having diabetes</answer>
 	<answer value="outstanding">It works!!</answer>
+	<answer value="weird">Help</answer>
 	<answer value="$undefined">I don't know what you should do, sorry…</answer>
 	<answer>Something else, namely $program.</answer>
 	</goal>
@@ -19,11 +20,10 @@
 		<if>
 			<and>
 				<fact name="eating">good</fact>
-				<fact name="eating">medium</fact>
 			</and>
 		</if>
 		<then>
-			<fact name="risk">outstanding</fact>
+			<fact name="risk">weird</fact>
 		</then>
 	</rule>
 
