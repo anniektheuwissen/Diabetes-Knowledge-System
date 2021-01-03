@@ -462,12 +462,24 @@
 	<question>
 		<description> What is your BMI? </description>
 		<number> yes </number>
-		<if>
-			<quantity> >27.5 </quantity>
+		<option>
+			<description> More than 27.5 </description>
 			<then>
 				<fact name="BMI">high</fact>
 			</then>
-		</if>
+		</option>
+		<option>
+			<description> Between 25-27.5 </description>
+			<then>
+				<fact name="BMI">medium</fact>
+			</then>
+		</option>
+		<option>
+			<description> Lower than 25 </description>
+			<then>
+				<fact name="BMI">low</fact>
+			</then>
+		</option>
 	</question>
 
 	<question>
