@@ -5,11 +5,8 @@
 	<!-- Goals -->
 	<goal name="risk">
 	<!-- description>What is your risk of Diabetes?</description> -->
-	<answer value="high">You have a high risk of having diabetes, go see a docter!</answer>
-	<answer value="medium">You have some risk of having diabetes</answer>
-	<answer value="low">You have a small risk of having diabetes</answer>
-	<answer value="outstanding">It works!!</answer>
-	<answer value="weird">Help</answer>
+	<answer value="weird">It works!!</answer>
+	<answer value="hoi">Hoi</answer>
 	<answer value="$undefined">I don't know what you should do, sorry…</answer>
 	<answer>Something else, namely $program.</answer>
 	</goal>
@@ -26,6 +23,18 @@
 		</if>
 		<then>
 			<fact name="risk">weird</fact>
+		</then>
+	</rule>
+
+	<rule>
+		<description>Qualifications for low risk</description>
+		<if>
+			<and>
+				<fact name="eating">good</fact>
+			</and>
+		</if>
+		<then>
+			<fact name="risk">hoi</fact>
 		</then>
 	</rule>
 	
@@ -54,41 +63,4 @@
 		</option>
 	</question>
 
-	<question>
-		<description>How much do you sport in a week?</description>
-		<option>
-			<description>Everyday</description>
-			<then>
-				<fact name="sport">everyday</fact>
-			</then>
-		</option>
-		<option>
-			<description>Multiple times a week</description>
-			<then>
-				<fact name="sport">multipletimes</fact>
-			</then>
-		</option>
-		<option>
-			<description>Twice a week</description>
-			<then>
-				<fact name="sport">twice</fact>
-			</then>
-		</option>
-		<option>
-			<description>Once a week</description>
-			<then>
-				<fact name="sport">once a week</fact>
-			</then>
-		</option>
-		<option>
-			<description>No sporting</description>
-			<then>
-				<fact name="sport">never</fact>
-			</then>
-		</option>
-	</question>
-
-
-	<!-- And yes, you can use this syntax to add
-	     comments to your knowledge base :) -->
 </knowledge>
