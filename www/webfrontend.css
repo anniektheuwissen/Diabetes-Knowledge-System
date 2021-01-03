@@ -14,7 +14,7 @@ body {
 	background-position: fixed;
 	background-position-y: 100%;
 	background-position-x: 100%;
-	height: 93vh;
+	height: 90vh;
 }
 
 @media screen and (min-width: 800px) {
@@ -203,6 +203,7 @@ table {
 }
 
 .question .options .single-click input[type=radio] {
+	border: 2px solid rgb(187, 30, 16) !important;
 	display: none;
 }
 
