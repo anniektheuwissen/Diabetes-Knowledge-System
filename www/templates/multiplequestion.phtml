@@ -6,7 +6,7 @@
 		<ol class="options">
 			<?php foreach ($question->options as $option): ?>
 					<label>
-						<input type="checkbox" name="answer" value="<?=_encode($option->consequences)?>">
+						<input type="radio" name="answer" value="<?=_encode($option->consequences)?>">
 						<?=$state->substitute_variables($option->description, ['Template', 'html'])?>
 					</label>
 			<?php endforeach ?>

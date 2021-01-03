@@ -206,8 +206,10 @@ table {
 	display: none;
 }
 
-:checked {
+input[type="radio"]:checked {
 	border: 2px solid rgb(187, 30, 16) !important;
+	background: #F3F3F3;
+	background: -webkit-linear-gradient(top, #F8F8F8, #F1F1F1);
 }
 
 #debug-info {
