@@ -3,22 +3,24 @@
 <?php $this->begin('content') ?>
 <section class="question">
 	<p><?=$state->substitute_variables($question->description, ['Template', 'html'])?></p>
-		<ol class="options">
+		<ul class="options">
 			<?php foreach ($question->options as $option): ?>
+				<li>
 					<label>
 						<input type="checkbox" name="answer" value="<?=_encode($option->consequences)?>">
 						<?=$state->substitute_variables($option->description, ['Template', 'html'])?>
 					</label>
+				</li>
 			<?php endforeach ?>
 			<?php if($skippable): ?>
-			<ol class="skip-option">
+			<li class="skip-option">
 				<label>
 					<input type="radio" name="answer" value="<?=_encode(array())?>">
 					I don't know
 				</label>
-			</ol>
+			</li>
 			<?php endif ?>
-		</ol>
+		</ul>
 			<ol class="submit-option">
 				<label>
 					<input type="submit" value="Submit">
