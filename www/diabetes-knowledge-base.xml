@@ -60,6 +60,56 @@
   </goal>
 
 
+	  <!--  multiple chopice test !!! -->
+
+		<goal name="MultipleChoice">
+		<description>multiple choise</description>
+				<answer value="itworks">It works!!!!</answer>
+		</goal>
+
+		<goal name="multi">
+		<description>multiple 1 works </description>
+				<answer value="yes">multi 1 works</answer>
+		</goal>
+
+		<goal name="multi2">
+		<description>multiple 2 works </description>
+				<answer value="yes">multi 2 works</answer>
+		</goal>
+
+		<rule>
+			<description>multi test</description>
+			<if>
+					<and>
+						<fact name="multi">yes</fact>
+						<fact name="multi2">yes</fact>
+					</and>
+			</if>
+			<then>
+				<fact name="MultipleChoice">itworks</fact>
+		</then>
+		</rule>
+
+
+		<question> <!-- mult choice-->
+			<description>we gaan nu even kijken of het lukt</description>
+			<option>
+				<description> nummer 1 </description>
+				<then>
+					<fact name="multi">yes</fact>
+				</then>
+			</option>
+			<option>
+				<description> nummer 2 </description>
+				<then>
+					<fact name="multi2">yes</fact>
+				</then>
+			</option>
+		</question>
+
+
+
+
 <!-- Rules for lifestyle -->
 
   	<rule>
@@ -484,7 +534,6 @@
 
 	<question>
 		<description>Do you often feel tired or drained?</description>
-		<multiple> yes </multiple>
 		<option>
 			<description> Yes </description>
 			<then>
