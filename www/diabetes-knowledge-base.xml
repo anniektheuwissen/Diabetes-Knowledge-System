@@ -92,6 +92,7 @@
 
 
 		<question> <!-- mult choice-->
+			<multiple> yes </multiple>
 			<description>we gaan nu even kijken of het lukt</description>
 			<option>
 				<description> nummer 1 </description>
