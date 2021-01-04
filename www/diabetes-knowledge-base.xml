@@ -65,16 +65,9 @@
 		<goal name="MultipleChoice">
 		<description>multiple choise</description>
 				<answer value="itworks">It works!!!!</answer>
-		</goal>
-
-		<goal name="multi">
-		<description>multiple 1 works </description>
-				<answer value="yes">multi 1 works</answer>
-		</goal>
-
-		<goal name="multi2">
-		<description>multiple 2 works </description>
-				<answer value="yes">multi 2 works</answer>
+				<answer value="1works">1 werkt</answer>
+				<answer value="2works">2 weerkt </answer>
+				<answer value="$undefined">niks werkt :(</answer>
 		</goal>
 
 		<rule>
@@ -90,6 +83,29 @@
 		</then>
 		</rule>
 
+		<rule>
+			<description>multi test2</description>
+			<if>
+					<and>
+						<fact name="multi">yes</fact>
+					</and>
+			</if>
+			<then>
+				<fact name="MultipleChoice">1works</fact>
+		</then>
+		</rule>
+
+		<rule>
+			<description>multi test3</description>
+			<if>
+					<and>
+						<fact name="multi2">yes</fact>
+					</and>
+			</if>
+			<then>
+				<fact name="MultipleChoice">2works</fact>
+		</then>
+		</rule>
 
 		<question> <!-- mult choice-->
 			<multiple> yes </multiple>
