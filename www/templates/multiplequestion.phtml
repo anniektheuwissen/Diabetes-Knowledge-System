@@ -3,19 +3,17 @@
 <?php $this->begin('content') ?>
 <section class="question">
 	<p><?=$state->substitute_variables($question->description, ['Template', 'html'])?></p>
-		<section class="options">
+		<ol class="options">
 			<?php foreach ($question->options as $option): ?>
-				<div>
+			  <!-- <li> -->
 					<label>
 						<input type="checkbox" name="answer" value="<?=_encode($option->consequences)?>">
 						<?=$state->substitute_variables($option->description, ['Template', 'html'])?>
 					</label>
-				</div>
+				<!-- </li> -->
 			<?php endforeach ?>
-			<div>
 			<input type="submit" value="Submit">
-		</div>
-	</section>
+	</ol>
 
 </section>
 <?php $this->end() ?>
