@@ -3,6 +3,7 @@
 <?php $this->begin('content') ?>
 <section class="question">
 	<p><?=$state->substitute_variables($question->description, ['Template', 'html'])?></p>
+		<section class="options">
 			<?php foreach ($question->options as $option): ?>
 				<div>
 					<label>
@@ -14,6 +15,7 @@
 			<div>
 			<input type="submit" value="Submit">
 		</div>
+	</section>
 
 </section>
 <?php $this->end() ?>
