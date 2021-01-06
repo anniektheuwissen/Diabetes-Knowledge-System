@@ -3,11 +3,11 @@
 <?php $this->begin('content') ?>
 <section class="question">
 	<p><?=$state->substitute_variables($question->description, ['Template', 'html'])?></p>
-		<ul class="options">
+		<ol class="options">
 			<?php foreach ($question->options as $option): ?>
 				<li>
 					<label>
-						<input type="checkbox" value="<?=_encode($option->consequences)?>">
+						<input type="checkbox" name="answer" value="<?=_encode($option->consequences)?>">
 						<?=$state->substitute_variables($option->description, ['Template', 'html'])?>
 					</label>
 				</li>
@@ -20,11 +20,9 @@
 				</label>
 			</li>
 			<?php endif ?>
-		</ul>
-			<ol class="submit-option">
-				<label>
-					<input type="submit" value="Submit">
-				</label>
-			</ol>
+		</ol>
+		<input type="submit" value="Submit">
+
+
 </section>
 <?php $this->end() ?>
