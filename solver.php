@@ -100,7 +100,7 @@ class AskedQuestion
 
 		$this->skippable = $skippable;
 
-		$this->multiple_choice = $question->multiple_choice
+		$this->multiple_choice = $question->multiple_choice;
 	}
 
 	public function __toString()
