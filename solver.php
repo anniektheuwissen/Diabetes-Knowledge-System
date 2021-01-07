@@ -70,8 +70,6 @@ class Question
 
 	public $multiple_choice = 0;
 
-	public $number = 0;
-
 	public function __construct()
 	{
 		$this->inferred_facts = new Set();
@@ -94,11 +92,15 @@ class AskedQuestion
 
 	public $skippable;
 
+	public $multiple_choice;
+
 	public function __construct(Question $question, $skippable)
 	{
 		$this->question = $question;
 
 		$this->skippable = $skippable;
+
+		$this->multiple_choice = $question->multiple_choice
 	}
 
 	public function __toString()

@@ -227,10 +227,6 @@ class KnowledgeBaseReader
 					$question->multiple_choice = 1;
 					break;
 
-				case 'number':
-					$question->number = 1;
-					break;
-
 				default:
 					$this->logError("KnowledgeBaseReader::parseQuestion: "
 						. "Skipping unknown element question '{$childNode->nodeName}'",
