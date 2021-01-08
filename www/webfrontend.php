@@ -81,7 +81,10 @@ class WebFrontend
 				$state->apply(_decode($_POST['answer']));
 
 			if (isset($_POST['answers']))
-				$state->apply(_decode($_POST['answers']));
+				foreach ($_POST['answer'] as $value) {
+					$state->apply(_decode($value));
+				}
+				
 
 			switch ($domain->algorithm)
 			{
