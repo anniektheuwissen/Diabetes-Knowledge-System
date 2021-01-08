@@ -64,9 +64,11 @@ class WebFrontend
 			$domain = $this->getDomain();
 
 			$state = $this->getState($domain);
-
-			if (isset($_POST['answer']))
-				$state->apply(_decode($_POST['answer']));
+			
+			$answers = $_POST['answer'];
+			foreach ($answers as $answer):
+				if (isset($answer))
+					$state->apply(_decode($answer));
 
 			switch ($domain->algorithm)
 			{

@@ -7,13 +7,12 @@
 			<?php foreach ($question->options as $option): ?>
 			  <li>
 					<label>
-						<input type="checkbox" name="answer" value="<?=_encode($option->consequences)?>">
+						<input type="checkbox" name="answer[]" value="<?=_encode($option->consequences)?>">
 						<?=$state->substitute_variables($option->description, ['Template', 'html'])?>
 					</label>
 				</li>
 			<?php endforeach ?>
 			<input type="submit" value="Submit">
-	</ol>
-
+		</ol>
 </section>
 <?php $this->end() ?>
