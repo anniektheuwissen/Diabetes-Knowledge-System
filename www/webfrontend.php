@@ -71,14 +71,14 @@ class WebFrontend
 					$state->apply(_decode($answer));
 			}*/
 
-			foreach ($_POST['answer'] as $value) {
+			/*foreach ($_POST['answer'] as $value) {
 				if (isset($value))
 					$state->apply(_decode($value);
-			}
+			}*/
 
 			// ORIGINEEL::
-			/*if (isset($_POST['answer']))
-				$state->apply(_decode($_POST['answer']));*/
+			if (isset($_POST['answer']))
+				$state->apply(_decode($_POST['answer']));
 
 			switch ($domain->algorithm)
 			{
