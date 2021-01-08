@@ -71,10 +71,10 @@ class WebFrontend
 					$state->apply(_decode($answer));
 			}*/
 
-			if (isset($_POST['answer[0]']))
-				$state->apply(_decode($_POST['answer']))
-			if (isset($_POST['answer[1]']))
-				$state->apply(_decode($_POST['answer']))
+			foreach ($_POST['answer'] as $key => $value) {
+				if (isset($value))
+					$state->apply(_decode($_POST['answer']));
+			}
 
 			// ORIGINEEL::
 			/*if (isset($_POST['answer']))
