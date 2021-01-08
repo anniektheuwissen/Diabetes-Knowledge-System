@@ -81,7 +81,6 @@ class WebFrontend
 				$state->apply(_decode($_POST['answer']));
 
 			if (isset($_POST['answers']))
-				echo "Hello world!<br>";
 				$state->apply(_decode($_POST['answers']));
 
 			switch ($domain->algorithm)
