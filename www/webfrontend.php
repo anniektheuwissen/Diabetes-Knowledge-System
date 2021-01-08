@@ -81,7 +81,7 @@ class WebFrontend
 				$state->apply(_decode($_POST['answer']));
 
 			if (isset($_POST['answers']))
-				foreach ($_POST['answer'] as $value) {
+				foreach ($_POST['answers'] as $value) {
 					$state->apply(_decode($value));
 				}
 				
