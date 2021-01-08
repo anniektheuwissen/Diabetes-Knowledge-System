@@ -9,6 +9,9 @@
 					<label>
 						<input type="checkbox" name="answers[]" value="<?=_encode($option->consequences)?>">
 						<?=$state->substitute_variables($option->description, ['Template', 'html'])?>
+
+						<input type="checkbox" name="answers[]" value="<?=_encode($option->consequences)?>">
+						<?=$state->substitute_variables($option->description, ['Template', 'html'])?>
 					</label>
 				</li>
 			<?php endforeach ?>
