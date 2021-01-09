@@ -89,42 +89,6 @@
 		</rule>
 
 		<rule>
-			<description>multi test2</description>
-			<if>
-					<and>
-						<fact name="multi">yes</fact>
-					</and>
-			</if>
-			<then>
-				<fact name="MultipleChoice">1works</fact>
-		</then>
-		</rule>
-
-		<rule>
-			<description>multi test3</description>
-			<if>
-					<and>
-						<fact name="multi2">yes</fact>
-					</and>
-			</if>
-			<then>
-				<fact name="MultipleChoice">2works</fact>
-		</then>
-		</rule>
-
-		<rule>
-			<description>multi test4</description>
-			<if>
-					<and>
-						<fact name="multi3">yes</fact>
-					</and>
-			</if>
-			<then>
-				<fact name="MultipleChoice">3works</fact>
-		</then>
-		</rule>
-
-		<rule>
 			<description>multi test5</description>
 			<if>
 					<and>
@@ -162,6 +126,42 @@
 				<fact name="MultipleChoice">23works</fact>
 		</then>
 		</rule>	
+
+		<rule>
+			<description>multi test2</description>
+			<if>
+					<and>
+						<fact name="multi">yes</fact>
+					</and>
+			</if>
+			<then>
+				<fact name="MultipleChoice">1works</fact>
+		</then>
+		</rule>
+
+		<rule>
+			<description>multi test3</description>
+			<if>
+					<and>
+						<fact name="multi2">yes</fact>
+					</and>
+			</if>
+			<then>
+				<fact name="MultipleChoice">2works</fact>
+		</then>
+		</rule>
+
+		<rule>
+			<description>multi test4</description>
+			<if>
+					<and>
+						<fact name="multi3">yes</fact>
+					</and>
+			</if>
+			<then>
+				<fact name="MultipleChoice">3works</fact>
+		</then>
+		</rule>
 
 
 		<question> <!-- mult choice-->
