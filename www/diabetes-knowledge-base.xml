@@ -67,6 +67,10 @@
 				<answer value="itworks">It works!!!!</answer>
 				<answer value="1works">1 werkt</answer>
 				<answer value="2works">2 weerkt </answer>
+				<answer value="3works">3 weerkt </answer>
+				<answer value="12works">12 weerkt </answer>
+				<answer value="13works">13 weerkt </answer>
+				<answer value="23works">23 weerkt </answer>
 				<answer value="$undefined">niks werkt :(</answer>
 		</goal>
 
