@@ -76,6 +76,7 @@
 					<and>
 						<fact name="multi">yes</fact>
 						<fact name="multi2">yes</fact>
+						<fact name="multi3">yes</fact>
 					</and>
 			</if>
 			<then>
@@ -107,6 +108,58 @@
 		</then>
 		</rule>
 
+		<rule>
+			<description>multi test4</description>
+			<if>
+					<and>
+						<fact name="multi3">yes</fact>
+					</and>
+			</if>
+			<then>
+				<fact name="MultipleChoice">3works</fact>
+		</then>
+		</rule>
+
+		<rule>
+			<description>multi test5</description>
+			<if>
+					<and>
+						<fact name="multi1">yes</fact>
+						<fact name="multi2">yes</fact>
+					</and>
+			</if>
+			<then>
+				<fact name="MultipleChoice">12works</fact>
+		</then>
+		</rule>
+	
+		<rule>
+			<description>multi test6</description>
+			<if>
+					<and>
+						<fact name="multi1">yes</fact>
+						<fact name="multi3">yes</fact>
+					</and>
+			</if>
+			<then>
+				<fact name="MultipleChoice">13works</fact>
+		</then>
+		</rule>
+
+		<rule>
+			<description>multi test7</description>
+			<if>
+					<and>
+						<fact name="multi2">yes</fact>
+						<fact name="multi3">yes</fact>
+					</and>
+			</if>
+			<then>
+				<fact name="MultipleChoice">23works</fact>
+		</then>
+		</rule>	
+
+
 		<question> <!-- mult choice-->
 			<multiple> yes </multiple>
 			<description>we gaan nu even kijken of het lukt</description>
@@ -120,6 +173,12 @@
 				<description> nummer 2 </description>
 				<then>
 					<fact name="multi2">yes</fact>
+				</then>
+			</option>
+			<option>
+				<description> nummer 3 </description>
+				<then>
+					<fact name="multi3">yes</fact>
 				</then>
 			</option>
 		</question>
