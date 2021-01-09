@@ -92,7 +92,7 @@
 			<description>multi test5</description>
 			<if>
 					<and>
-						<fact name="multi1">yes</fact>
+						<fact name="multi">yes</fact>
 						<fact name="multi2">yes</fact>
 					</and>
 			</if>
@@ -105,7 +105,7 @@
 			<description>multi test6</description>
 			<if>
 					<and>
-						<fact name="multi1">yes</fact>
+						<fact name="multi">yes</fact>
 						<fact name="multi3">yes</fact>
 					</and>
 			</if>
