@@ -73,7 +73,7 @@ class WebFrontend
 				$no_empty = $_POST['answers'];
 				$no_empty = array_shift($no_empty);
 				foreach ($no_empty as $value) {
-					$state->apply(_decode($value);
+					$state->apply(_decode($value));
 				}
 			}
 
