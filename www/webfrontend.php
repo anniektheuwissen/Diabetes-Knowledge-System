@@ -76,7 +76,6 @@ class WebFrontend
 				foreach ($_POST['answers'] as $value) {
 					if(isset($value)) {
 						$state->apply(_decode($value));
-						$state = $this->getState($domain);
 						$i = $i + 1;
 					}
 				}
