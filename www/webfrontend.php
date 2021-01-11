@@ -70,17 +70,10 @@ class WebFrontend
 				$state->apply(_decode($_POST['answer']));
 			// nieuw::
 			}  elseif (isset($_POST['submit']))  {
-				$i = 0;
-				while(!isset($_POST['answers']))  {
-					next($_POST['answers']);
-					$i = $i + 1;
-				}
-				while($i <= count($_POST['answers']))  {
-						if (isset(current($_POST['answers'])))  {
-							$state->apply(_decode(current($_POST['answers'])));
-							next($_POST['answers']);
-							$i = $i + 1;
-						}
+				$no_empty = $_POST['answers'];
+				$no_empty = array_shift($no_empty);
+				foreach ($no_empty as $value) {
+					$state->apply(_decode($value);
 				}
 			}
 
