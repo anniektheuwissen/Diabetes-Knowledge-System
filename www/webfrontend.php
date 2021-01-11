@@ -69,7 +69,8 @@ class WebFrontend
 			if (isset($_POST['answer']))  {
 				$state->apply(_decode($_POST['answer']));
 			}  elseif (isset($_POST['submit']))  {
-					foreach ($_POST['answers'] as $value) {
+				$no_empty = array_filter($_POST['answers']);
+					foreach ($no_empty as $value) {
 						if (isset($value))
 							$state->apply(_decode($value));
 				}
