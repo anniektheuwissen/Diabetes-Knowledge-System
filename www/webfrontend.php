@@ -71,7 +71,8 @@ class WebFrontend
 			//nieuw:
 			if (isset($_POST['answers']))
 				foreach ($_POST['answers'] as $value) {
-					$state->apply(_decode($value));
+					if (isset($value)
+						$state->apply(_decode($value));
 				}
 				
 

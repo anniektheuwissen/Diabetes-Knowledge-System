@@ -78,7 +78,7 @@
 			<description>multi test</description>
 			<if>
 					<and>
-						<fact name="multi">yes</fact>
+						<fact name="multi1">yes</fact>
 						<fact name="multi2">yes</fact>
 						<fact name="multi3">yes</fact>
 					</and>
@@ -92,7 +92,7 @@
 			<description>multi test5</description>
 			<if>
 					<and>
-						<fact name="multi">yes</fact>
+						<fact name="multi1">yes</fact>
 						<fact name="multi2">yes</fact>
 					</and>
 			</if>
@@ -105,7 +105,7 @@
 			<description>multi test6</description>
 			<if>
 					<and>
-						<fact name="multi">yes</fact>
+						<fact name="multi1">yes</fact>
 						<fact name="multi3">yes</fact>
 					</and>
 			</if>
@@ -131,7 +131,7 @@
 			<description>multi test2</description>
 			<if>
 					<and>
-						<fact name="multi">yes</fact>
+						<fact name="multi1">yes</fact>
 					</and>
 			</if>
 			<then>
@@ -170,7 +170,7 @@
 			<option>
 				<description> nummer 1 </description>
 				<then>
-					<fact name="multi">yes</fact>
+					<fact name="multi1">yes</fact>
 				</then>
 			</option>
 			<option>
