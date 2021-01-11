@@ -70,7 +70,7 @@ class WebFrontend
 				$state->apply(_decode($_POST['answer']));
 			//nieuw:
 			if (isset($_POST['answers'])) {
-				$emptyRemoved = array_filter($_POST['answers']);
+				$_POST['answers'] = array_filter($_POST['answers']);
 				foreach ($emptyRemoved as $value) {
 					if (isset($value))
 						$state->apply(_decode($value));
