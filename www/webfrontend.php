@@ -71,8 +71,10 @@ class WebFrontend
 				$state->apply(_decode($_POST['answer']));
 			// nieuw::
 			}
-			var_dump($_POST['answers']);
-			die();
+			if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+				var_dump($_POST);
+				die();
+		  }
 			if (isset($_POST['answers']))  {
 				foreach ($_POST['answers'] as $value) {
 					if(isset($value)) {
