@@ -66,8 +66,20 @@ class WebFrontend
 			$state = $this->getState($domain);
 
 			// ORIGINEEL::
-			if (isset($_POST['answer']))
+			if (isset($_POST['answer']))  {
 				$state->apply(_decode($_POST['answer']));
+			}  elseif (isset($_POST['answers']))  {
+				foreach ($_POST['answers'] as $value) {
+					if (isset($value))
+						$state->apply(_decode($value));
+				}
+			}  elseif (is_null($_POST['answers']))  {
+				$empty_removed = array_filter($_POST['answers']);
+				foreach ($emptyRemoved as $value) {
+					if (isset($value))
+						$state->apply(_decode($value));
+				}
+			}
 			//nieuw:
 			if (isset($_POST['answers'])) {
 				$_POST['answers'] = array_filter($_POST['answers']);
