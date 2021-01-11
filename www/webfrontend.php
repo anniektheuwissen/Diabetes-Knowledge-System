@@ -71,7 +71,7 @@ class WebFrontend
 			//nieuw:
 			if (isset($_POST['answers'])) {
 				while (is_null($_POST['answers']))  {
-					shift($_POST['answers'])
+					shift($_POST['answers']);
 				}
 				foreach ($_POST['answers'] as $value) {
 					if (isset($value))
