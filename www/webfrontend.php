@@ -69,12 +69,11 @@ class WebFrontend
 			if (isset($_POST['answer']))
 				$state->apply(_decode($_POST['answer']));
 			//nieuw:
-			if (is_array($_POST['answers']))
-				if (array_key_exists(0,$_POST['answers']) or array_key_exists(1,$_POST['answers']))
-					foreach ($_POST['answers'] as $value) {
-						if (isset($value))
-							$state->apply(_decode($value));
-					}
+			if (isset($_POST['Submit'])
+				foreach ($_POST['answers'] as $value) {
+					if (isset($value))
+						$state->apply(_decode($value));
+				}
 			
 	
 
