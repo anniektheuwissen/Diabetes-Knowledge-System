@@ -76,11 +76,12 @@ class WebFrontend
 				foreach ($_POST['answers'] as $value) {
 					if(isset($value)) {
 						$state->apply(_decode($value));
+						$state = $this->getState($domain);
 						$i = $i + 1;
 					}
 				}
-				var_dump($i);
-				die();
+			//	var_dump($i);
+				//die();
 			}
 
 			switch ($domain->algorithm)
