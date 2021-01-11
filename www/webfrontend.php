@@ -66,11 +66,11 @@ class WebFrontend
 			$state = $this->getState($domain);
 
 			// ORIGINEEL::
-			//if (isset($_POST['answer']))
-			//	$state->apply(_decode($_POST['answer']));
+			if (isset($_POST['answer']))
+				$state->apply(_decode($_POST['answer']));
 			//nieuw:
-			foreach ($_POST['answer'] as $value) {
-				if (isset($value))
+			foreach ($_POST['answers'] as $key => $value) {
+				if (isset($key))
 					$state->apply(_decode($value));
 			}
 			

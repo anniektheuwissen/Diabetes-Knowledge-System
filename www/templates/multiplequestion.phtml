@@ -4,15 +4,13 @@
 <section class="question">
 	<p><?=$state->substitute_variables($question->description, ['Template', 'html'])?></p>
 		<ol class="options">
-		$i = 0;
 			<?php foreach ($question->options as $option): ?>
 			  <li>
 					<label>
-						<input type="checkbox" name="answer[$i]" value="<?=_encode($option->consequences)?>">
+						<input type="checkbox" name="answers[]" value="<?=_encode($option->consequences)?>">
 						<?=$state->substitute_variables($option->description, ['Template', 'html'])?>
 					</label>
 				</li>
-				$i++;
 			<?php endforeach ?>
 			<input type="submit" value="Submit">
 		</ol>
