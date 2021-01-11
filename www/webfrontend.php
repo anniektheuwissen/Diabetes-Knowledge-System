@@ -84,8 +84,6 @@ class WebFrontend
 				}
 			}
 
-
-
 			switch ($domain->algorithm)
 			{
 				case 'backward-chaining':
