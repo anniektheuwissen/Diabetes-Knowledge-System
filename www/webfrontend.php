@@ -74,13 +74,13 @@ class WebFrontend
 						$state->apply(_decode($value));
 				}
 			}  elseif (is_null($_POST['answers']))  {
-				$_POST['answers'] = array_filter($_POST['answers']);
+				$emptyRemoved = array_filter($_POST['answers']);
 				foreach ($emptyRemoved as $value) {
 					if (isset($value))
 						$state->apply(_decode($value));
 				}
 			}
-		
+
 
 
 			switch ($domain->algorithm)
