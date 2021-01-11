@@ -71,7 +71,6 @@
 				<answer value="itworks">It works!!!!</answer>
 				<answer value="12works">12 weerkt </answer>
 				<answer value="13works">13 weerkt </answer>
-				<answer value="$undefined">niks werkt :(</answer>
 		</goal>
 
 		<rule>
