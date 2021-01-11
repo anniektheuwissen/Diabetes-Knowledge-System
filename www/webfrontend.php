@@ -69,7 +69,10 @@ class WebFrontend
 			if (isset($_POST['answer']))
 				$state->apply(_decode($_POST['answer']));
 			//nieuw:
-			if (!empty($_POST['answers']))
+			$values = array();
+			$values = $_POST['answers'];
+
+			if (!empty($values))
 				foreach ($_POST['answers'] as $value) {
 					if (isset($value))
 						$state->apply(_decode($value));
