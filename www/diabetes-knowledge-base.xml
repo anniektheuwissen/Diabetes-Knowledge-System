@@ -858,7 +858,6 @@
 		<option>
 			<description>None of these</description>
 			<then>
-				<and>
 					<fact name="type1Symptoms">no</fact>
 					<fact name="drymouth">no</fact>
 					<fact name="urinating">no</fact>
