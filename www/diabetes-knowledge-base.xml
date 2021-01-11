@@ -805,17 +805,9 @@
 	  	<if>
 	  		<or>
 	  			<fact name="drymouth">yes</fact>
-			</or>
-			<or>
 	  			<fact name="urinating">yes</fact>
-			</or>
-			<or>
 	  			<fact name="hungry">yes</fact>
-			</or>
-			<or>
 	  			<fact name="weight">yes</fact>
-			</or>
-			<or>
 	  			<fact name="eye-sight">yes</fact>
 			</or>
 	  	</if>
