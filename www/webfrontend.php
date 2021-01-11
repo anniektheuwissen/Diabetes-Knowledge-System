@@ -15,6 +15,7 @@ function _decode($data)
 	return unserialize(gzuncompress(base64_decode($data)));
 }
 
+
 class WebLogger implements Logger
 {
 	public $messages = array(array());
@@ -70,13 +71,14 @@ class WebFrontend
 				$state->apply(_decode($_POST['answer']));
 			// nieuw::
 			}
+			var_dump($_POST);
+			die();
 			if (isset($_POST['answers']))  {
-				$state->apply(_decode($_POST['answers']));
-			//	foreach ($_POST['answers'] as $value) {
-				//	if(isset($value)) {
-					//	$state->apply(_decode($value));
-				//	}
-			//	}
+				foreach ($_POST['answers'] as $value) {
+					if(isset($value)) {
+						$state->apply(_decode($value));
+					}
+				}
 			}
 
 			switch ($domain->algorithm)
