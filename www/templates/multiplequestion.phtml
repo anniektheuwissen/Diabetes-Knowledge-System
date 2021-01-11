@@ -7,7 +7,6 @@
 			<?php foreach ($question->options as $option): ?>
 			  <li>
 					<label>
-						<input type="hidden" name="checkbox" value="unchecked" />
 						<input type="checkbox" name="answers[]" value="<?=_encode($option->consequences)?>">
 						<?=$state->substitute_variables($option->description, ['Template', 'html'])?>
 					</label>
