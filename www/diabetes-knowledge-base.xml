@@ -65,7 +65,6 @@
 		<goal name="MultipleChoice">
 		<description>multiple choise</description>
 				<answer value="23works">23 weerkt </answer>
-				<answer value="1works">1 werkt</answer>
 				<answer value="2works">2 weerkt </answer>
 				<answer value="3works">3 weerkt </answer>
 				<answer value="itworks">It works!!!!</answer>
@@ -126,17 +125,6 @@
 		</then>
 		</rule>
 
-		<rule>
-			<description>multi test2</description>
-			<if>
-					<and>
-						<fact name="multi1">yes</fact>
-					</and>
-			</if>
-			<then>
-				<fact name="MultipleChoice">1works</fact>
-		</then>
-		</rule>
 
 		<rule>
 			<description>multi test3</description>
