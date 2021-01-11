@@ -8,6 +8,29 @@
 
 
 <!-- -->
+<goal name="RiskDiabetesType2">
+ 	<description>Diabetes type 2 risk</description>
+        <!-- These are the goal values of diagnosing diabetes type 2. There are 3 risk assessment values, as adviced by our expert.  -->
+        <answer value="lowRisk2">You have a low risk of diabetes type 2. </answer>
+        <answer value="mediumRisk2">You have a medium risk of  diabetes type 2. We advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. It will be especially valuable to also follow the lifestyle given below. A good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also significantly improve your life if you suffer from diabetes.
+        </answer>
+        <answer value="highRisk2">You have a high risk of diabetes type 2. YWe advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. It will be especially valuable to follow the lifestyle tips given below. A good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also improve your life if you suffer from diabetes.
+        </answer>
+        <answer value="no"></answer>
+</goal>
+
+<!-- As adviced by our expert, we first assess the risk of having diabetes type 1, as in that case, many diabetes type 2 and lifestyle related questions are unneccesary to ask. -->
+  <goal name="RiskDiabetesType1">
+ 	<description>Diabetes Type 1 risk</description>
+      	<!-- There are 2 possible forms of diabetes that can occur in our test. Here are first the possibilities of answers for a risk assesment of diabetes type 1. No lifestyle advice is given here, as that does not apply to people with (a risk of) diabetes 1. -->
+	    <answer value="mediumRisk1">You have a medium risk of diabetes type 1. We advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. </answer>
+	    <answer value="highRisk1">You have a high risk of diabetes type 1. We advice you to visit a doctor and take a diabetes test. A simple blood test at your general practitioner can quickly confirm this.</answer>
+	    <answer value="ketoacidose">You are experiencing the symptoms of a ketoacidose, this an advanced and dangerous stage of diabetes type 1. We advice you to go to call a doctor as soon as possible or possibly call the emergency services. </answer>
+        <!-- It could also be that a person does not have diabetes type 1 symptoms, but the symptoms relate to some other disease, our test is incapalbe of assesssing these other possible diseases as our expert lacks knowledge about this -->
+        <answer value="OtherSymptoms">Your symptoms seem to be unrelated to diabetes type 1, but could be caused by another diseases such as diabetes type 2 (see the above test result for your risk on diabetes type 2), or something else, we do advice you to see a doctor.</answer>
+        <answer value="No"></answer>
+  </goal>
+
 
 <goal name="AdviceSport">
  	<description>Lifestyle Advice: Exercise</description>
@@ -92,30 +115,6 @@
 	 	<answer value="JustTooMuchStress">Your answers show that you experience some problems that may be related to an imbalance between what you can handle and what you have to do in your daily life. If you have many obligations, problems and appointments for a longer period of time, this can cause a lot of tension (stress). If you also suffer from a reduced vitality, you can get overwhelmed. If you are overworked, you suffer from stress complaints and you function less well. It is important to think about this and talk to friends, family and experts about your situation.</answer>
 	    <answer value="no"></answer>
 </goal>
-
-<goal name="RiskDiabetesType2">
- 	<description>Diabetes type 2 risk</description>
-        <!-- These are the goal values of diagnosing diabetes type 2. There are 3 risk assessment values, as adviced by our expert.  -->
-        <answer value="lowRisk2">You have a low risk of diabetes type 2. </answer>
-        <answer value="mediumRisk2">You have a medium risk of  diabetes type 2. We advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. It will be especially valuable to also follow the lifestyle given below. A good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also significantly improve your life if you suffer from diabetes.
-        </answer>
-        <answer value="highRisk2">You have a high risk of diabetes type 2. YWe advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. It will be especially valuable to follow the lifestyle tips given below. A good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also improve your life if you suffer from diabetes.
-        </answer>
-        <answer value="no"></answer>
-</goal>
-
-<!-- As adviced by our expert, we first assess the risk of having diabetes type 1, as in that case, many diabetes type 2 and lifestyle related questions are unneccesary to ask. -->
-  <goal name="RiskDiabetesType1">
- 	<description>Diabetes Type 1 risk</description>
-      	<!-- There are 2 possible forms of diabetes that can occur in our test. Here are first the possibilities of answers for a risk assesment of diabetes type 1. No lifestyle advice is given here, as that does not apply to people with (a risk of) diabetes 1. -->
-	    <answer value="mediumRisk1">You have a medium risk of diabetes type 1. We advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. </answer>
-	    <answer value="highRisk1">You have a high risk of diabetes type 1. We advice you to visit a doctor and take a diabetes test. A simple blood test at your general practitioner can quickly confirm this.</answer>
-	    <answer value="ketoacidose">You are experiencing the symptoms of a ketoacidose, this an advanced and dangerous stage of diabetes type 1. We advice you to go to call a doctor as soon as possible or possibly call the emergency services. </answer>
-        <!-- It could also be that a person does not have diabetes type 1 symptoms, but the symptoms relate to some other disease, our test is incapalbe of assesssing these other possible diseases as our expert lacks knowledge about this -->
-        <answer value="OtherSymptoms">Your symptoms seem to be unrelated to diabetes type 1, but could be caused by another diseases such as diabetes type 2 (see the above test result for your risk on diabetes type 2), or something else, we do advice you to see a doctor.</answer>
-        <answer value="No"></answer>
-  </goal>
-
 
 <!-- below follow the rules, split up in lifestyle rules and diabetes rules -->
 
