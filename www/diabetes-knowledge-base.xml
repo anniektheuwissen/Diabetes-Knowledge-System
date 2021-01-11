@@ -860,11 +860,11 @@
 			<then>
 				<and>
 					<fact name="type1Symptoms">no</fact>
-					<fact name="drymouth">yes</fact>
-					<fact name="urinating">yes</fact>
-					<fact name="hungry">yes</fact>
-					<fact name="weight">yes</fact>
-					<fact name="eye-sight">yes</fact>
+					<fact name="drymouth">no</fact>
+					<fact name="urinating">no</fact>
+					<fact name="hungry">no</fact>
+					<fact name="weight">no</fact>
+					<fact name="eye-sight">no</fact>
 			</then>
 		</option>
 	</question>
