@@ -72,13 +72,13 @@ class WebFrontend
 			}
 			if (isset($_POST['submit']))  {
 				if (isset($_POST['answers'][0]))  {
-					$state->apply(_decode($_POST['answers'][0]));
-					}
+					$state->apply(_decode($_POST['answers[0]']));
+				}
 				if (isset($_POST['answers'][1]))  {
-					$state->apply(_decode($_POST['answers'][1]));
+					$state->apply(_decode($_POST['answers[1]']));
 				}
 				if (isset($_POST['answers'][2]))  {
-					$state->apply(_decode($_POST['answers'][2]));
+					$state->apply(_decode($_POST['answers[2]']));
 				}
 			}
 
