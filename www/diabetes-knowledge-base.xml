@@ -7,11 +7,11 @@
 <!-- Based on the answers to the lifestyle questions, we offer specific advice to users. There are many different answer values, as there are many different forms of advice-->
 
 
-<!-- --> 
+<!-- -->
 
 <goal name="AdviceSport">
  	<description>Lifestyle Advice: Exercise</description>
-	 	<answer value="SportMore">We advice you to increase the amount of exercise you do significantly. 
+	 	<answer value="SportMore">We advice you to increase the amount of exercise you do significantly.
 	 	Exercise reduces the risk of cardiovascular disease, diabetes, depressive complaints, breast cancer, colon cancer, mental decline and dementia.
 		Ideally, you should exercise actively for at least 2.5 hours a week (for example walking, cycling, running, playing football, fitness, dancing, martial arts). Also do activities that strengthen muscles and bones, such as exercise or strength training. And avoid sitting still a lot. Choose exercise / sports activities that suit you, but do not set your goals too high at the start. Even already doing a short walk everyday is very good for you!</answer>
 	 	<answer value="SportaBitMore">Your answers seem to indicate that you already do quite some exercise and active movement, still we advice you to increase this a little bit. It is healthy to exercise for at least 30 minutes at least five days a week. Try to find out what you like to do. Because if you like it, you can last longer. You move quite a  it already, but more exercise is better! </answer>
@@ -20,9 +20,9 @@
 
 <goal name="AdviceFat">
  	<description>Lifestyle Advice: Saturated and Trans Fat</description>
-	 	<answer value="LessFat">You eat too much fat. Try to change this! 
-	 	Products with saturated and trans fat are very unhealthy. Saturated fat is commonly found in products as 48+ cheese, sausages, buttercream and chocalate, while trans fat is found in cookies, cake, chips and products from the fryer. 
-	 	Saturated fat and trans fat raise cholesterol. This increases the risk of obesity and arteriosclerosis and therefore more risk of cardiovascular disease, diabetes and problems with the kidneys. 
+	 	<answer value="LessFat">You eat too much fat. Try to change this!
+	 	Products with saturated and trans fat are very unhealthy. Saturated fat is commonly found in products as 48+ cheese, sausages, buttercream and chocalate, while trans fat is found in cookies, cake, chips and products from the fryer.
+	 	Saturated fat and trans fat raise cholesterol. This increases the risk of obesity and arteriosclerosis and therefore more risk of cardiovascular disease, diabetes and problems with the kidneys.
 	 	Unsaturated fat is healthier than saturated fat. It is important that you eat enough unsaturated fat. This can lower cholesterol. This reduces the risk of cardiovascular disease. Unsaturated fat is usually liquid. Unsaturated fat is, for example, in vegetable oils such as sunflower and olive oil.</answer>
 	    <answer value="no">You do not eat too much fat. That is very healthy!</answer>
 </goal>
@@ -117,7 +117,7 @@
   </goal>
 
 
-<!-- below follow the rules, split up in lifestyle rules and diabetes rules --> 
+<!-- below follow the rules, split up in lifestyle rules and diabetes rules -->
 
 <!-- Every lifestyle rule has a type 1 check, as in the case of diabetes type 1, we do not offer lifestyle advice-->
 <!-- Rules for lifestyle tips for exercise -->
@@ -425,19 +425,19 @@
       			<and>
       				<fact name="type1">no</fact>
       				<fact name="stress">lot</fact>
-      			
+
       					<not>
       						<fact name="stresswork">no</fact>
       					</not>
    						<not>
       						<fact name="stressother">no</fact>
    						</not>
-      					
+
 				</and>
 				<and>
 					<fact name="type1">no</fact>
       				<fact name="stresswork">lot</fact>
-      				
+
       					<not>
       						<fact name="stress">no</fact>
       						<fact name="stressother">no</fact>
@@ -566,7 +566,7 @@
   	</rule>
 
 
-<!-- Rules for Diabetes Type 2 Diagnoses 
+<!-- Rules for Diabetes Type 2 Diagnoses
 	Note: As our expert indicated, it is very hard to effectively distinguish between risk types. -->
 
 <!-- = lastig -> moet nog -->
@@ -761,7 +761,7 @@
 
 <!-- Rules for assessing if diabetes 1 or 2  -->
     <rule>
-	  	<description>Diagnose type 1: 
+	  	<description>Diagnose type 1:
 	  	If someone suffers from diabetes related symptoms and these have started in the past few weeks, we check for diabetes type 1 risk first, if this turns out a dead end -> we also check for type 2. </description>
 	  	<if>
 	  		<and>
@@ -827,10 +827,10 @@
 <!-- Start of the questions-->
 
 <!-- These 2 questions are posed at the start to filter between possibilities of type 1, type 2 or only lifestyle advice-->
-	
+
 	<question>
 		<description> Do you experience any of the following symptoms? You can select each one that you experience.  dry mouth, frequently urinating, more than usually hungry, sudden weight losses/gains, blurry eye-sight? </description>
-		<muliple> yes </muliple>
+		<multiple> yes </multiple>
 		<option>
 			<description>Dry mouth</description>
 			<then>
@@ -867,7 +867,7 @@
 				<fact name="type1Symptoms">no</fact>
 			</then>
 		</option>
-	</question> 
+	</question>
 
 <!--
 	<question>
@@ -982,7 +982,7 @@
 	</question>
 
 	<question>
-		<description>What is your abdominal girth? 
+		<description>What is your abdominal girth?
 		You can measure you abdominal girth on your bare belly with measuring tape, make sure that you measure between the lowest rib and the belly button, make sure the measuring tape is horizontal.</description>
 		<option>
 			<description>Lower or equal than 88</description>
@@ -999,7 +999,7 @@
 	</question>
 
 	<question>
-		<description>What is your abdominal girth? 
+		<description>What is your abdominal girth?
 		You can measure you abdominal girth on your bare belly with measuring tape, make sure that you measure between the lowest rib and the belly button, make sure the measuring tape is horizontal.</description>
 		<option>
 			<description>Lower or equal than 102</description>
@@ -1159,8 +1159,8 @@
 <!-- These are questions related to lifestyle-->
 	<question>
 		<description>How many minutes of moderate and heavy exercise do you do per week?
-		When answering the questions, think about a typical week in the past month.			
-		With 'Moderate effort' you still have enough breath to be able to talk. For example: walking briskly, climbing stairs, cycling briskly, swimming, gardening or vacuuming. 
+		When answering the questions, think about a typical week in the past month.
+		With 'Moderate effort' you still have enough breath to be able to talk. For example: walking briskly, climbing stairs, cycling briskly, swimming, gardening or vacuuming.
 		With 'Heavy exertion' you start to sweat. Your breath is much faster and you cannot keep talking. For example: intensive sports, running, fast cycling or heavy physical work such as digging in the garden. </description>
 		<option>
 			<description>More than 150 minutes </description>
@@ -1565,7 +1565,7 @@
 		</option>
 	</question>
 
-	<question> 
+	<question>
 		<description>Do or did you ever smoke in the last year?</description>
 		<option>
 			<description>Yes</description>
@@ -1587,7 +1587,7 @@
 		</option>
 	</question>
 
-	<question> 
+	<question>
 		<description>How often do or did you smoke?</description>
 		<option>
 			<description>Almost never</description>
@@ -1615,7 +1615,7 @@
 		</option>
 	</question>
 
-	<question> 
+	<question>
 		<description>Do you smoke a cigarette, shag, cigar, cigarillo and / or pipe 10 or more times a day?</description>
 		<option>
 			<description>Yes</description>
@@ -1631,7 +1631,7 @@
 		</option>
 	</question>
 
-	<question> 
+	<question>
 		<description>Do you drink alcohol?</description>
 		<option>
 			<description>Yes</description>
@@ -1647,7 +1647,7 @@
 		</option>
 	</question>
 
-	<question> 
+	<question>
 		<description>How much alcohol do you drink per week?</description>
 		<option>
 			<description>Less than 2 glasses a week</description>
@@ -1675,7 +1675,7 @@
 		</option>
 	</question>
 
-	<question> 
+	<question>
 		<description>How often did you experience stress at home this past year?</description>
 		<option>
 			<description>Never</description>
@@ -1703,7 +1703,7 @@
 		</option>
 	</question>
 
-	<question> 
+	<question>
 		<description>How often did you experience stress at work this past year?</description>
 		<option>
 			<description>Never</description>
@@ -1731,7 +1731,7 @@
 		</option>
 	</question>
 
-	<question> 
+	<question>
 		<description>How often did you experience stress from other things this past year?</description>
 		<option>
 			<description>Never</description>
@@ -1759,7 +1759,7 @@
 		</option>
 	</question>
 
-	<question> 
+	<question>
 		<description>Do you feel financial pressure?</description>
 		<option>
 			<description>Almost none</description>
@@ -1781,7 +1781,7 @@
 		</option>
 	</question>
 
-	<question> 
+	<question>
 		<description>Do you feel like you have a lot of energy?</description>
 		<option>
 			<description>Almost never</description>
@@ -1809,7 +1809,7 @@
 		</option>
 	</question>
 
-	<question> 
+	<question>
 		<description>Do you feel excitment when starting the day in the morning?</description>
 		<option>
 			<description>Almost never</description>
@@ -1837,7 +1837,7 @@
 		</option>
 	</question>
 
-	<question> 
+	<question>
 		<description>Which education did you finish?
 		With finish, we mean where did you get a diploma from</description>
 		<option>
