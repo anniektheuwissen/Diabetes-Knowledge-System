@@ -64,12 +64,9 @@
 
 		<goal name="MultipleChoice">
 		<description>multiple choise</description>
-				<answer value="23works">23 weerkt </answer>
-				<answer value="2works">2 weerkt </answer>
-				<answer value="3works">3 weerkt </answer>
+
 				<answer value="itworks">It works!!!!</answer>
-				<answer value="12works">12 weerkt </answer>
-				<answer value="13works">13 weerkt </answer>
+				<answer value="no"></answer>
 		</goal>
 
 		<rule>
@@ -86,69 +83,6 @@
 		</then>
 		</rule>
 
-		<rule>
-			<description>multi test5</description>
-			<if>
-					<and>
-						<fact name="multi1">yes</fact>
-						<fact name="multi2">yes</fact>
-					</and>
-			</if>
-			<then>
-				<fact name="MultipleChoice">12works</fact>
-		</then>
-		</rule>
-
-		<rule>
-			<description>multi test6</description>
-			<if>
-					<and>
-						<fact name="multi1">yes</fact>
-						<fact name="multi3">yes</fact>
-					</and>
-			</if>
-			<then>
-				<fact name="MultipleChoice">13works</fact>
-		</then>
-		</rule>
-
-		<rule>
-			<description>multi test7</description>
-			<if>
-					<and>
-						<fact name="multi2">yes</fact>
-						<fact name="multi3">yes</fact>
-					</and>
-			</if>
-			<then>
-				<fact name="MultipleChoice">23works</fact>
-		</then>
-		</rule>
-
-
-		<rule>
-			<description>multi test3</description>
-			<if>
-					<and>
-						<fact name="multi2">yes</fact>
-					</and>
-			</if>
-			<then>
-				<fact name="MultipleChoice">2works</fact>
-		</then>
-		</rule>
-
-		<rule>
-			<description>multi test4</description>
-			<if>
-					<and>
-						<fact name="multi3">yes</fact>
-					</and>
-			</if>
-			<then>
-				<fact name="MultipleChoice">3works</fact>
-		</then>
-		</rule>
 
 
 		<question> <!-- mult choice-->
