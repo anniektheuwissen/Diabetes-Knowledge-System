@@ -835,24 +835,28 @@
 			<description>Frequently urinating</description>
 			<then>
 				<fact name="urinating">yes</fact>
+				<fact name="drymouth">no</fact>
 			</then>
 		</option>
 		<option>
 			<description>More than usually hungry</description>
 			<then>
 				<fact name="hungry">yes</fact>
+				<fact name="drymouth">no</fact>
 			</then>
 		</option>
 		<option>
 			<description>Sudden weight losses/gains</description>
 			<then>
 				<fact name="weight">yes</fact>
+				<fact name="drymouth">no</fact>
 			</then>
 		</option>
 		<option>
 			<description>Blurry eye-sight</description>
 			<then>
 				<fact name="eye-sight">yes</fact>
+				<fact name="drymouth">no</fact>
 			</then>
 		</option>
 		<option>
