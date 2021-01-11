@@ -4,6 +4,7 @@
 <section class="question">
 	<p><?=$state->substitute_variables($question->description, ['Template', 'html'])?></p>
 		<ol class="options">
+			<input type="submit" name="answers[]" value="Submit">
 			<?php foreach ($question->options as $option): ?>
 			  <li>
 					<label>
@@ -12,7 +13,6 @@
 					</label>
 				</li>
 			<?php endforeach ?>
-			<input type="submit" name="submit" value="Submit">
 		</ol>
 </section>
 <?php $this->end() ?>
