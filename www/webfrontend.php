@@ -79,8 +79,8 @@ class WebFrontend
 						$i = $i + 1;
 					}
 				}
-				var_dump($state);
-				die();
+			//	var_dump($state);
+			//	die();
 			}
 
 			switch ($domain->algorithm)
