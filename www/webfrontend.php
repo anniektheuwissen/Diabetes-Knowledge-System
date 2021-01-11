@@ -68,15 +68,12 @@ class WebFrontend
 			// ORIGINEEL::
 			if (isset($_POST['answer']))  {
 				$state->apply(_decode($_POST['answer']));
-			}  elseif (isset($_POST['answers']))  {
-				foreach ($_POST['answers'] as $value) {
-					if (isset($value))
-						$state->apply(_decode($value));
-				}
-			}  elseif (!empty($_POST['answers']))  {
-				foreach ($_POST['answers'] as $value) {
-					if (isset($value))
-						$state->apply(_decode($value));
+			}  elseif (isset($_POST['submit']))  {
+				if(!empty($_POST['answers'])  {
+					foreach ($_POST['answers'] as $value) {
+						if (isset($value))
+							$state->apply(_decode($value));
+					}
 				}
 			}
 
