@@ -4,133 +4,155 @@
    presents the user with lifestyle improvements to lower the risk of diabetes and
    to help people to live a healthier life.</description>
 
-  <!-- First the different types of lifestyle advices as seperate goals, after which follow the diabetes diagnoses goals-->
-  <goal name="AdviceSport">
- 	<description>Lifestyle Advice: Sport</description>
-      	<!-- Based on the answers to the lifestyle questions, we offer specific advice to users. There are many different answer values, as there are many different forms of advice-->
-      	<!-- MAYBE SPLIT EACH FORM OF ADVICE IN SEPERATE GOALS??? -->
-	 	<answer value="SportMore">You could improve your lifestyle by increasing the amount of exercise you do.</answer>
-	    <answer value="no">Your answer seem to indicate that you have a perfect lifestyle concerning sport! Keep up the good work!</answer>
-  </goal>
+<!-- Based on the answers to the lifestyle questions, we offer specific advice to users. There are many different answer values, as there are many different forms of advice-->
 
-  <goal name="AdviceFood">
- 	<description>Lifestyle Advice: Food</description>
-      	<!-- Based on the answers to the lifestyle questions, we offer specific advice to users. There are many different answer values, as there are many different forms of advice-->
-      	<!-- MAYBE SPLIT EACH FORM OF ADVICE IN SEPERATE GOALS??? -->
-	 	<answer value="EatMoreVeggiesAndLessSugar">You could improve your eating habits by adding more vegatables to your diet. The Dutch Institute for Food advices to eat at least 250 gram of vegatables each day.
-	 	It is also be better to lower your intake of sugar. Food sources that contain a lot of sugar are for example soft drinks, juices, candy, cookies and many types of processed foods. Try to check the amount of sugar on the products that you regularly buy and use this website .. to search for alternative food sources that contain less sugar.
-	 	</answer>
-	    <answer value="EatMoreVegatables">You could improve your eating habits by adding more vegatables to your diet. The Dutch Institute for Food advices to eat at least 250 gram of vegatables each day.</answer>
-	    <answer value="EatLessSugar">It would be better to lower your intake of sugar. Food sources that contain a lot of sugar are for example soft drinks, juices, candy, cookies and many types of processed foods. Try to check the amount of sugar on the products that you regularly buy and use this website .. to search for alternative food sources that contain less sugar.</answer>
-	    <answer value="no">Your answer seem to indicate that you have a perfect lifestyle concerning food! Keep up the good work!</answer>
-  </goal>
 
-  <goal name="AdviceSmoking">
+<!-- --> 
+
+<goal name="AdviceSport">
+ 	<description>Lifestyle Advice: Exercise</description>
+	 	<answer value="SportMore">We advice you to increase the amount of exercise you do significantly. 
+	 	Exercise reduces the risk of cardiovascular disease, diabetes, depressive complaints, breast cancer, colon cancer, mental decline and dementia.
+		Ideally, you should exercise actively for at least 2.5 hours a week (for example walking, cycling, running, playing football, fitness, dancing, martial arts). Also do activities that strengthen muscles and bones, such as exercise or strength training. And avoid sitting still a lot. Choose exercise / sports activities that suit you, but do not set your goals too high at the start. Even already doing a short walk everyday is very good for you!</answer>
+	 	<answer value="SportaBitMore">Your answers seem to indicate that you already do quite some exercise and active movement, still we advice you to increase this a little bit. It is healthy to exercise for at least 30 minutes at least five days a week. Try to find out what you like to do. Because if you like it, you can last longer. You move quite a  it already, but more exercise is better! </answer>
+	    <answer value="no">How good that you exercise so much! You probably already notice that you feel good by exercising. If you keep doing this well, you have less chance of cardiovascular disease and diabetes (diabetes).</answer>
+</goal>
+
+<goal name="AdviceFat">
+ 	<description>Lifestyle Advice: Saturated and Trans Fat</description>
+	 	<answer value="LessFat">You eat too much fat. Try to change this! 
+	 	Products with saturated and trans fat are very unhealthy. Saturated fat is commonly found in products as 48+ cheese, sausages, buttercream and chocalate, while trans fat is found in cookies, cake, chips and products from the fryer. 
+	 	Saturated fat and trans fat raise cholesterol. This increases the risk of obesity and arteriosclerosis and therefore more risk of cardiovascular disease, diabetes and problems with the kidneys. 
+	 	Unsaturated fat is healthier than saturated fat. It is important that you eat enough unsaturated fat. This can lower cholesterol. This reduces the risk of cardiovascular disease. Unsaturated fat is usually liquid. Unsaturated fat is, for example, in vegetable oils such as sunflower and olive oil.</answer>
+	    <answer value="no">You do not eat too much fat. That is very healthy!</answer>
+</goal>
+
+<goal name="AdviceSugar">
+ 	<description>Lifestyle Advice: Sugar</description>
+	 	<answer value="LessSugar">You eat too much sugar per day. The advice of the WHO is too eat less than 50 grams of added sugar per day. Sugars are basically energy. Excess energy is stored in your body as fat. Products with added sugars often contain so much energy that you get more energy than you need. This energy is therefore stored in our body as fat. Overweight and obesity (serious overweight) is therefore lurking when you get too much energy through sugars and overweight is strongly associated with higher risks of many types of diseases, so try to lower your suger intake!</answer>
+	    <answer value="no">You do not eat too much sugar. That is very healthy!</answer>
+</goal>
+
+<goal name="AdviceFruit">
+ 	<description>Lifestyle Advice: Fruit</description>
+ 		<answer value="MoreFruit">For your health it is important to eat at least 2 pieces of fruit per day (200 gram). Fruit provides few calories and many nutrients. Fruit is good for your health and is associated with a lower risk of cardiovascular disease. In addition, eating fruit is associated with a lower risk of type 2 diabetes, colon cancer and lung cancer.</answer>
+	    <answer value="no">You eat at least two pieces of fruit every day. That is very healthy! If you eat a lot of fruit, you have less chance of health problems such as cardiovascular disease.</answer>
+</goal>
+
+<goal name="AdviceVegetables">
+ 	<description>Lifestyle Advice: Vegetables</description>
+ 		<answer value="MoreVegetables">You don't eat enough vegetables. The advice is to eat at least 250 grams of vegetables per day. Vegetables are listed in the Wheel of Five. Vegetables provide few calories and many nutrients. Vegetables have many health benefits and are associated with a lower risk of chronic disease.</answer>
+	    <answer value="no">You eat at least 200 grams of vegetables every day. That is very healthy! If you eat a lot of vegetables, you have less chance of health problems such as cardiovascular disease, high blood pressure and diabetes. Vegetables contain many vitamins and minerals. These help you stay healthy. It is also important to eat a different type of vegetable every day. Through variation, your body receives different types of vitamins and minerals. That is even healthier. Continue with this!</answer>
+</goal>
+
+<goal name="AdviceFish">
+ 	<description>Lifestyle Advice: Fish</description>
+ 		<answer value="MoreFish">You don't eat enough (oily) fish. Try to change this! Fish contains omega-3 fatty acids (EPA and DHA). That is good for your heart and your cholesterol. Omega-3 fatty acids are mainly found in oily fish such as herring, mackerel, salmon, sardines and halibut.</answer>
+	    <answer value="no"></answer>
+</goal>
+
+<goal name="AdviceBreakfast">
+ 	<description>Lifestyle Advice: Breakfast</description>
+ 		<answer value="MoreBreakfast">It is important to eat breakfast every day, eating breakfast every day gives you energy and allows you to concentrate better. If you do not eat breakfast every day, you are more likely to get diabetes. If you do have breakfast every day, your body will get energy at different times of the day. Moreover, you eat less (unhealthy) snacks when you have breakfast. </answer>
+	    <answer value="no">You have breakfast every day. That is very healthy! Eating breakfast every day gives you energy and allows you to concentrate better. If you do not eat breakfast every day, you are more likely to get diabetes. If you have breakfast every day, your body will get energy at different times of the day. Moreover, you eat less (unhealthy) snacks when you have breakfast.</answer>
+</goal>
+
+<goal name="AdviceNuts">
+ 	<description>Lifestyle Advice: Nuts</description>
+ 		<answer value="MoreNuts">It is healthy to eat about 15 grams of nuts every day. That's about a hand. People who occasionally eat nuts are less likely to develop cardiovascular disease and have healthier cholesterol. It is important that they are unsalted nuts.</answer>
+	    <answer value="no"></answer>
+</goal>
+
+<goal name="AdviceTea">
+ 	<description>Lifestyle Advice: Tea</description>
+ 		<answer value="MoreTea">It is healthy to drink 3 or 4 cups of green or black tea every day. This can lower your blood pressure and reduce your risk of stroke.</answer>
+	    <answer value="no"></answer>
+</goal>
+
+<goal name="AdviceSmoking">
  	<description>Lifestyle Advice: Smoking</description>
-      	<!-- Based on the answers to the lifestyle questions, we offer specific advice to users. There are many different answer values, as there are many different forms of advice-->
-      	<!-- MAYBE SPLIT EACH FORM OF ADVICE IN SEPERATE GOALS??? -->
-	 	<answer value="QuitSmoking">Smoking can cause all types of disaeases and is heavility related to the risk of forming diabates. We advice you to try and stop smoking, this website contians a lot of useful tips to help you quit: https://www.lung.org/quit-smoking/i-want-to-quit.</answer>
-	    <answer value="no">Smoking can cause all types of disaeases, it is therefore great that you do not smoke. Keep it up!</answer>
-  </goal>
+	 	<answer value="Smoking">People who smoke have more chanche of forming chronic diseases, like diabetes and usually have a shorter life expectancy. We advice you to consider lowering Smoking can cause all types of disaeases and is heavility related to the risk of forming diabates. We advice you to try and stop smoking. This website contians a lot of useful tips to help you quit: www.ikstopnu.nl </answer>
+	 	<answer value="JustQuit">People who smoke have more chanches of forming chronic diseases, like diabetes and usually have a shorter life expectancy. It is therefore great that you quit smoking and we advice you to keep this up! After 1 year your chance of forming hart- and vascular diseases lowers by 50%, together with many other benefits.</answer>
+	    <answer value="no"></answer>
+</goal>
 
-  <!-- more lifestyle columns will be added here -->
+<goal name="AdviceAlcohol">
+ 	<description>Lifestyle Advice: Alcohol</description>
+	 	<answer value="TooMuchAlcohol">From your answers it seems that you drink a lot of alcohol, far above the adviced norm. We advivce you to lower this intake, concrete tips can be found on this website: https://minderdrinken.nl
+	 	People who drink a lot of alcohol are more likely to have health problems. The more alcohol you drink, the more likely you are to have these health problems. Examples of these health problems are cardiovascular disease, cancer and damage to the brain and nerves. Drinking more than five glasses of alcohol every day can damage your coronary arteries. If you drink more than two glasses of alcohol a day, you are more likely to have a stroke. Drinking a lot of alcohol in a short period of time increases the risk of cardiovascular disease, kidney problems and damage to the brain. </answer>
+	 	<answer value="JustTooMuchAlcohol">It is better for your health if you do not drink more alcohol than one glass of alcohol per day. Then you adhere to the Moderate Alcohol Use Norm. We call this moderate drinking.</answer>
+	    <answer value="no"></answer>
+</goal>
 
-  <goal name="RiskDiabetesType2">
+<goal name="AdviceStress">
+ 	<description>Lifestyle Advice: Stress</description>
+	 	<answer value="TooMuchStress">From your answers it seems that you experience problems from stress.
+	 	Stress is a natural response of the body and mind to tensions. Stress can be both positive and negative. Stress is negative when you suffer from it. If you have a lot of stress for a long time, you can suffer from it both mentally and physically. Examples of physical complaints are headaches, muscle pain, sleeping problems and a greater risk of cardiovascular disease. Examples of mental complaints are depression, anxiety and burnout.
+	 	We recommend that you discuss your concerns with someone you trust. That often relieves you and gives you support. This gives you a better overview, which gives you stress. Do you find talking difficult? It also helps to write down problems and how you feel. You can also seek professional help from an institution or organization. </answer>
+	 	<answer value="JustTooMuchStress">Your answers show that you experience some problems that may be related to an imbalance between what you can handle and what you have to do in your daily life. If you have many obligations, problems and appointments for a longer period of time, this can cause a lot of tension (stress). If you also suffer from a reduced vitality, you can get overwhelmed. If you are overworked, you suffer from stress complaints and you function less well. It is important to think about this and talk to friends, family and experts about your situation.</answer>
+	    <answer value="no"></answer>
+</goal>
+
+<goal name="RiskDiabetesType2">
  	<description>Diabetes type 2 risk</description>
         <!-- These are the goal values of diagnosing diabetes type 2. There are 3 risk assessment values, as adviced by our expert.  -->
-        <answer value="lowRisk2">You have a low risk of having diabetes type 2. </answer>
-        <answer value="mediumRisk2">You have a medium risk of having diabetes type 2. We advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. It will be especially valuable to follow the lifestyle tips that the systems gives, as a good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also improve your life if you suffer from diabetes.
+        <answer value="lowRisk2">You have a low risk of diabetes type 2. </answer>
+        <answer value="mediumRisk2">You have a medium risk of  diabetes type 2. We advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. It will be especially valuable to also follow the lifestyle given below. A good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also significantly improve your life if you suffer from diabetes.
         </answer>
-        <answer value="highRisk2">You have a high risk of having diabetes type 1. We advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. It will be especially valuable to follow the lifestyle tips that the systems gives, as a good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also improve your life if you suffer from diabetes.
+        <answer value="highRisk2">You have a high risk of diabetes type 2. YWe advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. It will be especially valuable to follow the lifestyle tips given below. A good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also improve your life if you suffer from diabetes.
         </answer>
         <answer value="no"></answer>
-  </goal>
+</goal>
 
 <!-- As adviced by our expert, we first assess the risk of having diabetes type 1, as in that case, many diabetes type 2 and lifestyle related questions are unneccesary to ask. -->
   <goal name="RiskDiabetesType1">
  	<description>Diabetes Type 1 risk</description>
       	<!-- There are 2 possible forms of diabetes that can occur in our test. Here are first the possibilities of answers for a risk assesment of diabetes type 1. No lifestyle advice is given here, as that does not apply to people with (a risk of) diabetes 1. -->
-	    <answer value="mediumRisk1">You have a medium risk of having diabetes type 1. We advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. </answer>
-	    <answer value="highRisk1">You have a high risk of having diabetes type 1. We advice you to visit a doctor and take a diabetes test. A simple blood test at your general practitioner can quickly confirm this.</answer>
+	    <answer value="mediumRisk1">You have a medium risk of diabetes type 1. We advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. </answer>
+	    <answer value="highRisk1">You have a high risk of diabetes type 1. We advice you to visit a doctor and take a diabetes test. A simple blood test at your general practitioner can quickly confirm this.</answer>
 	    <answer value="ketoacidose">You are experiencing the symptoms of a ketoacidose, this an advanced and dangerous stage of diabetes type 1. We advice you to go to call a doctor as soon as possible or possibly call the emergency services. </answer>
         <!-- It could also be that a person does not have diabetes type 1 symptoms, but the symptoms relate to some other disease, our test is incapalbe of assesssing these other possible diseases as our expert lacks knowledge about this -->
-        <answer value="OtherSymptoms">Your symptoms seem not to be related to diabetes, we do advice you to see a doctor.</answer>
-
+        <answer value="OtherSymptoms">Your symptoms seem to be unrelated to diabetes type 1, but could be caused by another diseases such as diabetes type 2 (see the above test result for your risk on diabetes type 2), or something else, we do advice you to see a doctor.</answer>
         <answer value="No"></answer>
   </goal>
 
 
-	  <!--  multiple chopice test !!! -->
+<!-- below follow the rules, split up in lifestyle rules and diabetes rules --> 
 
-		<goal name="MultipleChoice">
-		<description>multiple choise</description>
-
-				<answer value="itworks">It works!!!!</answer>
-				<answer value="no"></answer>
-		</goal>
-
-		<rule>
-			<description>multi test</description>
-			<if>
-					<and>
-						<fact name="multi1">yes</fact>
-						<fact name="multi2">yes</fact>
-						<fact name="multi3">yes</fact>
-					</and>
-			</if>
-			<then>
-				<fact name="MultipleChoice">itworks</fact>
-		</then>
-		</rule>
-
-
-
-		<question> <!-- mult choice-->
-			<multiple> yes </multiple>
-			<description>we gaan nu even kijken of het lukt</description>
-			<option>
-				<description> nummer 1 </description>
-				<then>
-					<fact name="multi1">yes</fact>
-				</then>
-			</option>
-			<option>
-				<description> nummer 2 </description>
-				<then>
-					<fact name="multi2">yes</fact>
-				</then>
-			</option>
-			<option>
-				<description> nummer 3 </description>
-				<then>
-					<fact name="multi3">yes</fact>
-				</then>
-			</option>
-		</question>
-
-
-
-
-<!-- Rules for lifestyle -->
-
+<!-- Every lifestyle rule has a type 1 check, as in the case of diabetes type 1, we do not offer lifestyle advice-->
+<!-- Rules for lifestyle tips for exercise -->
   	<rule>
-	  	<description>Advice More Sport</description>
+	  	<description>Lifestyle advice: exercise more!</description>
 	  	<if>
       		<and>
       			<fact name="type1">no</fact>
-  				<fact name="sport">no</fact>
+  				<fact name="Exercise">yes</fact>
 			</and>
 	  	</if>
 	  	<then>
 		  	<fact name="AdviceSport">SportMore</fact>
 	  </then>
   	</rule>
-  	<rule>
-	  	<description>Advice Sport Good</description>
+
+	<rule>
+	  	<description>Lifestyle advice: exercise can be better</description>
 	  	<if>
       		<and>
       			<fact name="type1">no</fact>
-  				<fact name="sport">yes</fact>
+  				<fact name="Exercise">some</fact>
+			</and>
+	  	</if>
+	  	<then>
+		  	<fact name="AdviceSport">SportaBitMore</fact>
+	  </then>
+  	</rule>
+
+  	<rule>
+	  	<description>Lifestyle advice: exercise good</description>
+	  	<if>
+      		<and>
+      			<fact name="type1">no</fact>
+  				<fact name="Exercise">no</fact>
 			</and>
 	  	</if>
 	  	<then>
@@ -138,136 +160,417 @@
 	  </then>
   	</rule>
 
+<!-- Rules for lifestyle tips for breakfast-->
+
   	<rule>
-	  	<description>Lifestyle sugar</description>
+	  	<description>Lifestyle advice: more breakfast </description>
 	  	<if>
       		<and>
       			<fact name="type1">no</fact>
-      			<fact name="sugar">bad</fact>
-	      		<fact name="vegatables">good</fact>
+      			<fact name="breakfast">no</fact>
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceFood">EatLessSugar</fact>
+		  	<fact name="AdviceBreakfast">MoreBreakfast</fact>
 	  </then>
   	</rule>
 
   	<rule>
-	  	<description>Lifestyle sugar and veggies </description>
+	  	<description>Lifestyle advice: breakfast good </description>
 	  	<if>
       		<and>
       			<fact name="type1">no</fact>
-      			<fact name="sugar">bad</fact>
-	      		<fact name="vegatables">bad</fact>
+      			<fact name="breakfast">yes</fact>
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceFood">EatMoreVeggiesAndLessSugar</fact>
+		  	<fact name="AdviceBreakfast">no</fact>
 	  </then>
   	</rule>
 
+<!-- Rules for lifestyle tips for tea, nuts and fish -->
   	<rule>
-	  	<description>Lifestyle sugar and veggies good </description>
+	  	<description>Lifestyle advice: more nuts</description>
 	  	<if>
       		<and>
       			<fact name="type1">no</fact>
-      			<fact name="sugar">good</fact>
-	      		<fact name="vegatables">good</fact>
+      			<fact name="nuts">no</fact>
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceFood">no</fact>
+		  	<fact name="AdviceNuts">MoreNuts</fact>
 	  </then>
   	</rule>
 
   	<rule>
-	  	<description>Lifestyle stop smoking</description>
+	  	<description>Lifestyle advice: more tea</description>
 	  	<if>
       		<and>
       			<fact name="type1">no</fact>
-      			<fact name="smoking">yes</fact>
+      			<fact name="tea">no</fact>
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceSmoking">QuitSmoking</fact>
+		  	<fact name="AdviceTea">MoreTea</fact>
 	  </then>
   	</rule>
 
   	<rule>
-	  	<description>Lifestyle smoking good</description>
+	  	<description>Lifestyle advice: more fish </description>
 	  	<if>
       		<and>
       			<fact name="type1">no</fact>
-      			<fact name="smoking">no</fact>
+      			<fact name="fish">justquit</fact>
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceSmoking">no</fact>
+		  	<fact name="AdviceFish">MoreFish</fact>
 	  </then>
   	</rule>
 
-
-<!-- Rules for specific Diabetes Type 1 Diagnoses -->
+<!-- Rules for lifestyle tips for fat -->
   	<rule>
-	  	<description>Type 1 ketoacidose</description>
+	  	<description>Lifestyle advice: too much fat</description>
 	  	<if>
-	      	<and>
-	  			<fact name="type1">yes</fact>
-				<fact name="PassOut">yes</fact>
-			</and>
+	  		<or>
+				<and>
+					<fact name="type1">no</fact>
+      				<fact name="fried">verylot</fact>
+				</and>
+				<and>
+					<fact name="type1">no</fact>
+      				<fact name="snack">verylot</fact>
+				</and>
+				<and>
+					<fact name="type1">no</fact>
+					<fact name="snack">lot</fact>
+					<fact name="fried">lot</fact>
+				</and>
+				<and>
+					<fact name="type1">no</fact>
+					<fact name="snack">some</fact>
+					<fact name="fried">lot</fact>
+					<fact name="cheese">lot</fact>
+					<fact name="CheeseKind">fat</fact>
+				</and>
+				<and>
+					<fact name="type1">no</fact>
+					<fact name="snack">lot</fact>
+					<fact name="fried">some</fact>
+					<fact name="cheese">lot</fact>
+					<fact name="CheeseKind">fat</fact>
+				</and>
+				<and>
+					<fact name="type1">no</fact>
+					<fact name="snack">some</fact>
+					<fact name="fried">some</fact>
+					<fact name="cheese">lot</fact>
+					<fact name="CheeseKind">fat</fact>
+					<fact name="wholegrain">no</fact>
+				</and>
+				<and>
+					<fact name="type1">no</fact>
+					<fact name="snack">some</fact>
+					<fact name="fried">some</fact>
+					<fact name="cheese">lot</fact>
+					<fact name="CheeseKind">fat</fact>
+					<fact name="wholegrain">bit</fact>
+				</and>
+			</or>
 	  	</if>
 	  	<then>
-		  	<fact name="RiskDiabetesType1">ketoacidose</fact>
-		  	<fact name="LifestyleAdvices">undefined</fact>
+		  	<fact name="AdviceFat">LessFat</fact>
 	  </then>
   	</rule>
 
   	<rule>
-	  	<description>Type 1 High Risk</description>
+	  	<description>Lifestyle advice: good in fats</description>
 	  	<if>
-	  	    <and>
-		  		<fact name="type1">yes</fact>
-		  		<fact name="PassOut">no</fact>
-				<fact name="Age1">high</fact>
+			<and>
+				<fact name="type1">no</fact>
+					<not>
+						<fact name="AdviceFat">LessFat</fact>
+					</not>
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="RiskDiabetesType1">highRisk1</fact>
-		  	<fact name="LifestyleAdvices">undefined</fact>
+		  	<fact name="AdviceFat">no</fact>
+	  </then>
+  	</rule>
+
+
+<!-- Rules for lifestyle tips for sugar & sweets -->
+  	<rule>
+	  	<description>Lifestyle advice: too much sugar and sweets</description>
+	  	<if>
+	  		<or>
+      			<and>
+      				<fact name="type1">no</fact>
+      				<fact name="sugar">lot</fact>
+				</and>
+				<and>
+					<fact name="type1">no</fact>
+      				<fact name="sweets">lot</fact>
+				</and>
+				<and>
+					<fact name="type1">no</fact>
+      				<fact name="sweets">some</fact>
+      				<fact name="sugar">some</fact>
+				</and>
+				<and>
+					<fact name="type1">no</fact>
+      				<fact name="sweets">some</fact>
+      				<fact name="sugar">bit</fact>
+				</and>
+				<and>
+					<fact name="type1">no</fact>
+      				<fact name="sweets">bit</fact>
+      				<fact name="sugar">some</fact>
+				</and>
+			</or>
+	  	</if>
+	  	<then>
+		  	<fact name="AdviceSugar">LessSugar</fact>
 	  </then>
   	</rule>
 
   	<rule>
-	  	<description>Type 1 Medium Risk</description>
+	  	<description>Lifestyle advice: good in sugar</description>
 	  	<if>
-	      	<and>
-	  			<fact name="type1">yes</fact>
-	  	  		<fact name="PassOut">no</fact>
-				<fact name="Age1">medium</fact>
+			<not>
+				<and>
+					<fact name="type1">yes</fact>
+					<fact name="AdviceSugar">LessSugar</fact>
+				</and>
+			</not>
+	  	</if>
+	  	<then>
+		  	<fact name="AdviceSugar">no</fact>
+	  </then>
+  	</rule>
+
+<!-- Rules for lifestyle tips for fruit -->
+
+  	<rule>
+	  	<description>Lifestyle advice: more fruit </description>
+	  	<if>
+      		<and>
+      			<fact name="type1">no</fact>
+      			<fact name="fruit">bad</fact>
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="RiskDiabetesType1">mediumRisk1</fact>
-		  	<fact name="LifestyleAdvices">undefined</fact>
+		  	<fact name="AdviceFruit">MoreFruit</fact>
 	  </then>
   	</rule>
 
   	<rule>
-	  	<description>Type 1 Medium Risk</description>
+	  	<description>Lifestyle advice: fruit good </description>
 	  	<if>
-	      	<and>
-	  			<fact name="type1">yes</fact>
-	  	  		<fact name="PassOut">no</fact>
-				<fact name="Age1">low</fact>
+      		<and>
+      			<fact name="type1">no</fact>
+      			<fact name="fruit">good</fact>
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="RiskDiabetesType1">mediumRisk1</fact>
-		  	<fact name="LifestyleAdvices">undefined</fact>
+		  	<fact name="AdviceFruit">no</fact>
 	  </then>
   	</rule>
 
-<!-- Rules for Diabetes Type 2 Diagnoses -->
+<!-- Rules for lifestyle tips for vegetables -->
+  	<rule>
+	  	<description>Lifestyle advice: more vegetables</description>
+	  	<if>
+      		<or>
+      			<and>
+      				<fact name="type1">no</fact>
+      				<fact name="vegetables">no</fact>
+      			</and>
+      			<and>
+      				<fact name="type1">no</fact>
+      				<fact name="vegetables">some</fact>
+      			</and>
+      			<and>
+      				<fact name="type1">no</fact>
+      				<fact name="vegetables">bit</fact>
+      			</and>
+			</or>
+	  	</if>
+	  	<then>
+		  	<fact name="AdviceVegetables">MoreVegetables</fact>
+	  </then>
+  	</rule>
+
+  	<rule>
+	  	<description>Lifestyle advice: good in vegetables</description>
+	  	<if>
+      		<and>
+      			<fact name="type1">no</fact>
+      			<fact name="vegetables">lot</fact>
+			</and>
+	  	</if>
+	  	<then>
+		  	<fact name="AdviceVegetables">no</fact>
+	  </then>
+  	</rule>
+
+
+
+<!-- Rules for lifestyle tips for stress -->
+<!-- = lastig -> moet nog -->
+<rule>
+	  	<description>Lifestyle advice: too much stress</description>
+	  	<if>
+	  		<or>
+      			<and>
+      				<fact name="type1">no</fact>
+      				<fact name="stress">lot</fact>
+      			
+      					<not>
+      						<fact name="stresswork">no</fact>
+      					</not>
+   						<not>
+      						<fact name="stressother">no</fact>
+   						</not>
+      					
+				</and>
+				<and>
+					<fact name="type1">no</fact>
+      				<fact name="stresswork">lot</fact>
+      				
+      					<not>
+      						<fact name="stress">no</fact>
+      						<fact name="stressother">no</fact>
+      					</not>
+				</and>
+				<and>
+					<fact name="type1">no</fact>
+      				<fact name="stressother">lot</fact>
+      				<not>
+      						<fact name="stress">no</fact>
+      						<fact name="stresswork">no</fact>
+      				</not>
+				</and>
+				<and>
+					<fact name="type1">no</fact>
+      				<fact name="stress">some</fact>
+      				<fact name="stresswork">some</fact>
+      				<fact name="stressother">some</fact>
+      				<fact name="finance">lot</fact>
+				</and>
+				<and>
+					<fact name="type1">no</fact>
+      				<fact name="stress">some</fact>
+      				<fact name="stresswork">some</fact>
+      				<fact name="stressother">some</fact>
+      				<fact name="energy">no</fact>
+				</and>
+				<and>
+					<fact name="type1">no</fact>
+      				<fact name="stress">some</fact>
+      				<fact name="stresswork">some</fact>
+      				<fact name="stressother">some</fact>
+      				<fact name="energy">bit</fact>
+      				<fact name="finance">bit</fact>
+				</and>
+			</or>
+	  	</if>
+	  	<then>
+		  	<fact name="AdviceStress">TooMuchStress</fact>
+	  </then>
+  	</rule>
+
+<rule>
+	  	<description>Lifestyle advice: good in sstres</description>
+	  	<if>
+			<and>
+				<fact name="type1">no</fact>
+				<not>
+					<fact name="AdviceStress">TooMuchStress</fact>
+				</not>
+				<not>
+					<fact name="AdviceStress">JustTooMuchStress</fact>
+				</not>
+			</and>
+	  	</if>
+	  	<then>
+		  	<fact name="AdviceStress">no</fact>
+	  </then>
+  	</rule>
+
+
+
+
+<!-- Rules for lifestyle tips for alcohol -->
+  	<rule>
+	  	<description>Lifestyle advice: too much alcohol</description>
+	  	<if>
+	  		<or>
+      			<and>
+      				<fact name="type1">no</fact>
+      				<fact name="alcohol">yes</fact>
+      				<fact name="alcoholamount">lot</fact>
+				</and>
+				<and>
+					<fact name="type1">no</fact>
+      				<fact name="alcohol">yes</fact>
+      				<fact name="alcoholamount">some</fact>
+				</and>
+			</or>
+	  	</if>
+	  	<then>
+		  	<fact name="AdviceAlcohol">TooMuchAlcohol</fact>
+	  </then>
+  	</rule>
+
+  	<rule>
+	  	<description>Lifestyle advice: just too much alcohol</description>
+	  	<if>
+			<and>
+				<fact name="type1">no</fact>
+      			<fact name="alcohol">yes</fact>
+      			<fact name="alcoholamount">bit</fact>
+			</and>
+	  	</if>
+	  	<then>
+		  	<fact name="AdviceAlcohol">JustTooMuchAlcohol</fact>
+	  </then>
+  	</rule>
+
+
+<!-- Rules for lifestyle tips for smoking -->
+  	<rule>
+	  	<description>Lifestyle advice: stop smoking</description>
+	  	<if>
+      		<and>
+      			<fact name="type1">no</fact>
+      			<fact name="smoker">yes</fact>
+			</and>
+	  	</if>
+	  	<then>
+		  	<fact name="AdviceSmoking">Smoking</fact>
+	  </then>
+  	</rule>
+
+  	<rule>
+	  	<description>Lifestyle advice: keep quitting smoking</description>
+	  	<if>
+      		<and>
+      			<fact name="type1">no</fact>
+      			<fact name="smoker">justquit</fact>
+			</and>
+	  	</if>
+	  	<then>
+		  	<fact name="AdviceSmoking">JustQuit</fact>
+	  </then>
+  	</rule>
+
+
+<!-- Rules for Diabetes Type 2 Diagnoses 
+	Note: As our expert indicated, it is very hard to effectively distinguish between risk types. -->
+
+<!-- = lastig -> moet nog -->
+
     <rule>
 	  	<description>Diagnose high Risk type 2</description>
 	  	<if>
@@ -276,13 +579,13 @@
 		  			<fact name="type1">no</fact>
 		  			<fact name="tired">yes</fact>
 					<fact name="BMI">high</fact>
-					<fact name="Age2">high</fact>
+					<fact name="Age">high</fact>
 				</and>
 				<and>
 		  			<fact name="type1">no</fact>
 		  			<fact name="tired">sometimes</fact>
 		  			<fact name="BMI">high</fact>
-		  			<fact name="Age2">high</fact>
+		  			<fact name="Age">high</fact>
 				</and>
 			</or>
 	  	</if>
@@ -299,31 +602,31 @@
 		  			<fact name="type1">no</fact>
 		  			<fact name="tired">sometimes</fact>
 		  			<fact name="BMI">medium</fact>
-		  			<fact name="Age2">medium</fact>
+		  			<fact name="Age">medium</fact>
 				</and>
 				<and>
 		  			<fact name="type1">no</fact>
 		  			<fact name="tired">sometimes</fact>
 		  			<fact name="BMI">high</fact>
-		  			<fact name="Age2">medium</fact>
+		  			<fact name="Age">medium</fact>
 				</and>
 				<and>
 		  			<fact name="type1">no</fact>
 		  			<fact name="tired">sometimes</fact>
 		  			<fact name="BMI">medium</fact>
-		  			<fact name="Age2">high</fact>
+		  			<fact name="Age">high</fact>
 				</and>
 				<and>
 		  			<fact name="type1">no</fact>
 		  			<fact name="tired">yes</fact>
 		  			<fact name="BMI">high</fact>
-		  			<fact name="Age2">medium</fact>
+		  			<fact name="Age">medium</fact>
 				</and>
 				<and>
 		  			<fact name="type1">no</fact>
 		  			<fact name="tired">yes</fact>
 		  			<fact name="BMI">medium</fact>
-		  			<fact name="Age2">high</fact>
+		  			<fact name="Age">high</fact>
 				</and>
 			</or>
 	  	</if>
@@ -331,57 +634,139 @@
 		  	<fact name="RiskDiabetesType2">mediumRisk2</fact>
 	  </then>
   	</rule>
-
+  	<!--
     <rule>
-	  	<description>Diagnose low Risk type 2</description>
+	  	<description>Diagnose low Risk type 2:
+	  	A low age, low BMI and low girth are the most imporant indicators. If these are all low, we don't have to ask any questions. </description>
 	  	<if>
-	  	   	<or>
-	  	   		<and>
-		  			<fact name="type1">no</fact>
-					<fact name="tired">no</fact>
-					<fact name="BMI">low</fact>
-					<fact name="Age2">low</fact>
-				</and>
-				<and>
-		  			<fact name="type1">no</fact>
-		  			<fact name="tired">no</fact>
-		  			<fact name="BMI">medium</fact>
-		  			<fact name="Age2">low</fact>
-				</and>
-				<and>
-		  			<fact name="type1">no</fact>
-		  			<fact name="tired">no</fact>
-		  			<fact name="BMI">low</fact>
-		  			<fact name="Age2">medium</fact>
-				</and>
-				<and>
-		  			<fact name="type1">no</fact>
-		  			<fact name="tired">no</fact>
-		  			<fact name="BMI">medium</fact>
-		  			<fact name="Age2">medium</fact>
-				</and>
-				<and>
-		  			<fact name="type1">no</fact>
-		  			<fact name="tired">yes</fact>
-		  			<fact name="BMI">low</fact>
-		  			<fact name="Age2">low</fact>
-				</and>
-			</or>
+	  		<and>
+	  			<not>
+	  				<fact name="RiskDiabetesType2">mediumRisk2</fact>
+	  			</not>
+	  			<not>
+	  				<fact name="RiskDiabetesType2">highRisk2</fact>
+	  			</not>
+	  		</and>
 	  	</if>
 	  	<then>
-		  	<fact name="type2Check">assessed</fact>
+		  	<fact name="RiskDiabetesType2">lowRisk2</fact>
+	  </then>
+  	</rule>-->
+  	<rule>
+	  	<description>Lifestyle advice: good in fats</description>
+	  	<if>
+			<and>
+				<fact name="type1">no</fact>
+				<fact name="check2">yes</fact>
+				<fact name="check3">yes</fact>
+				<fact name="check4">yes</fact>
+				<fact name="check5">yes</fact>
+				<fact name="check6">yes</fact>
+			</and>
+	  	</if>
+	  	<then>
+		  	<fact name="RiskDiabetesType2">lowRisk2</fact>
+	  </then>
+  	</rule>
+
+
+<!-- Rules for specific Diabetes Type 1 Diagnoses -->
+
+<!-- = lastig -> moet nog -->
+
+  	<rule>
+	  	<description>Type 1 ketoacidose:
+	 	When someone suffers from the type 1 symmtoms in the past weeks and has passed out, we move directly to a ketoacidose advice, as you cannot waste time with this. We skip the lifestyle questions</description>
+	  	<if>
+	      	<and>
+	  			<fact name="type1">yes</fact>
+				<fact name="PassOut">yes</fact>
+			</and>
+	  	</if>
+	  	<then>
+		  	<fact name="RiskDiabetesType1">ketoacidose</fact>
+		  	<fact name="LifestyleAdvices">undefined</fact>
+	  </then>
+  	</rule>
+
+  	<rule>
+	  	<description>Type 1 High Risk:
+	  	If we find someone with a high risk of diabetes type 1, we skip the lifestyle questions, as adviced by our expert.</description>
+	  	<if>
+	  	    <and>
+		  		<fact name="type1">yes</fact>
+		  		<fact name="PassOut">no</fact>
+				<fact name="Age">low</fact>
+				<fact name="family1">yes</fact>
+			</and>
+	  	</if>
+	  	<then>
+		  	<fact name="RiskDiabetesType1">highRisk1</fact>
+	  </then>
+  	</rule>
+
+  	<rule>
+	  	<description>Type 1 Medium Risk:
+	  	If we find someone with a medium risk of diabetes type 1, we skip the lifestyle questions, as adviced by our expert.</description>
+	  	<if>
+	      	<and>
+	  			<fact name="type1">yes</fact>
+	  	  		<fact name="PassOut">no</fact>
+				<or>
+					<and>
+						<fact name="Age">low</fact>
+						<fact name="family1">no</fact>
+					</and>
+					<and>
+						<fact name="Age">medium</fact>
+						<fact name="family1">yes</fact>
+					</and>
+					<and>
+						<fact name="Age">high</fact>
+						<fact name="family1">yes</fact>
+					</and>
+				</or>
+			</and>
+	  	</if>
+	  	<then>
+		  	<fact name="RiskDiabetesType1">mediumRisk1</fact>
+	  </then>
+  	</rule>
+
+  	<rule>
+	  	<description>Type 1 Low Risk:
+	  	If we find someone with a low risk of diabetes type 1 -> we state that the symptoms might be related to another disease, and we also check for diabetes type 2, after which we move to lifestyle questions.</description>
+	  	<if>
+	      	<and>
+	  			<fact name="type1">yes</fact>
+	  	  		<fact name="PassOut">no</fact>
+				<or>
+					<and>
+						<fact name="Age">medium</fact>
+						<fact name="family1">no</fact>
+					</and>
+					<and>
+						<fact name="Age">high</fact>
+						<fact name="family1">no</fact>
+					</and>
+				</or>
+			</and>
+	  	</if>
+	  	<then>
+		  	<fact name="RiskDiabetesType1">OtherSymptoms</fact>
+		  	<fact name="type1">no</fact>
 	  </then>
   	</rule>
 
 
 <!-- Rules for assessing if diabetes 1 or 2  -->
-
     <rule>
-	  	<description>Diagnose type 1</description>
+	  	<description>Diagnose type 1: 
+	  	If someone suffers from diabetes related symptoms and these have started in the past few weeks, we check for diabetes type 1 risk first, if this turns out a dead end -> we also check for type 2. </description>
 	  	<if>
 	  		<and>
 		  		<fact name="type1Symptoms">yes</fact>
-		  		<fact name="SymptomsRecent">yes</fact>
+		  		<fact name="lastweeks">yes</fact>
 			</and>
 	  	</if>
 	  	<then>
@@ -390,11 +775,12 @@
   	</rule>
 
     <rule>
-	  	<description>Diagnose type 2</description>
+	  	<description>Diagnose type 2:
+	  	if someone suffers from symptoms related to diabetes, but these have not started in the past few weeks, the chance of diabetes 1 is very low, so we check for type 2.</description>
 	  	<if>
 	  		<and>
 	  			<fact name="type1Symptoms">yes</fact>
-				<fact name="SymptomsRecent">no</fact>
+				<fact name="lastweeks">no</fact>
 			</and>
 	  	</if>
 	  	<then>
@@ -403,7 +789,8 @@
   	</rule>
 
   	<rule>
-	  	<description>Directly to lifestyle questions</description>
+	  	<description>Directly to lifestyle questions:
+	  	If someone has not 1 symptom related to diabetes type 1 and 2, the risk is too low to pose unneccesarry questions about this, so we directly move to the lifestyle advice section.</description>
 	  	<if>
 			<fact name="type1Symptoms">no</fact>
 	  	</if>
@@ -412,38 +799,105 @@
 	  </then>
   	</rule>
 
+<!-- Test rule for multiple -->
+    <rule>
+	  	<description>Multiple test</description>
+	  	<if>
+	  		<or>
+	  			<fact name="drymouth">yes</fact>
+			</or>
+			<or>
+	  			<fact name="urinating">yes</fact>
+			</or>
+			<or>
+	  			<fact name="hungry">yes</fact>
+			</or>
+			<or>
+	  			<fact name="weight">yes</fact>
+			</or>
+			<or>
+	  			<fact name="eye-sight">yes</fact>
+			</or>
+	  	</if>
+	  	<then>
+		  	<fact name="type1Symptoms">yes</fact>
+	  </then>
+  	</rule> -->
 
 <!-- Start of the questions-->
 
 <!-- These 2 questions are posed at the start to filter between possibilities of type 1, type 2 or only lifestyle advice-->
+	
 	<question>
-		<description> Do you experience any of the following symptoms: dry mouth, frequently urinating, more than usually hungry, sudden weight losses/gains, blurry eye-sight? </description>
+		<description> Do you experience any of the following symptoms? You can select each one that you experience.  dry mouth, frequently urinating, more than usually hungry, sudden weight losses/gains, blurry eye-sight? </description>
+		<muliple> yes </muliple>
 		<option>
-			<description> Yes</description>
+			<description>Dry mouth</description>
+			<then>
+				<fact name="drymouth">yes</fact>
+			</then>
+		</option>
+		<option>
+			<description>Frequently urinating</description>
+			<then>
+				<fact name="urinating">yes</fact>
+			</then>
+		</option>
+		<option>
+			<description>More than usually hungry</description>
+			<then>
+				<fact name="hungry">yes</fact>
+			</then>
+		</option>
+		<option>
+			<description>Sudden weight losses/gains</description>
+			<then>
+				<fact name="weight">yes</fact>
+			</then>
+		</option>
+		<option>
+			<description>Blurry eye-sight</description>
+			<then>
+				<fact name="eye-sight">yes</fact>
+			</then>
+		</option>
+		<option>
+			<description>None of these</description>
+			<then>
+				<fact name="type1Symptoms">no</fact>
+			</then>
+		</option>
+	</question> 
+
+<!--
+	<question>
+		<description> check zeg yes hier </description>
+		<option>
+			<description> Yes, since a couple a weeks or less </description>
 			<then>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
-			<description> No</description>
+			<description> No, I have experienced (at least some of) them longer than a couple of weeks</description>
 			<then>
 				<fact name="type1Symptoms">no</fact>
 			</then>
 		</option>
-	</question>
+	</question>-->
 
 	<question>
 		<description> Have these symptoms started suddenly in the last few weeks or shorter? </description>
 		<option>
 			<description> Yes, since a couple a weeks or less </description>
 			<then>
-				<fact name="type1">yes</fact>
+				<fact name="lastweeks">yes</fact>
 			</then>
 		</option>
 		<option>
 			<description> No, I have experienced (at least some of) them longer than a couple of weeks</description>
 			<then>
-				<fact name="type1">no</fact>
+				<fact name="lastweeks">no</fact>
 			</then>
 		</option>
 	</question>
@@ -466,69 +920,122 @@
 	</question>
 
 	<question>
+		<description>Does anyone in your direct family have diabetes type 1?
+		with direct family we only mean brothers, sisters, father, mother or sun and daugher</description>
+		<option>
+			<description>Yes</description>
+			<then>
+				<fact name="family1">yes</fact>
+			</then>
+		</option>
+		<option>
+			<description>No</description>
+			<then>
+				<fact name="family1">no</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
 		<description> How old are you? </description>
 		<option>
 			<description> Over 50 </description>
 			<then>
-				<fact name="Age1">low</fact>
+				<fact name="Age">high</fact>
 			</then>
 		</option>
 		<option>
 			<description> Between 20-50 </description>
 			<then>
-				<fact name="Age1">medium</fact>
+				<fact name="Age">medium</fact>
 			</then>
 		</option>
 		<option>
 			<description> Under 20 </description>
 			<then>
-				<fact name="Age1">high</fact>
+				<fact name="Age">low</fact>
 			</then>
 		</option>
 	</question>
 
 <!-- These are questions related to assessing the risk of diabetes type 2-->
 	<question>
-		<description> How old are you? </description>
+		<description> Do you identify as male or female?</description>
 		<option>
-			<description> Over 65 </description>
+			<description>Male</description>
 			<then>
-				<fact name="Age2">high</fact>
+				<fact name="gender">male</fact>
 			</then>
 		</option>
 		<option>
-			<description> Between 50-65 </description>
+			<description>Female</description>
 			<then>
-				<fact name="Age2">medium</fact>
+				<fact name="gender">female</fact>
 			</then>
 		</option>
 		<option>
-			<description> Under 50 </description>
+			<description>Other</description>
 			<then>
-				<fact name="Age2">low</fact>
+				<fact name="gender">other</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>What is your abdominal girth? 
+		You can measure you abdominal girth on your bare belly with measuring tape, make sure that you measure between the lowest rib and the belly button, make sure the measuring tape is horizontal.</description>
+		<option>
+			<description>Lower or equal than 88</description>
+			<then>
+				<fact name="womengirth">low</fact>
+			</then>
+		</option>
+		<option>
+			<description>Higher than 88</description>
+			<then>
+				<fact name="womengirth">high</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>What is your abdominal girth? 
+		You can measure you abdominal girth on your bare belly with measuring tape, make sure that you measure between the lowest rib and the belly button, make sure the measuring tape is horizontal.</description>
+		<option>
+			<description>Lower or equal than 102</description>
+			<then>
+				<fact name="mengirth">low</fact>
+			</then>
+		</option>
+		<option>
+			<description>Higher than 102</description>
+			<then>
+				<fact name="mengirth">high</fact>
 			</then>
 		</option>
 	</question>
 
 	<question>
 		<description> What is your BMI? </description>
-		<!--<number> yes </number>-->
 		<option>
-			<description> Higher than 27.5 </description>
+			<description> More than 27.5 </description>
 			<then>
 				<fact name="BMI">high</fact>
+				<fact name="check2">yes</fact>
 			</then>
 		</option>
 		<option>
 			<description> Between 25-27.5 </description>
 			<then>
 				<fact name="BMI">medium</fact>
+				<fact name="check2">yes</fact>
 			</then>
 		</option>
 		<option>
 			<description> Lower than 25 </description>
 			<then>
 				<fact name="BMI">low</fact>
+				<fact name="check2">yes</fact>
 			</then>
 		</option>
 	</question>
@@ -539,18 +1046,111 @@
 			<description> Yes </description>
 			<then>
 				<fact name="tired">yes</fact>
+				<fact name="check3">yes</fact>
+
 			</then>
 		</option>
 		<option>
 			<description> Sometimes </description>
 			<then>
 				<fact name="tired">sometimes</fact>
+				<fact name="check3">yes</fact>
+
 			</then>
 		</option>
 		<option>
 			<description> No </description>
 			<then>
 				<fact name="tired">no</fact>
+				<fact name="check3">yes</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>Do or did you ever smoke regularly?</description>
+		<option>
+			<description>Yes</description>
+			<then>
+				<fact name="smoke2">yes</fact>
+				<fact name="check4">yes</fact>
+			</then>
+		</option>
+		<option>
+			<description> No </description>
+			<then>
+				<fact name="smoke2">no</fact>
+				<fact name="check4">yes</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>Does anyone in your direct family have diabetes type 2?
+		with direct family we only mean brothers, sisters, father, mother or sun and daugher</description>
+		<option>
+			<description>Yes</description>
+			<then>
+				<fact name="family2">yes</fact>
+				<fact name="check5">yes</fact>
+			</then>
+		</option>
+		<option>
+			<description>No</description>
+			<then>
+				<fact name="family2">no</fact>
+				<fact name="check5">yes</fact>
+			</then>
+		</option>
+	</question>
+
+	<question> <!-- type 2 -->
+		<description>Are you from a Surinamese, Hindustani, Turkish or Moroccan descent?
+		Note: These races have a genetic pre-disposition for diabetes type 2</description>
+		<option>
+			<description>Yes</description>
+			<then>
+				<fact name="descent">yes</fact>
+				<fact name="check6">yes</fact>
+			</then>
+		</option>
+		<option>
+			<description>No</description>
+			<then>
+				<fact name="descent">no</fact>
+				<fact name="check6">yes</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>For which of the following diseases have you been treated by a doctor?</description>
+		<option>
+			<description> Yes </description>
+			<then>
+				<fact name="diseases">yes</fact>
+			</then>
+		</option>
+		<option>
+			<description> No </description>
+			<then>
+				<fact name="diseases">no</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>Have you ever had pregnancy diabetes?</description>
+		<option>
+			<description>Yes</description>
+			<then>
+				<fact name="pregnancy">yes</fact>
+			</then>
+		</option>
+		<option>
+			<description>No</description>
+			<then>
+				<fact name="pregnancy">no</fact>
 			</then>
 		</option>
 	</question>
@@ -558,69 +1158,734 @@
 
 <!-- These are questions related to lifestyle-->
 	<question>
-		<description>How much do you sport on average per day?</description>
+		<description>How many minutes of moderate and heavy exercise do you do per week?
+		When answering the questions, think about a typical week in the past month.			
+		With 'Moderate effort' you still have enough breath to be able to talk. For example: walking briskly, climbing stairs, cycling briskly, swimming, gardening or vacuuming. 
+		With 'Heavy exertion' you start to sweat. Your breath is much faster and you cannot keep talking. For example: intensive sports, running, fast cycling or heavy physical work such as digging in the garden. </description>
 		<option>
-			<description> More than 30 minutes </description>
+			<description>More than 150 minutes </description>
 			<then>
-				<fact name="sport">yes</fact>
+				<fact name="Exercise">yes</fact>
 			</then>
 		</option>
 		<option>
-			<description> Less than 30 minutes </description>
+			<description>Between 100-150 minutes </description>
 			<then>
-				<fact name="sport">no</fact>
+				<fact name="Exercise">some</fact>
 			</then>
 		</option>
-	</question>
-	<question>
-		<description>How much vegatables do you eat per day?</description>
+
 		<option>
-			<description> More than 250 gram </description>
+			<description> Less than 100 minutes minutes </description>
 			<then>
-				<fact name="vegatables">good</fact>
-			</then>
-		</option>
-		<option>
-			<description> Less than 250 gram </description>
-			<then>
-				<fact name="vegatables">bad</fact>
-			</then>
-		</option>
-	</question>
-	<question>
-		<description>How many times do you eat a big portion of sweet food per day (like cake, pie or chocalate)? </description>
-		<option>
-			<description> (almost) Never </description>
-			<then>
-				<fact name="sugar">good</fact>
-			</then>
-		</option>
-		<option>
-			<description> Once or Twice</description>
-			<then>
-				<fact name="sugar">good</fact>
-			</then>
-		</option>
-		<option>
-			<description> More than twice a day </description>
-			<then>
-				<fact name="sugar">bad</fact>
+				<fact name="Exercise">no</fact>
 			</then>
 		</option>
 	</question>
 
-	<question> <!-- type 2 -->
+	<question>
+		<description>How many times do you have breakfast per week?
+		Only a cup of coffee or tea is not considered a breakfast.</description>
+		<option>
+			<description>Less than once a week</description>
+			<then>
+				<fact name="breakfast">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>1 Till 5 times a week</description>
+			<then>
+				<fact name="breakfast">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>6 Or 7 days a week</description>
+			<then>
+				<fact name="breakfast">yes</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>How much portions of fruit do you eat per day?
+			A portion of fruit is about 100 gram</description>
+		<option>
+			<description>Almost nothing </description>
+			<then>
+				<fact name="fruit">bad</fact>
+			</then>
+		</option>
+		<option>
+			<description>1 Or 2 portions per week</description>
+			<then>
+				<fact name="fruit">bad</fact>
+			</then>
+		</option>
+		<option>
+			<description>1 Portion per day</description>
+			<then>
+				<fact name="fruit">bad</fact>
+			</then>
+		</option>
+		<option>
+			<description>2 Or more portions per day</description>
+			<then>
+				<fact name="fruit">good</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>Do you eat a handful of nuts every day?
+		A handful of nuts is about 15 gram.</description>
+		<option>
+			<description>Yes</description>
+			<then>
+				<fact name="nuts">yes</fact>
+			</then>
+		</option>
+		<option>
+			<description>No</description>
+			<then>
+				<fact name="nuts">no</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>How many cups of tea do you drink per day?</description>
+		<option>
+			<description>0-2 cups</description>
+			<then>
+				<fact name="tea">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>3 or more cups</description>
+			<then>
+				<fact name="tea">yes</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>How many servings/slices of cheese do you eat per day?
+		1 portion/slice = 20 grams (about the amount on 1 sandwich)</description>
+		<option>
+			<description>0 -2 Slices</description>
+			<then>
+				<fact name="cheese">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>3 -4 Slices</description>
+			<then>
+				<fact name="cheese">bit</fact>
+			</then>
+		</option>
+		<option>
+			<description>More than 4 Slices</description>
+			<then>
+				<fact name="cheese">lot</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>Which cheese do you eat then?</description>
+		<option>
+			<description>Low-fat cheese: 10+, 20+ or 30+ (such as Milner, fresh goat cheese, cottage cheese, mozzarella)</description>
+			<then>
+				<fact name="CheeseKind">lowfat</fact>
+			</then>
+		</option>
+		<option>
+			<description>Light full-fat cheese: 40+ or 48+ (such as Gouda, Edam, hard goat cheese)</description>
+			<then>
+				<fact name="CheeseKind">light</fact>
+			</then>
+		</option>
+		<option>
+			<description>Full-fat cheese: 50+ or 60+ (such as Brie, Paturain)</description>
+			<then>
+				<fact name="CheeseKind">fat</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>How many times per week do you eat fish?</description>
+		<option>
+			<description>Almost never</description>
+			<then>
+				<fact name="fish">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>1-2 Per week</description>
+			<then>
+				<fact name="fish">bit</fact>
+			</then>
+		</option>
+		<option>
+			<description>3 Or more times per week</description>
+			<then>
+				<fact name="fish">lot</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>How many times per week do you eat fried food?</description>
+		<option>
+			<description>Almost never</description>
+			<then>
+				<fact name="fried">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>2-3 servings per month</description>
+			<then>
+				<fact name="fried">bit</fact>
+			</then>
+		</option>
+		<option>
+			<description>1-2 servings per week</description>
+			<then>
+				<fact name="fried">some</fact>
+			</then>
+		</option>
+		<option>
+			<description>3-4 servings per week</description>
+			<then>
+				<fact name="fried">some</fact>
+			</then>
+		</option>
+		<option>
+			<description>5-6 servings per week</description>
+			<then>
+				<fact name="fried">lot</fact>
+			</then>
+		</option>
+		<option>
+			<description>1 serving per day</description>
+			<then>
+				<fact name="fried">lot</fact>
+			</then>
+		</option>
+		<option>
+			<description>2 or more servings per day</description>
+			<then>
+				<fact name="fried">verylot</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>How many servings of (whole grain) breakfast cereals, (brown) rice, whole grain pasta or other fiber-rich foods do you eat in a day? Non whole grain bread and crackers do not count here.</description>
+		<option>
+			<description>Almost never</description>
+			<then>
+				<fact name="wholegrain">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>A few times a week</description>
+			<then>
+				<fact name="wholegrain">bit</fact>
+			</then>
+		</option>
+		<option>
+			<description>1-2 per day</description>
+			<then>
+				<fact name="wholegrain">some</fact>
+			</then>
+		</option>
+		<option>
+			<description>3 or more times a day</description>
+			<then>
+				<fact name="wholegrain">lot</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>How often do you snack with chips, sausage or sausage rolls, for example?</description>
+		<option>
+			<description>Almost never</description>
+			<then>
+				<fact name="snack">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>2-3 servings per month</description>
+			<then>
+				<fact name="snack">bit</fact>
+			</then>
+		</option>
+		<option>
+			<description>1-2 servings per week</description>
+			<then>
+				<fact name="snack">some</fact>
+			</then>
+		</option>
+		<option>
+			<description>3-4 servings per week</description>
+			<then>
+				<fact name="snack">some</fact>
+			</then>
+		</option>
+		<option>
+			<description>5-6 servings per week</description>
+			<then>
+				<fact name="snack">lot</fact>
+			</then>
+		</option>
+		<option>
+			<description>1 serving per day</description>
+			<then>
+				<fact name="snack">lot</fact>
+			</then>
+		</option>
+		<option>
+			<description>2 or more servings per day</description>
+			<then>
+				<fact name="snack">verylot</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>How often do you eat a large portion of sweets, such as pastry, cake or chocolate?</description>
+		<option>
+			<description>Almost never</description>
+			<then>
+				<fact name="sweets">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>2-3 servings per month</description>
+			<then>
+				<fact name="sweets">bit</fact>
+			</then>
+		</option>
+		<option>
+			<description>1-2 servings per week</description>
+			<then>
+				<fact name="sweets">some</fact>
+			</then>
+		</option>
+		<option>
+			<description>3-4 servings per week</description>
+			<then>
+				<fact name="sweets">some</fact>
+			</then>
+		</option>
+		<option>
+			<description>5-6 servings per week</description>
+			<then>
+				<fact name="sweets">some</fact>
+			</then>
+		</option>
+		<option>
+			<description>1 serving per day</description>
+			<then>
+				<fact name="sweets">lot</fact>
+			</then>
+		</option>
+		<option>
+			<description>2 or more servings per day</description>
+			<then>
+				<fact name="sweets">lot</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>How many teaspoons of sugar do you take in a day?
+		We mean sugar that you add extra to your food. An example is sugar in the tea.</description>
+		<option>
+			<description>None</description>
+			<then>
+				<fact name="sugar">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>1-2 per day</description>
+			<then>
+				<fact name="sugar">bit</fact>
+			</then>
+		</option>
+		<option>
+			<description>3-4 per day</description>
+			<then>
+				<fact name="sugar">some</fact>
+			</then>
+		</option>
+		<option>
+			<description>5 or more a day</description>
+			<then>
+				<fact name="sugar">lot</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>How many servings of vegetables, beans and / or raw vegetables do you eat on average per day?
+		1 serving is about 50 grams</description>
+		<option>
+			<description>None</description>
+			<then>
+				<fact name="vegetables">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>1 servings per day</description>
+			<then>
+				<fact name="vegetables">bit</fact>
+			</then>
+		</option>
+		<option>
+			<description>2 servings per day</description>
+			<then>
+				<fact name="vegetables">bit</fact>
+			</then>
+		</option>
+		<option>
+			<description>3 servings per day</description>
+			<then>
+				<fact name="vegetables">some</fact>
+			</then>
+		</option>
+		<option>
+			<description>4 or more servings per day</description>
+			<then>
+				<fact name="vegetables">lot</fact>
+			</then>
+		</option>
+	</question>
+
+	<question> 
 		<description>Do or did you ever smoke in the last year?</description>
 		<option>
-			<description> Yes </description>
+			<description>Yes</description>
 			<then>
-				<fact name="smoking">yes</fact>
+				<fact name="smoker">yes</fact>
 			</then>
 		</option>
 		<option>
-			<description> No </description>
+			<description>I quit in this past year</description>
 			<then>
-				<fact name="smoking">no</fact>
+				<fact name="smoker">justquit</fact>
+			</then>
+		</option>
+		<option>
+			<description>No</description>
+			<then>
+				<fact name="smoker">no</fact>
+			</then>
+		</option>
+	</question>
+
+	<question> 
+		<description>How often do or did you smoke?</description>
+		<option>
+			<description>Almost never</description>
+			<then>
+				<fact name="smoking">never</fact>
+			</then>
+		</option>
+		<option>
+			<description>(Almost) Every month</description>
+			<then>
+				<fact name="smoking">month</fact>
+			</then>
+		</option>
+		<option>
+			<description>(Almost) Every week</description>
+			<then>
+				<fact name="smoking">week</fact>
+			</then>
+		</option>
+		<option>
+			<description>(Almost) Every day</description>
+			<then>
+				<fact name="smoking">day</fact>
+			</then>
+		</option>
+	</question>
+
+	<question> 
+		<description>Do you smoke a cigarette, shag, cigar, cigarillo and / or pipe 10 or more times a day?</description>
+		<option>
+			<description>Yes</description>
+			<then>
+				<fact name="heavy-smoking">yes</fact>
+			</then>
+		</option>
+		<option>
+			<description>No</description>
+			<then>
+				<fact name="heavy-smoking">no</fact>
+			</then>
+		</option>
+	</question>
+
+	<question> 
+		<description>Do you drink alcohol?</description>
+		<option>
+			<description>Yes</description>
+			<then>
+				<fact name="alcohol">yes</fact>
+			</then>
+		</option>
+		<option>
+			<description>No</description>
+			<then>
+				<fact name="alcohol">no</fact>
+			</then>
+		</option>
+	</question>
+
+	<question> 
+		<description>How much alcohol do you drink per week?</description>
+		<option>
+			<description>Less than 2 glasses a week</description>
+			<then>
+				<fact name="alcoholamount">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>Between 2 and 7 glasses a week</description>
+			<then>
+				<fact name="alcoholamount">bit</fact>
+			</then>
+		</option>
+		<option>
+			<description>Between 8 and 14 glasses a week</description>
+			<then>
+				<fact name="alcoholamount">some</fact>
+			</then>
+		</option>
+		<option>
+			<description>More than 15 glasses a week</description>
+			<then>
+				<fact name="alcoholamount">lot</fact>
+			</then>
+		</option>
+	</question>
+
+	<question> 
+		<description>How often did you experience stress at home this past year?</description>
+		<option>
+			<description>Never</description>
+			<then>
+				<fact name="stress">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>Once in a while</description>
+			<then>
+				<fact name="stress">bit</fact>
+			</then>
+		</option>
+		<option>
+			<description>Several times</description>
+			<then>
+				<fact name="stress">some</fact>
+			</then>
+		</option>
+		<option>
+			<description>Always</description>
+			<then>
+				<fact name="stress">lot</fact>
+			</then>
+		</option>
+	</question>
+
+	<question> 
+		<description>How often did you experience stress at work this past year?</description>
+		<option>
+			<description>Never</description>
+			<then>
+				<fact name="stresswork">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>Once in a while</description>
+			<then>
+				<fact name="stresswork">bit</fact>
+			</then>
+		</option>
+		<option>
+			<description>Several times</description>
+			<then>
+				<fact name="stresswork">some</fact>
+			</then>
+		</option>
+		<option>
+			<description>Always</description>
+			<then>
+				<fact name="stresswork">lot</fact>
+			</then>
+		</option>
+	</question>
+
+	<question> 
+		<description>How often did you experience stress from other things this past year?</description>
+		<option>
+			<description>Never</description>
+			<then>
+				<fact name="stressother">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>Once in a while</description>
+			<then>
+				<fact name="stressother">bit</fact>
+			</then>
+		</option>
+		<option>
+			<description>Several times</description>
+			<then>
+				<fact name="stressother">some</fact>
+			</then>
+		</option>
+		<option>
+			<description>Always</description>
+			<then>
+				<fact name="stressother">lot</fact>
+			</then>
+		</option>
+	</question>
+
+	<question> 
+		<description>Do you feel financial pressure?</description>
+		<option>
+			<description>Almost none</description>
+			<then>
+				<fact name="finance">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>Sometimes</description>
+			<then>
+				<fact name="finance">bit</fact>
+			</then>
+		</option>
+		<option>
+			<description>A lot</description>
+			<then>
+				<fact name="finance">lot</fact>
+			</then>
+		</option>
+	</question>
+
+	<question> 
+		<description>Do you feel like you have a lot of energy?</description>
+		<option>
+			<description>Almost never</description>
+			<then>
+				<fact name="energy">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>Sometimes</description>
+			<then>
+				<fact name="energy">bit</fact>
+			</then>
+		</option>
+		<option>
+			<description>Regurarly</description>
+			<then>
+				<fact name="energy">some</fact>
+			</then>
+		</option>
+		<option>
+			<description>Always</description>
+			<then>
+				<fact name="energy">lot</fact>
+			</then>
+		</option>
+	</question>
+
+	<question> 
+		<description>Do you feel excitment when starting the day in the morning?</description>
+		<option>
+			<description>Almost never</description>
+			<then>
+				<fact name="wake">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>Sometimes</description>
+			<then>
+				<fact name="wake">bit</fact>
+			</then>
+		</option>
+		<option>
+			<description>Regurarly</description>
+			<then>
+				<fact name="wake">some</fact>
+			</then>
+		</option>
+		<option>
+			<description>Always</description>
+			<then>
+				<fact name="wake">lot</fact>
+			</then>
+		</option>
+	</question>
+
+	<question> 
+		<description>Which education did you finish?
+		With finish, we mean where did you get a diploma from</description>
+		<option>
+			<description>I did not finish any education</description>
+			<then>
+				<fact name="education">no</fact>
+			</then>
+		</option>
+		<option>
+			<description>Primary school</description>
+			<then>
+				<fact name="education">primary</fact>
+			</then>
+		</option>
+		<option>
+			<description>LBO</description>
+			<then>
+				<fact name="education">lbo</fact>
+			</then>
+		</option>
+		<option>
+			<description>MAVO / VMBO</description>
+			<then>
+				<fact name="education">mavo</fact>
+			</then>
+		</option>
+		<option>
+			<description>MBO</description>
+			<then>
+				<fact name="education">mbo</fact>
+			</then>
+		</option>
+		<option>
+			<description>HAVO / VWO</description>
+			<then>
+				<fact name="education">vwo</fact>
+			</then>
+		</option>
+		<option>
+			<description>HBO / WO</description>
+			<then>
+				<fact name="education">wo</fact>
+			</then>
+		</option>
+		<option>
+			<description>PHD</description>
+			<then>
+				<fact name="education">phd</fact>
 			</then>
 		</option>
 	</question>
@@ -637,132 +1902,10 @@
 
 
 
-
-<!-- ALL THE FOLLOWING QUESTIONS STILL NEED TO BE INCORPORATED IN THE SYSTEM-->
-
-
-
-
-
-
-	<question>
-		<description>Are you loosing weigth without trying or do you have an eormous appetite?</description>
-		<option>
-			<description> Yes </description>
-			<then>
-				<fact name="hunger">yes</fact>
-			</then>
-		</option>
-		<option>
-			<description> No </description>
-			<then>
-				<fact name="hunger">no</fact>
-			</then>
-		</option>
-	</question>
+<!-- extra-->
 
 	<question> <!-- type 2 -->
-		<description>Did you have pregnancydiabetes?</description>
-		<option>
-			<description> Yes </description>
-			<then>
-				<fact name="pregnancydiabetes">yes</fact>
-			</then>
-		</option>
-		<option>
-			<description> No </description>
-			<then>
-				<fact name="pregnancydiabetes">no</fact>
-			</then>
-		</option>
-	</question>
-
-	<question> <!-- type 2 -->
-		<description>Do you have a high cholesterol level?</description>
-		<option>
-			<description> Yes </description>
-			<then>
-				<fact name="cholesterol">yes</fact>
-			</then>
-		</option>
-		<option>
-			<description> No </description>
-			<then>
-				<fact name="cholesterol">no</fact>
-			</then>
-		</option>
-	</question>
-
-	<question> <!-- type 2 -->
-		<description>Do you have a high blood pressure?</description>
-		<option>
-			<description> Yes </description>
-			<then>
-				<fact name="bloodpressure">yes</fact>
-			</then>
-		</option>
-		<option>
-			<description> No </description>
-			<then>
-				<fact name="bloodpressure">no</fact>
-			</then>
-		</option>
-	</question>
-
-
-
-	<question> <!-- type 2 -->
-		<description>Wat is uw afkomst?</description>
-		<option>
-			<description> Hindu </description>
-			<then>
-				<fact name="hindu">yes</fact>
-			</then>
-		</option>
-		<option>
-			<description> Turkish </description>
-			<then>
-				<fact name="Turkish">yes</fact>
-			</then>
-		</option>
-		<option>
-			<description> Marrocan </description>
-			<then>
-				<fact name="Marrocan">yes</fact>
-			</then>
-		</option>
-		<option>
-			<description> Surinamees </description>
-			<then>
-				<fact name="Surinamees">yes</fact>
-			</then>
-		</option>
-		<option>
-			<description> Different </description>
-			<then>
-				<fact name="Different">yes</fact>
-			</then>
-		</option>
-	</question>
-
-	<question> <!-- type 2 -->
-		<description>Does anyone in your family has Diabetes type 2?</description>
-		<option>
-			<description> Yes </description>
-			<then>
-				<fact name="erfelijk">yes</fact>
-			</then>
-		</option>
-		<option>
-			<description> No </description>
-			<then>
-				<fact name="erfelijk">no</fact>
-			</then>
-		</option>
-	</question>
-
-	<question> <!-- type 2 -->
-		<description> Do you have cystitis?</description>
+		<description> Do you have cystitis / shortness of breath, high blood pressure, high cholesterol, stress?</description>
 		<option>
 			<description> Yes </description>
 			<then>
@@ -777,54 +1920,5 @@
 		</option>
 	</question>
 
-	<question> <!-- type 2 -->
-		<description>Do you suffer from shortness of breath?</description>
-		<option>
-			<description> Yes </description>
-			<then>
-				<fact name="kortademig">yes</fact>
-			</then>
-		</option>
-		<option>
-			<description> No </description>
-			<then>
-				<fact name="kortademig">no</fact>
-			</then>
-		</option>
-	</question>
 
-  <question> <!-- lifestyle -->
-		<description>Do you suffer from stress?</description>
-		<option>
-			<description> Yes </description>
-			<then>
-				<fact name="stress">yes</fact>
-			</then>
-		</option>
-		<option>
-			<description> No </description>
-			<then>
-				<fact name="stress">no</fact>
-			</then>
-		</option>
-	</question>
-
-
-
-
-
-<!-- TO DO VRAGEN
-		 - leeftijd, gewicht en lengte
-		 - andere compilaties type 2?
-		 - acute symptimen voor ketoacidose?
-		-->
-
-
-
-
-
-	<!-- Here follow multiple rules, questions and goals -->
-
-	<!-- And yes, you can use this syntax to add
-	     comments to your knowledge base :) -->
 </knowledge>
