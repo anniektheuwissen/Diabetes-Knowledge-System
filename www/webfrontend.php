@@ -70,10 +70,10 @@ class WebFrontend
 				$state->apply(_decode($_POST['answer']));
 			// nieuw::
 			}  elseif (isset($_POST['submit']))  {
-				$no_empty = $_POST['answers'];
-				$no_empty = array_shift($no_empty);
-				foreach ($no_empty as $value) {
-					$state->apply(_decode($value));
+				foreach ($_POST['answers'] as $value) {
+					if(isset($value)) {
+						$state->apply(_decode($value));
+					}
 				}
 			}
 
