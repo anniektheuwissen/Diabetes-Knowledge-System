@@ -72,15 +72,15 @@ class WebFrontend
 			// nieuw::
 			}
 			if (isset($_POST['answers']))  {
+				$i = 0;
 				foreach ($_POST['answers'] as $value) {
 					if(isset($value)) {
-						if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-							var_dump($_POST);
-							die();
-					  }
 						$state->apply(_decode($value));
+						$i = $i + 1;
 					}
 				}
+				var_dump($i);
+				die();
 			}
 
 			switch ($domain->algorithm)
