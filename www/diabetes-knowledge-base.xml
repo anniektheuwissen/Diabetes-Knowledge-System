@@ -1299,7 +1299,7 @@
 
 	<question>
 		<description>Does anyone in your direct family have diabetes type 1?
-		with direct family we only mean brothers, sisters, father, mother or sun and daugher</description>
+		with direct family we only mean brothers, sisters, father, mother or son and daugher</description>
 		<option>
 			<description>Yes</description>
 			<then>
