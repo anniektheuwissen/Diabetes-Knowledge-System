@@ -814,37 +814,18 @@
 <!-- And only if fact type1=no, we asess type 2 risk cases -->
 
 <!-- First check for symptoms that were asked in the very first question for type 1 risk that correspond to type 2 symptoms as well and for the tired question -> in that case type2Symptoms is set to yes-->
-<!--
+
   	 <rule>
 	  	<description>Type 1 symbols first question -> check for type 2 symptoms </description>
 	  	<if>	
-	
 			<and>
-				<fact name="checked">yes</fact>
 				<fact name="check2">yes</fact>
 			</and>
-
 	  	</if>
 	  	<then>
 		  	<fact name="type2Symptoms">yes</fact>
 	  </then>
   	</rule>
-
-
-  	 <rule>
-	  	<description>Type 1 symbols first question -> check for type 2 symptoms </description>
-	  	<if>	
-			<and>
-				<fact name="checked">yes</fact>
-				<not>
-					<fact name="check2">yes</fact>
-				</not>
-			</and>
-	  	</if>
-	  	<then>
-		  	<fact name="type2Symptoms">NO</fact>
-	  </then>
-  	</rule> -->
 
 
 
@@ -1224,8 +1205,7 @@
 			<description>Dry mouth and/or more than usually thirsty</description>
 			<then>
 				<fact name="drymouth">yes</fact>
-				<fact name="checked">yes</fact>
-				<fact name="type2Symptoms">yes</fact>
+				<fact name="check2">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
@@ -1233,8 +1213,7 @@
 			<description>Frequently urinating</description>
 			<then>
 				<fact name="urinating">yes</fact>
-				<fact name="checked">yes</fact>
-				<fact name="type2Symptoms">yes</fact>
+				<fact name="check2">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
@@ -1242,7 +1221,6 @@
 			<description>More than usually hungry</description>
 			<then>
 				<fact name="hungry">yes</fact>
-				<fact name="checked">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
@@ -1250,7 +1228,6 @@
 			<description>Sudden weight losses/gains</description>
 			<then>
 				<fact name="weight">yes</fact>
-				<fact name="checked">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
@@ -1258,8 +1235,7 @@
 			<description>Blurry eye-sight</description>
 			<then>
 				<fact name="eye-sight">yes</fact>
-				<fact name="checked">yes</fact>
-				<fact name="type2Symptoms">yes</fact>
+				<fact name="check2">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
@@ -1267,8 +1243,7 @@
 			<description>Frequently tired or drained</description>
 			<then>
 				<fact name="tired">yes</fact>
-				<fact name="checked">yes</fact>
-				<fact name="type2Symptoms">yes</fact>
+				<fact name="check2">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
