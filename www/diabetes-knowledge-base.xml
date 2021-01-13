@@ -1178,50 +1178,10 @@
 	  	</if>
 	  	<then>
 	  		<fact name="type1">no</fact>
-	  		<fact name="type2Symptoms">no</fact>
-
 	  </then>
   	</rule>
 
 
-  	 <rule>
-	  	<description>Type 1 symbols first question -> check for type 2 symptoms </description>
-	  	<if>
-				<and>
-					<not>
-						<fact name="drymouth">yes</fact>
-					</not>
-					<not>
-						<fact name="urinating">yes</fact>
-					</not>
-					<not>
-						<fact name="tired">yes</fact>
-					</not>
-					<not>
-						<fact name="eye-sight">yes</fact>
-					</not>
-				</and>
-	  	</if>
-	  	<then>
-	  		<fact name="checkie">check</fact>
-		  	<fact name="type2Symptoms">no</fact>
-	  </then>
-  	</rule>
-
-  	 <rule>
-	  	<description>Type 1 symbols first question -> check for type 2 symptoms </description>
-	  	<if>
-	  		<and>
-	  			<fact name="type1Symptoms">yes</fact>
-	  			<not>
-					<fact name="checkie">check</fact>
-				</not>
-	  		</and>
-	  	</if>
-	  	<then>
-		  	<fact name="type2Symptoms">yes</fact>
-	  </then>
-  	</rule>
 
 
 
@@ -1236,6 +1196,7 @@
 			<then>
 				<fact name="drymouth">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
+				<fact name="type2Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
@@ -1243,6 +1204,7 @@
 			<then>
 				<fact name="urinating">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
+				<fact name="type2Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
@@ -1250,6 +1212,7 @@
 			<then>
 				<fact name="hungry">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
+				<fact name="type2Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
@@ -1257,6 +1220,7 @@
 			<then>
 				<fact name="weight">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
+				<fact name="type2Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
@@ -1264,6 +1228,7 @@
 			<then>
 				<fact name="eye-sight">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
+				<fact name="type2Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
@@ -1271,6 +1236,7 @@
 			<then>
 				<fact name="tired">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
+				<fact name="type2Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
