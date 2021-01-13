@@ -17,7 +17,7 @@
         <answer value="lowRisk2">You have a low risk of diabetes type 2, that is very good! Be sure to check out the lifestyle tips given below, as this can help you to keep your risk low! Also, if you are older than 45, we advice you to take this test every year. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG assocation for general practioners in the Netherlands. It is a general risk assesment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advice you to visit your general practioner and take an actual diabetes test) </answer>
         <answer value="mediumRisk2">You have a medium risk of  diabetes type 2. We advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm your actual diabetes risk. It will be especially valuable to also follow the lifestyle given below. A good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also significantly improve your life if you suffer from diabetes. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG assocation for general practioners in the Netherlands. It is a general risk assesment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advice you to visit your general practioner and take an actual diabetes test)
         </answer>
-        <answer value="highRisk2">You have a high risk of diabetes type 2. YWe advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm your actual diabetes risk. It will be especially valuable to follow the lifestyle tips given below. A good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also significantly improve your life if you suffer from diabetes. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG assocation for general practioners in the Netherlands. It is a general risk assesment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advice you to visit your general practioner and take an actual diabetes test)
+        <answer value="highRisk2">You have a high risk of diabetes type 2. We advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm your actual diabetes risk. It will be especially valuable to follow the lifestyle tips given below. A good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also significantly improve your life if you suffer from diabetes. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG assocation for general practioners in the Netherlands. It is a general risk assesment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advice you to visit your general practioner and take an actual diabetes test)
         </answer>
         <answer value="no"></answer>
 </goal>
@@ -136,7 +136,7 @@
       		<and>
       			<fact name="type1">no</fact>
       			<fact name="type2">yes</fact>
-  				<fact name="Exercise">yes</fact>
+  				<fact name="Exercise">no</fact>
 			</and>
 	  	</if>
 	  	<then>
@@ -164,7 +164,7 @@
       		<and>
       			<fact name="type1">no</fact>
       			<fact name="type2">yes</fact>
-  				<fact name="Exercise">no</fact>
+  				<fact name="Exercise">yes</fact>
 			</and>
 	  	</if>
 	  	<then>
@@ -813,35 +813,8 @@
 	These risk assessments were made by consulting our expert and via the advice of the Dutch general practicioners, via our main source: thuisarts.nl -->
 <!-- And only if fact type1=no, we asess type 2 risk cases -->
 
-<!-- First check for symptoms that were asked in the very first question for type 1 risk that correspond to type 2 symptoms as well and for the tired question-->
+<!-- First check for symptoms that were asked in the very first question for type 1 risk that correspond to type 2 symptoms as well and for the tired question -> in that case type2Symptoms is set to yes-->
 
-    <rule>
-	  	<description>Diagnose type 2 symptoms</description>
-	  	<if>
-			<or>
-				<and>
-					<fact name="type1Symptoms">no</fact>
-					<fact name="type1">no</fact>
-					<fact name="tired">yes</fact>
-				</and>
-				<and>
-					<fact name="type1">no</fact>
-					<fact name="type1Symptoms">yes</fact>
-					<and>
-						<or>
-							<fact name="urinating">yes</fact>
-		 					<fact name="eye-sight">yes</fact>
-		 					<fact name="drymouth">yes</fact>
-		 					<fact name="tired">yes</fact>
-		 				</or>
-					</and>
-	 			</and>
-			</or>
-	  	</if>
-	  	<then>
-		  	<fact name="type2Symptoms">yes</fact>
-	  </then>
-  	</rule>
 
     <rule>
 	  	<description>Diagnose high Risk type 2</description>
@@ -1007,95 +980,83 @@
 
 <!-- Rules for specific Diabetes Type 1 Diagnoses -->
 
-<!-- As indicated by our expert, type 1 diabetes is quite rare, so you would need quite some symptoms and risk factors, otherwise it is better to assess for type 2 and the symptoms probably relate to something else. therefore this first rule is to check if there were at least 3 symptoms indicated  -->
+<!-- As indicated by our expert, type 1 diabetes is quite rare, so you would need quite some symptoms and risk factors, otherwise it is better to assess for type 2 and the symptoms probably relate to something else. therefore this first rule is to check if there were at least 3 symptoms indicated 
+	
+
 	<rule>
 	  <description>Type 1 at least 3 symptoms:
 	 	</description>
 	  	<if>
-		  	<and>
-			  	<not>
-				  	<fact name="asked">done</fact>
-				</not>
-				<or>
-					<and>
-						<fact name="drymouth">yes</fact>
-						<and>
-							<or>
-								<and>
-								<fact name="urinating">yes</fact>
-									<and>
-										<or>
-											<fact name="hungry">yes</fact>
-											<fact name="weight">yes</fact>
-											<fact name="eye-sight">yes</fact>
-										</or>
-									</and>
-								</and>
-
-								<and>
-								<fact name="hungry">yes</fact>
-									<and>
-										<or>
-											<fact name="weight">yes</fact>
-											<fact name="eye-sight">yes</fact>
-										</or>
-									</and>
-								</and>
-
-								<and>
-									<fact name="weight">yes</fact>
-									<fact name="eye-sight">yes</fact>
-								</and>
-							</or>
-						</and>
-					</and>
-					<and>
-						<fact name="urinating">yes</fact>
-						<and>
-							<or>
-								<and>
-								<fact name="hungry">yes</fact>
-									<and>
-										<or>
-											<fact name="weight">yes</fact>
-											<fact name="eye-sight">yes</fact>
-										</or>
-									</and>
-								</and>
-
-								<and>
-									<fact name="weight">yes</fact>
-									<fact name="eye-sight">yes</fact>
-								</and>
-							</or>
-						</and>
-
-					</and>
-					<and>
-						<fact name="hungry">yes</fact>
-						<fact name="weight">yes</fact>
-						<fact name="eye-sight">yes</fact>
-					</and>
-				</or>
-			</and>
-	  	</if>
-	  	<then>
-		  	<fact name="3Type1symptoms">yes</fact>
-	  </then>
-  	</rule>
-
-	<rule>
-	  	<description> try </description>
-		<if>
 	      	<or>
-	  			<fact name="type1Symptoms">yes</fact>
-				<fact name="type1Symptoms">no</fact>
+	      		<and>
+					<fact name="drymouth">yes</fact>
+					<and>
+						<or>
+							<and>
+							<fact name="urinating">yes</fact>
+								<and>
+									<or>
+										<fact name="hungry">yes</fact>
+										<fact name="weight">yes</fact>
+										<fact name="eye-sight">yes</fact>
+									</or>
+								</and>
+							</and>
+
+							<and>
+							<fact name="hungry">yes</fact>
+								<and>
+									<or>
+										<fact name="weight">yes</fact>
+										<fact name="eye-sight">yes</fact>
+									</or>
+								</and>
+							</and>
+
+							<and>
+								<fact name="weight">yes</fact>
+								<fact name="eye-sight">yes</fact>
+							</and>
+						</or>
+					</and>
+				</and>
+				<and>
+					      			
+					<fact name="urinating">yes</fact>
+					<and>
+						<or>
+							<and>
+							<fact name="hungry">yes</fact>
+								<and>
+									<or>
+										<fact name="weight">yes</fact>
+										<fact name="eye-sight">yes</fact>
+									</or>
+								</and>
+							</and>
+
+							<and>
+								<fact name="weight">yes</fact>
+								<fact name="eye-sight">yes</fact>
+							</and>
+						</or>
+					</and>
+
+				</and>
+				<and>	      			
+					<fact name="hungry">yes</fact>
+					<fact name="weight">yes</fact>
+					<fact name="eye-sight">yes</fact>
+				</and>
 			</or>
 	  	</if>
 	  	<then>
-		  	<fact name="ask">done</fact>
-	  </then>
-  	</rule>
+		  	<fact name="3Type1symptoms">yes</fact>
+	  </then> 
+  	</rule>-->
+
+
+<!-- As indicated by our expert, type 1 diabetes is quitre rare and very hard to identify, so you would need quite some risk factors and at least some symptoms, otherwise it is better to assess for type 2 -->
 
 <!-- But again here, quite hard to effectively differentiate between specific type 1 risk assesmments (not scientific) -->
   	<rule>
@@ -1124,7 +1085,7 @@
 	  	    	<and>
 			  		<fact name="type1Check">yes</fact>
 			  		<fact name="PassOut">no</fact>
-			  		<fact name="3Type1symptoms">yes</fact>
+			  		<fact name="type1Symptoms">yes</fact>
 					<fact name="Age">low</fact>
 					<fact name="family1">yes</fact>
 				</and>
@@ -1143,19 +1104,14 @@
 	  	If we find someone with a medium risk of diabetes type 1, we skip the lifestyle questions, as adviced by our expert.</description>
 	  	<if>
 	  		<or>
+	  			<!-- other case of type 1, high age & family with diabetes 1 and symptoms = better to check with doctor -->
+
 			   	<and>
 		 			<fact name="type1Check">yes</fact>
 		  	  		<fact name="PassOut">no</fact>
-		  	  		<fact name="3Type1symptoms">yes</fact>
+		  	  		<fact name="type1Symptoms">yes</fact>
 					<fact name="Age">high</fact>
 					<fact name="family1">yes</fact>
-				</and>
-				<and>
-		 			<fact name="type1Check">yes</fact>
-		  	  		<fact name="PassOut">no</fact>
-		  	  		<fact name="3Type1symptoms">yes</fact>
-					<fact name="Age">low</fact>
-					<fact name="family1">no</fact>
 				</and>
 			</or>
 	  	</if>
@@ -1167,7 +1123,7 @@
 	  </then>
   	</rule>
 
-  	<rule>
+  	 <rule>
 	  	<description>Type 1 Low Risk:
 	  	If we find someone with a low risk of diabetes type 1 -> we state that the symptoms might be related to another disease, and we also check for diabetes type 2, after which we move to lifestyle questions.</description>
 	  	<if>
@@ -1183,6 +1139,8 @@
 		  	<fact name="type1">no</fact>
 	  </then>
   	</rule>
+
+
 
 
 <!-- Rules for assessing if diabetes 1 or 2  -->
@@ -1225,52 +1183,73 @@
 	  </then>
   	</rule>
 
+  	<rule>
+	  	<description>Directly to lifestyle questions:
+	  	If someone does not have type 1 symptoms, the risk is too low to pose unneccesarry questions about this, so we directly move to risk 2 assessment and lifestyle advices afterwards.</description>
+	  	<if>
+	  		<or>
+				<fact name="drymouth">yes</fact>
+				<fact name="urinating">yes</fact>
+				<fact name="hungry">yes</fact>
+				<fact name="weight">yes</fact>
+				<fact name="eye-sight">yes</fact>
+				<fact name="tired">yes</fact>
+			</or>
+	  	</if>
+	  	<then>
+	  		<fact name="type1Symptoms">yes</fact>
+	  		<fact name="type2Symptoms">yes</fact>
+	  </then>
+  	</rule>
+
 
 <!-- Start of the questions-->
 
 <!-- These 2 questions are posed at the start to filter between possibilities of type 1, type 2-->
 	<question>
-		<description> Do you experience any of the following symptoms? You can select each one that you experience, if you do not have any of these symptoms, please select the .</description>
+		<description> Do you experience any of the following symptoms? You can select each one that you experience, if you do not have any of these symptoms, please select the last symptom.</description>
 		<multiple> yes </multiple>
 		<option>
 			<description>Dry mouth and/or more than usually thirsty</description>
 			<then>
 				<fact name="drymouth">yes</fact>
-				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
 			<description>Frequently urinating</description>
 			<then>
 				<fact name="urinating">yes</fact>
-				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
 			<description>More than usually hungry</description>
 			<then>
 				<fact name="hungry">yes</fact>
-				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
 			<description>Sudden weight losses/gains</description>
 			<then>
 				<fact name="weight">yes</fact>
-				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
 			<description>Blurry eye-sight</description>
 			<then>
 				<fact name="eye-sight">yes</fact>
-				<fact name="type1Symptoms">yes</fact>
+			</then>
+		</option>
+		<option>
+			<description>Frequently tired or drained</description>
+			<then>
+				<fact name="tired">yes</fact>
 			</then>
 		</option>
 		<option>
 			<description>None of these</description>
 			<then>
 				<fact name="type1Symptoms">no</fact>
+				<fact name="type2Symptoms">no</fact>
 			</then>
 		</option>
 	</question>
@@ -1294,7 +1273,7 @@
 -->
 
 	<question>
-		<description> Have these symptoms started suddenly in the last few weeks or shorter? </description>
+		<description> Have these symptoms started very suddenly in the last few weeks or shorter? </description>
 		<option>
 			<description> Yes, since a couple a weeks or less </description>
 			<then>
@@ -1445,6 +1424,7 @@
 		</option>
 	</question>
 
+<!--
 	<question>
 		<description>Do you very often feel tired or drained?</description>
 		<option>
@@ -1467,7 +1447,7 @@
 				<fact name="tired">no</fact>
 			</then>
 		</option>
-	</question>
+	</question> -->
 
 	<question>
 		<description>Do or did you ever smoke regularly?</description>
