@@ -1089,67 +1089,7 @@
 		  	<and>
 			  	<fact name="asked">yes</fact>
 				<not>
-					<or>
-						<and>
-							<fact name="drymouth">yes</fact>
-							<and>
-								<or>
-									<and>
-									<fact name="urinating">yes</fact>
-										<and>
-											<or>
-												<fact name="hungry">yes</fact>
-												<fact name="weight">yes</fact>
-												<fact name="eye-sight">yes</fact>
-											</or>
-										</and>
-									</and>
-
-									<and>
-									<fact name="hungry">yes</fact>
-										<and>
-											<or>
-												<fact name="weight">yes</fact>
-												<fact name="eye-sight">yes</fact>
-											</or>
-										</and>
-									</and>
-
-									<and>
-										<fact name="weight">yes</fact>
-										<fact name="eye-sight">yes</fact>
-									</and>
-								</or>
-							</and>
-						</and>
-						<and>
-							<fact name="urinating">yes</fact>
-							<and>
-								<or>
-									<and>
-									<fact name="hungry">yes</fact>
-										<and>
-											<or>
-												<fact name="weight">yes</fact>
-												<fact name="eye-sight">yes</fact>
-											</or>
-										</and>
-									</and>
-
-									<and>
-										<fact name="weight">yes</fact>
-										<fact name="eye-sight">yes</fact>
-									</and>
-								</or>
-							</and>
-
-						</and>
-						<and>
-							<fact name="hungry">yes</fact>
-							<fact name="weight">yes</fact>
-							<fact name="eye-sight">yes</fact>
-						</and>
-					</or>
+					<fact name="3Type1symptoms">yes</fact>
 				</not>
 			</and>
 	  	</if>
