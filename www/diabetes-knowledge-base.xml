@@ -818,15 +818,32 @@
   	 <rule>
 	  	<description>Type 1 symbols first question -> check for type 2 symptoms </description>
 	  	<if>	
-			
-				<and>
-					<fact name="checked">yes</fact>
-					<fact name="check2">yes</fact>
-				</and>
+	
+			<and>
+				<fact name="checked">yes</fact>
+				<fact name="check2">yes</fact>
+			</and>
 
 	  	</if>
 	  	<then>
 		  	<fact name="type2Symptoms">yes</fact>
+	  </then>
+  	</rule>
+
+
+  	 <rule>
+	  	<description>Type 1 symbols first question -> check for type 2 symptoms </description>
+	  	<if>	
+			<and>
+				<fact name="checked">yes</fact>
+				<not>
+					<fact name="check2">n</fact>
+				</not>
+			</and>
+
+	  	</if>
+	  	<then>
+		  	<fact name="type2Symptoms">NO</fact>
 	  </then>
   	</rule>
 
@@ -1253,6 +1270,7 @@
 				<fact name="tired">yes</fact>
 				<fact name="checked">yes</fact>
 				<fact name="check2">yes</fact>
+				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
