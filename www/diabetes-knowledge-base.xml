@@ -1248,7 +1248,7 @@
 		<option>
 			<description>None of these</description>
 			<then>
-				<fact name="type1Symptoms">no</fact>
+				<fact name="type1">no</fact>
 				<fact name="type2Symptoms">no</fact>
 			</then>
 		</option>
