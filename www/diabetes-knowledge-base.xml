@@ -1087,7 +1087,9 @@
 					</not>
 			  		<fact name="type1Check">yes</fact>
 			  		<fact name="PassOut">no</fact>
-			  		<fact name="3Type1symptoms">yes</fact>
+			  		<fact name="drymouth">yes</fact>
+			  		<fact name="urinating">yes</fact>
+			  		<fact name="hungry">yes</fact>
 					<fact name="Age">low</fact>
 					<fact name="family1">yes</fact>
 				</and>
@@ -1112,7 +1114,9 @@
 					</not>
 		 			<fact name="type1Check">yes</fact>
 		  	  		<fact name="PassOut">no</fact>
-		  	  		<fact name="3Type1symptoms">yes</fact>
+		  	  		<fact name="drymouth">yes</fact>
+			  		<fact name="urinating">yes</fact>
+			  		<fact name="hungry">yes</fact>
 					<fact name="Age">high</fact>
 					<fact name="family1">yes</fact>
 				</and>
@@ -1122,7 +1126,9 @@
 					</not>
 		 			<fact name="type1Check">yes</fact>
 		  	  		<fact name="PassOut">no</fact>
-		  	  		<fact name="3Type1symptoms">yes</fact>
+		  	  		<fact name="drymouth">yes</fact>
+			  		<fact name="urinating">yes</fact>
+			  		<fact name="hungry">yes</fact>
 					<fact name="Age">low</fact>
 					<fact name="family1">no</fact>
 				</and>
@@ -1142,10 +1148,7 @@
 	      	<and>
 	      		<fact name="type1Check">yes</fact>
 	  			<not>
-					<fact name="RiskDiabetesType1">ketoacidose</fact>
-				</not>
-				<not>
-					<fact name="3Type1symptoms">yes</fact>
+					<fact name="Risk1Advice">given</fact>
 				</not>
 			</and>
 	  	</if>
