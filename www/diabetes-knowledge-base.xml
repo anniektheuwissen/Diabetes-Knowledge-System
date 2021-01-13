@@ -1082,14 +1082,9 @@
 	  		<or>
 	  			<!-- Classic case of type 1, low age & family with diabetes 1 and symptoms = better to check with doctor -->
 	  	    	<and>
-	  	    		<not>
-						<fact name="RiskDiabetesType1">OtherSymptoms</fact>
-					</not>
 			  		<fact name="type1Check">yes</fact>
 			  		<fact name="PassOut">no</fact>
-			  		<fact name="drymouth">yes</fact>
-			  		<fact name="urinating">yes</fact>
-			  		<fact name="hungry">yes</fact>
+			  		<fact name="3Type1symptoms">yes</fact>
 					<fact name="Age">low</fact>
 					<fact name="family1">yes</fact>
 				</and>
@@ -1109,14 +1104,9 @@
 	  	<if>
 	  		<or>
 			   	<and>
-			   		<not>
-						<fact name="RiskDiabetesType1">OtherSymptoms</fact>
-					</not>
 		 			<fact name="type1Check">yes</fact>
 		  	  		<fact name="PassOut">no</fact>
-		  	  		<fact name="drymouth">yes</fact>
-			  		<fact name="urinating">yes</fact>
-			  		<fact name="hungry">yes</fact>
+		  	  		<fact name="3Type1symptoms">yes</fact>
 					<fact name="Age">high</fact>
 					<fact name="family1">yes</fact>
 				</and>
@@ -1126,9 +1116,7 @@
 					</not>
 		 			<fact name="type1Check">yes</fact>
 		  	  		<fact name="PassOut">no</fact>
-		  	  		<fact name="drymouth">yes</fact>
-			  		<fact name="urinating">yes</fact>
-			  		<fact name="hungry">yes</fact>
+		  	  		<fact name="3Type1symptoms">yes</fact>
 					<fact name="Age">low</fact>
 					<fact name="family1">no</fact>
 				</and>
@@ -1143,21 +1131,24 @@
   	</rule>
 
   	 <rule>
-	  	<description>symptoms no</description>
+	  	<description>Type 1 Low Risk:
+	  	If we find someone with a low risk of diabetes type 1 -> we state that the symptoms might be related to another disease, and we also check for diabetes type 2, after which we move to lifestyle questions.</description>
 	  	<if>
-	      	<and>
-	      		<fact name="type1Check">yes</fact>
-	  			<not>
-					<fact name="Risk1Advice">given</fact>
+	  		<and>
+	  			<fact name="type1Check">yes</fact>
+	      		<not>
+	      			<fact name="3Type1symptoms">yes</fact>
 				</not>
 			</and>
 	  	</if>
 	  	<then>
-	  		<fact name="type1">no</fact>
-	  		<fact name="type1Check">off</fact>
-	  		<fact name="RiskDiabetesType1">OtherSymptoms</fact>
+		  	<fact name="RiskDiabetesType1">OtherSymptoms</fact>
+		  	<fact name="type1">no</fact>
 	  </then>
   	</rule>
+
+
+
 
 <!-- Rules for assessing if diabetes 1 or 2  -->
     <rule>
@@ -1173,29 +1164,6 @@
 		  	<fact name="type1Check">yes</fact>
 	  </then>
   	</rule>
-
-<!--
-  	<rule>
-	  	<description>Type 1 Low Risk:
-	  	If we find someone with a low risk of diabetes type 1 -> we state that the symptoms might be related to another disease, and we also check for diabetes type 2, after which we move to lifestyle questions.</description>
-	  	<if>
-	  		<and>
-	  			<fact name="type1Check">yes</fact>
-	      		<not>
-	      			<fact name="Risk1Advice">given</fact>
-				</not>
-			</and>
-	  	</if>
-	  	<then>
-	  		<fact name="type1">no</fact>
-	  		<fact name="Risk1Advice">given</fact>
-		  	<fact name="RiskDiabetesType1">OtherSymptoms</fact>
-		  	<fact name="type1Check">off</fact>
-	  </then>
-  	</rule>
--->
-
-
 
     <rule>
 	  	<description>Diagnose type 2:
