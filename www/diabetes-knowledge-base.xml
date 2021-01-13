@@ -1012,78 +1012,8 @@
 	  <description>Type 1 at least 3 symptoms:
 	 	</description>
 	  	<if>
-	      	<or>
-	      		<and>
-					<fact name="drymouth">yes</fact>
-					<and>
-						<or>
-							<and>
-							<fact name="urinating">yes</fact>
-								<and>
-									<or>
-										<fact name="hungry">yes</fact>
-										<fact name="weight">yes</fact>
-										<fact name="eye-sight">yes</fact>
-									</or>
-								</and>
-							</and>
-
-							<and>
-							<fact name="hungry">yes</fact>
-								<and>
-									<or>
-										<fact name="weight">yes</fact>
-										<fact name="eye-sight">yes</fact>
-									</or>
-								</and>
-							</and>
-
-							<and>
-								<fact name="weight">yes</fact>
-								<fact name="eye-sight">yes</fact>
-							</and>
-						</or>
-					</and>
-				</and>
-				<and>
-					<fact name="urinating">yes</fact>
-					<and>
-						<or>
-							<and>
-							<fact name="hungry">yes</fact>
-								<and>
-									<or>
-										<fact name="weight">yes</fact>
-										<fact name="eye-sight">yes</fact>
-									</or>
-								</and>
-							</and>
-
-							<and>
-								<fact name="weight">yes</fact>
-								<fact name="eye-sight">yes</fact>
-							</and>
-						</or>
-					</and>
-
-				</and>
-				<and>
-					<fact name="hungry">yes</fact>
-					<fact name="weight">yes</fact>
-					<fact name="eye-sight">yes</fact>
-				</and>
-			</or>
-	  	</if>
-	  	<then>
-		  	<fact name="3Type1symptoms">yes</fact>
-	  </then>
-  	</rule>
-
-	<rule>
-	  <description>Type 1 at least 3 symptoms:
-	 	</description>
-	  	<if>
-		  	<not>
+		  	<and>
+			  	<fact name="asked">yes</fact>
 				<or>
 					<and>
 						<fact name="drymouth">yes</fact>
@@ -1145,7 +1075,83 @@
 						<fact name="eye-sight">yes</fact>
 					</and>
 				</or>
-			</not>
+			</and>
+	  	</if>
+	  	<then>
+		  	<fact name="3Type1symptoms">yes</fact>
+	  </then>
+  	</rule>
+
+	<rule>
+	  <description>Type 1 at least 3 symptoms:
+	 	</description>
+	  	<if>
+		  	<and>
+			  	<fact name="asked">yes</fact>
+				<not>
+					<or>
+						<and>
+							<fact name="drymouth">yes</fact>
+							<and>
+								<or>
+									<and>
+									<fact name="urinating">yes</fact>
+										<and>
+											<or>
+												<fact name="hungry">yes</fact>
+												<fact name="weight">yes</fact>
+												<fact name="eye-sight">yes</fact>
+											</or>
+										</and>
+									</and>
+
+									<and>
+									<fact name="hungry">yes</fact>
+										<and>
+											<or>
+												<fact name="weight">yes</fact>
+												<fact name="eye-sight">yes</fact>
+											</or>
+										</and>
+									</and>
+
+									<and>
+										<fact name="weight">yes</fact>
+										<fact name="eye-sight">yes</fact>
+									</and>
+								</or>
+							</and>
+						</and>
+						<and>
+							<fact name="urinating">yes</fact>
+							<and>
+								<or>
+									<and>
+									<fact name="hungry">yes</fact>
+										<and>
+											<or>
+												<fact name="weight">yes</fact>
+												<fact name="eye-sight">yes</fact>
+											</or>
+										</and>
+									</and>
+
+									<and>
+										<fact name="weight">yes</fact>
+										<fact name="eye-sight">yes</fact>
+									</and>
+								</or>
+							</and>
+
+						</and>
+						<and>
+							<fact name="hungry">yes</fact>
+							<fact name="weight">yes</fact>
+							<fact name="eye-sight">yes</fact>
+						</and>
+					</or>
+				</not>
+			</and>
 	  	</if>
 	  	<then>
 		  	<fact name="3Type1symptoms">no</fact>
@@ -1292,6 +1298,7 @@
 			<then>
 				<fact name="drymouth">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
+				<fact name="asked">yes</fact>
 			</then>
 		</option>
 		<option>
@@ -1299,6 +1306,7 @@
 			<then>
 				<fact name="urinating">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
+				<fact name="asked">yes</fact>
 			</then>
 		</option>
 		<option>
@@ -1306,6 +1314,7 @@
 			<then>
 				<fact name="hungry">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
+				<fact name="asked">yes</fact>
 			</then>
 		</option>
 		<option>
@@ -1313,6 +1322,7 @@
 			<then>
 				<fact name="weight">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
+				<fact name="asked">yes</fact>
 			</then>
 		</option>
 		<option>
@@ -1320,12 +1330,14 @@
 			<then>
 				<fact name="eye-sight">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
+				<fact name="asked">yes</fact>
 			</then>
 		</option>
 		<option>
 			<description>None of these</description>
 			<then>
 				<fact name="type1Symptoms">no</fact>
+				<fact name="asked">yes</fact>
 			</then>
 		</option>
 	</question>
