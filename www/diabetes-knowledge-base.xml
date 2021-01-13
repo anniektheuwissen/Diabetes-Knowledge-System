@@ -819,11 +819,25 @@
 	  	<description>Type 1 symbols first question -> check for type 2 symptoms </description>
 	  	<if>	
 			<and>
+				<fact name="checked">yes</fact>
 				<fact name="tired">yes</fact>
 			</and>
 	  	</if>
 	  	<then>
 		  	<fact name="type2Symptoms">yes</fact>
+	  </then>
+  	</rule>
+
+  	<rule>
+	  	<description>Type 1 symbols first question -> check for type 2 symptoms </description>
+	  	<if>	
+			<and>
+				<fact name="checked">yes</fact>
+				<fact name="tired">no</fact>
+			</and>
+	  	</if>
+	  	<then>
+		  	<fact name="type2Symptoms">no</fact>
 	  </then>
   	</rule>
 
@@ -1196,12 +1210,13 @@
 
 <!-- These 2 questions are posed at the start to filter between possibilities of type 1, type 2-->
 	<question>
-		<description> Do you experience any of the following symptoms? You can select each one that you experience, if you do not have any of these symptoms, please select the .</description>
+		<description> Do you experience any of the following symptoms? You can select each one that you experience, if you do not have any of these symptoms, please select the last symptom.</description>
 		<multiple> yes </multiple>
 		<option>
 			<description>Dry mouth and/or more than usually thirsty</description>
 			<then>
 				<fact name="drymouth">yes</fact>
+				<fact name="checked">yes</fact>
 				<fact name="type2Symptoms">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
@@ -1210,6 +1225,7 @@
 			<description>Frequently urinating</description>
 			<then>
 				<fact name="urinating">yes</fact>
+				<fact name="checked">yes</fact>
 				<fact name="type2Symptoms">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
@@ -1218,6 +1234,7 @@
 			<description>More than usually hungry</description>
 			<then>
 				<fact name="hungry">yes</fact>
+				<fact name="checked">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
@@ -1225,6 +1242,7 @@
 			<description>Sudden weight losses/gains</description>
 			<then>
 				<fact name="weight">yes</fact>
+				<fact name="checked">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
@@ -1232,6 +1250,7 @@
 			<description>Blurry eye-sight</description>
 			<then>
 				<fact name="eye-sight">yes</fact>
+				<fact name="checked">yes</fact>
 				<fact name="type2Symptoms">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
@@ -1239,6 +1258,7 @@
 		<option>
 			<description>None of these</description>
 			<then>
+				<fact name="checked">yes</fact>
 				<fact name="type1Symptoms">no</fact>
 			</then>
 		</option>
