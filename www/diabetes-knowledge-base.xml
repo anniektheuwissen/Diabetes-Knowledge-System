@@ -1188,6 +1188,7 @@
 	  		<or>	
 				<and>
 					<fact name="type1Symptoms">yes</fact>
+					<fact name="type1">no</fact>
 					<not>
 						<fact name="drymouth">yes</fact>
 					</not>
@@ -1207,6 +1208,7 @@
 			</or>
 	  	</if>
 	  	<then>
+	  		<fact name="type1Symptoms">no</fact>
 		  	<fact name="type2Symptoms">no</fact>
 	  </then>
   	</rule>
@@ -1217,6 +1219,7 @@
 	  		
 				<and>
 					<fact name="type1Symptoms">yes</fact>
+					<fact name="type1">no</fact>
 					<or>
 					
 						<fact name="drymouth">yes</fact>
@@ -1228,6 +1231,7 @@
 			
 	  	</if>
 	  	<then>
+	  		<fact name="type1Symptoms">no</fact>
 		  	<fact name="type2Symptoms">yes</fact>
 	  </then>
   	</rule>
