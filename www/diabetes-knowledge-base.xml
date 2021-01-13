@@ -1181,6 +1181,58 @@
   	</rule>
 
 
+  	 <rule>
+	  	<description>Type 1 symbols first question -> check for type 2 symptoms </description>
+	  	<if>
+	  		<or>	
+				<and>
+					<fact name="type1Symptoms">yes</fact>
+					<not>
+						<fact name="drymouth">yes</fact>
+					</not>
+					<not>
+						<fact name="urinating">yes</fact>
+					</not>
+					<not>
+						<fact name="tired">yes</fact>
+					</not>
+					<not>
+						<fact name="eye-sight">yes</fact>
+					</not>
+				</and>
+				<and>
+					<fact name="type1Symptoms">yes</fact>
+				</and>
+			</or>
+	  	</if>
+	  	<then>
+		  	<fact name="type2Symptoms">no</fact>
+	  </then>
+  	</rule>
+
+  	 <rule>
+	  	<description>Type 1 symbols first question -> check for type 2 symptoms </description>
+	  	<if>
+	  		
+				<and>
+					<fact name="type1Symptoms">yes</fact>
+					<or>
+					
+						<fact name="drymouth">yes</fact>
+						<fact name="urinating">yes</fact>
+						<fact name="tired">yes</fact>
+						<fact name="eye-sight">yes</fact>
+					</or>
+				</and>
+			
+	  	</if>
+	  	<then>
+		  	<fact name="type2Symptoms">no</fact>
+	  </then>
+  	</rule>
+
+
+
 <!-- Start of the questions-->
 
 <!-- These 2 questions are posed at the start to filter between possibilities of type 1, type 2-->
@@ -1190,7 +1242,6 @@
 		<option>
 			<description>Dry mouth and/or more than usually thirsty</description>
 			<then>
-				<fact name="type2Symptoms">yes</fact>
 				<fact name="drymouth">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
@@ -1198,7 +1249,6 @@
 		<option>
 			<description>Frequently urinating</description>
 			<then>
-				<fact name="type2Symptoms">yes</fact>
 				<fact name="urinating">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
@@ -1220,7 +1270,6 @@
 		<option>
 			<description>Blurry eye-sight</description>
 			<then>
-				<fact name="type2Symptoms">yes</fact>
 				<fact name="eye-sight">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
@@ -1228,7 +1277,6 @@
 		<option>
 			<description>Frequently tired or drained</description>
 			<then>
-				<fact name="type2Symptoms">yes</fact>
 				<fact name="tired">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
@@ -1236,7 +1284,6 @@
 		<option>
 			<description>None of these</description>
 			<then>
-				<fact name="type2Symptoms">no</fact>
 				<fact name="type1Symptoms">no</fact>
 			</then>
 		</option>
