@@ -1435,6 +1435,7 @@
 		</option>
 	</question>
 
+<!--
 	<question>
 		<description>Do you very often feel tired or drained?</description>
 		<option>
@@ -1457,7 +1458,7 @@
 				<fact name="tired">no</fact>
 			</then>
 		</option>
-	</question>
+	</question> -->
 
 	<question>
 		<description>Do or did you ever smoke regularly?</description>
