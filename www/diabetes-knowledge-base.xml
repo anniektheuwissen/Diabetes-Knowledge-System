@@ -1201,7 +1201,7 @@
 					</not>
 				</and>
 				<and>
-					<fact name="type1Symptoms">yes</fact>
+					<fact name="type1Symptoms">no</fact>
 				</and>
 			</or>
 	  	</if>
