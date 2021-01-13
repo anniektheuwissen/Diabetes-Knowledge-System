@@ -1178,6 +1178,8 @@
 	  	</if>
 	  	<then>
 	  		<fact name="type1">no</fact>
+	  		<fact name="type2Symptoms">no</fact>
+
 	  </then>
   	</rule>
 
@@ -1185,10 +1187,7 @@
   	 <rule>
 	  	<description>Type 1 symbols first question -> check for type 2 symptoms </description>
 	  	<if>
-	  		<or>	
 				<and>
-					<fact name="type1Symptoms">yes</fact>
-					<fact name="type1">no</fact>
 					<not>
 						<fact name="drymouth">yes</fact>
 					</not>
@@ -1202,13 +1201,9 @@
 						<fact name="eye-sight">yes</fact>
 					</not>
 				</and>
-				<and>
-					<fact name="type1Symptoms">no</fact>
-				</and>
-			</or>
 	  	</if>
 	  	<then>
-	  		<fact name="type1Symptoms">no</fact>
+	  		<fact name="checkie">check</fact>
 		  	<fact name="type2Symptoms">no</fact>
 	  </then>
   	</rule>
@@ -1216,22 +1211,14 @@
   	 <rule>
 	  	<description>Type 1 symbols first question -> check for type 2 symptoms </description>
 	  	<if>
-	  		
-				<and>
-					<fact name="type1Symptoms">yes</fact>
-					<fact name="type1">no</fact>
-					<or>
-					
-						<fact name="drymouth">yes</fact>
-						<fact name="urinating">yes</fact>
-						<fact name="tired">yes</fact>
-						<fact name="eye-sight">yes</fact>
-					</or>
-				</and>
-			
+	  		<and>
+	  			<fact name="type1Symptoms">yes</fact>
+	  			<not>
+					<fact name="checkie">check</fact>
+				</not>
+	  		</and>
 	  	</if>
 	  	<then>
-	  		<fact name="type1Symptoms">no</fact>
 		  	<fact name="type2Symptoms">yes</fact>
 	  </then>
   	</rule>
@@ -1290,6 +1277,7 @@
 			<description>None of these</description>
 			<then>
 				<fact name="type1Symptoms">no</fact>
+				<fact name="type2Symptoms">no</fact>
 			</then>
 		</option>
 	</question>
