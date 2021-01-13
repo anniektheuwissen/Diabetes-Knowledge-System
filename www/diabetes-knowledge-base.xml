@@ -847,7 +847,7 @@
 	  	<description>Diagnose high Risk type 2</description>
 	  	<if>
 			<or>
-				<!-- High age and high BMI in combination with symptoms = high risk -->
+				<!-- High age and high BMI in combination with symptoms = high risk --> 
 				<and>
 		  			<fact name="type1">no</fact>
 		  			<fact name="type2Symptoms">yes</fact>
@@ -859,6 +859,7 @@
 				<and>
 		  			<fact name="type1">no</fact>
 		  			<fact name="type2Symptoms">yes</fact>
+		  			<fact name="gender">female</fact>
 					<fact name="pregnancy">yes</fact>
 					<or>
 						<fact name="BMI">high</fact>
@@ -866,7 +867,7 @@
 						<fact name="Age">high</fact>
 					</or>
 				</and>
-				<!-- high age, high BMI & one of the other most important risk factors = definitely high risk, even if no symptoms -->
+				<!-- high age, high BMI & one of the other most important risk factors = definitely high risk, even if no symptoms --> 
 				<and>
 		  			<fact name="type1">no</fact>
 		  			<fact name="BMI">high</fact>
@@ -876,7 +877,10 @@
 		  				<fact name="family2">yes</fact>
 		  				<fact name="descent">yes</fact>
 		  				<fact name="diseases">yes</fact>
-		  				<fact name="pregnancy">yes</fact>
+		  				<and>
+		  					<fact name="gender">female</fact>
+		  					<fact name="pregnancy">yes</fact>
+		  				</and>
 		  			</or>
 				</and>
 				<and>
@@ -889,7 +893,10 @@
 		  				<fact name="family2">yes</fact>
 		  				<fact name="descent">yes</fact>
 		  				<fact name="diseases">yes</fact>
-		  				<fact name="pregnancy">yes</fact>
+		  				<and>
+		  					<fact name="gender">female</fact>
+		  					<fact name="pregnancy">yes</fact>
+		  				</and>
 		  			</or>
 				</and>
 			</or>
@@ -897,7 +904,7 @@
 	  	<then>
 		  	<fact name="RiskDiabetesType2">highRisk2</fact>
 		  	<fact name="CheckForType2">risk</fact>
-		  	<!-- set type2 to yes, so that the lifestyle questions will be asked -->
+		  	<!-- set type2 to yes, so that the lifestyle questions will be asked --> 
 		  	<fact name="type2">yes</fact>
 	  </then>
   	</rule>
@@ -907,8 +914,8 @@
 	  	<description>Diagnose medium Risk type 2</description>
 	  	<if>
 			<or>
-				<!-- Some other combinations of cases that could lead to a medium risk. As our expert stated, differentiating for a medium risk is even less clear, so these cases are by no means scientifically proven and it is important to state that clearly to the user at the beginning and the end.-->
-				<!-- medium BMI in combination with high age and symptoms = medium risk, if you have other risk factors-->
+				<!-- Some other combinations of cases that could lead to a medium risk. As our expert stated, differentiating for a medium risk is even less clear, so these cases are by no means scientifically proven and it is important to state that clearly to the user at the beginning and the end.--> 
+				<!-- medium BMI in combination with high age and symptoms = medium risk, if you have other risk factors--> 
 				<and>
 		  			<fact name="type1">no</fact>
 		  			<fact name="type2Symptoms">yes</fact>
@@ -936,18 +943,18 @@
 					<fact name="BMI">high</fact>
 					<fact name="Age">low</fact>
 					<or>
-						<fact name="family2">yes</fact>
+						<fact name="family2">yes</fact>	
 						<fact name="descent">yes</fact>
-					</or>
+					</or>	
 				</and>
-				<!-- or in case of medium BMI -> a lot of other factors -->
+				<!-- or in case of medium BMI -> a lot of other factors --> 
 				<and>
 		  			<fact name="type1">no</fact>
 		  			<fact name="type2Symptoms">yes</fact>
 					<fact name="BMI">medium</fact>
 					<fact name="Age">low</fact>
-					<fact name="family2">yes</fact>
-					<fact name="descent">yes</fact>
+					<fact name="family2">yes</fact>	
+					<fact name="descent">yes</fact>	
 					<fact name="smoke2">yes</fact>
 				</and>
 
@@ -961,9 +968,10 @@
 		  			<fact name="descent">yes</fact>
 	 				<fact name="diseases">yes</fact>
 				</and>
-				<!-- even with no symptoms, pregnancy diabetes could still lead to a medium risk, but you would need high BMI or high Age-->
+				<!-- even with no symptoms, pregnancy diabetes could still lead to a medium risk, but you would need high BMI or high Age--> 
 		  		<and>
 		  			<fact name="type1">no</fact>
+		  			<fact name="gender">female</fact>
 					<fact name="pregnancy">yes</fact>
 					<or>
 						<fact name="BMI">high</fact>
@@ -975,10 +983,11 @@
 	  	<then>
 		  	<fact name="RiskDiabetesType2">mediumRisk2</fact>
 		  	<fact name="CheckForType2">risk</fact>
-		  	<!-- set type2 to yes, so that the lifestyle questions will be asked -->
+		  	<!-- set type2 to yes, so that the lifestyle questions will be asked --> 
 		  	<fact name="type2">yes</fact>
 	  </then>
   	</rule>
+  	
 
     <rule>
 	  	<description>Diagnose low Risk type 2:
@@ -1336,8 +1345,7 @@
 
 <!-- These are questions related only to assessing the risk of diabetes type 2-->
 
-<!-- As adviced by expert, do not use abdominal girth, but simple BMI only -->
-<!--
+
 	<question>
 		<description> Do you identify as male or female?</description>
 		<option>
@@ -1358,7 +1366,10 @@
 				<fact name="gender">other</fact>
 			</then>
 		</option>
-	</question>
+	</question> 
+
+<!-- As adviced by expert, do not use abdominal girth, but simple BMI only -->
+<!--	
 
 	<question>
 		<description>What is your abdominal girth?
