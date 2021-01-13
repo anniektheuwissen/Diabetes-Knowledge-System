@@ -1137,7 +1137,6 @@
 	  	<if>
 	  		<and>
 	  			<fact name="type1Check">yes</fact>
-	  			<fact name="PassOut">no</fact>
 	      		<not>
 	      			<fact name="Risk1Advice">given</fact>
 				</not>
