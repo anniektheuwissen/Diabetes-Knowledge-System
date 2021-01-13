@@ -1570,22 +1570,22 @@
 		<description>How many minutes of moderate and heavy exercise do you do per week?
 		When answering the questions, think about a typical week in the past month.
 		With 'Moderate effort' you still have enough breath to be able to talk. For example: walking briskly, climbing stairs, cycling briskly, swimming, gardening or vacuuming.
-		With 'Heavy exertion' you start to sweat. Your breath is much faster and you cannot keep talking. For example: intensive sports, running, fast cycling or heavy physical work such as digging in the garden. </description>
+		With 'Heavy exertion' you start to sweat. For example: intensive sports, running, fast cycling or heavy physical work such as digging in the garden. </description>
 		<option>
-			<description>More than 150 minutes </description>
+			<description>More than 150 minutes (average of 20+ minutes per day) </description>
 			<then>
 				<fact name="Exercise">yes</fact>
 			</then>
 		</option>
 		<option>
-			<description>Between 100-150 minutes </description>
+			<description>Between 100-150 minutes (average of 15-20 minutes per day)</description>
 			<then>
 				<fact name="Exercise">some</fact>
 			</then>
 		</option>
 
 		<option>
-			<description> Less than 100 minutes minutes </description>
+			<description> Less than 100 minutes minutes (average of less then 15 minutes per day)</description>
 			<then>
 				<fact name="Exercise">no</fact>
 			</then>
