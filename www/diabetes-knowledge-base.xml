@@ -816,7 +816,7 @@
 <!-- First check for symptoms that were asked in the very first question for type 1 risk that correspond to type 2 symptoms as well and for the tired question-->
 
     <rule>
-	  	<description>Diagnose High Risk type 2</description>
+	  	<description>Diagnose type 2 symptoms</description>
 	  	<if>
 			<or>
 				<and>
@@ -1076,6 +1076,22 @@
 	  	</if>
 	  	<then>
 		  	<fact name="3Type1symptoms">yes</fact>
+			<fact name="checkcheck">yes</fact>
+	  </then>
+  	</rule>
+
+	<rule>
+	  	<description>Not 3 symptoms</description>
+	  	<if>
+	      	<and>
+	  			<fact name="type1Symptoms">yes</fact>
+				<not>
+					<fact name="checkcheck">yes</fact>
+				</not>
+			</and>
+	  	</if>
+	  	<then>
+		  	<fact name="3Type1symptoms">no</fact>
 	  </then>
   	</rule>
 
