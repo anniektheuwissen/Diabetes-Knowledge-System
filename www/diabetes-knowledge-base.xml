@@ -1,10 +1,10 @@
 <knowledge>
 	<title>Diagnosing Diabetes</title>
-	<description>This test will assess your diabetes type 1 and/or type 2 risk and will offer lifestyle improvement tips on the basis of your answers to a set of questions. For an optimal treatment and/or prevention of diabetes, it is is extremely important to be aware of your diabetes condition or risk in time. Also, your life with diabetes and your risk of getting diabetes can be significantly improved by adjusting your lifestyle. 
+	<description>This test will assess your diabetes type 1 and/or type 2 risk and will offer lifestyle improvement tips on the basis of your answers to a set of questions. For an optimal treatment and/or prevention of diabetes, it is is extremely important to be aware of your diabetes condition or risk in time. Also, your life with diabetes and your risk of getting diabetes can be significantly improved by adjusting your lifestyle.
 
-	This test will take approximately 10 minutes. 
+	This test will take approximately 10 minutes.
 
-	(Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG assocation for general practioners in the Netherlands. It is a general risk assesment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advice you to visit your general practioner and take an actual diabetes test)</knowledge>/description>
+	(Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG assocation for general practioners in the Netherlands. It is a general risk assesment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advice you to visit your general practioner and take an actual diabetes test)</description>
 
 
 
@@ -36,12 +36,12 @@
 
 
 <!-- Based on the answers to the lifestyle questions, we offer specific advice to users. There are many different answer values, as there are many different forms of advice-->
-<!-- As adviced by our expert, also positive advice and feedback is given --> 
+<!-- As adviced by our expert, also positive advice and feedback is given -->
 <goal name="AdviceSport">
  	<description>Lifestyle Advice: Exercise</description>
-	 	<answer value="SportMore">We advice you to increase the amount of exercise you do significantly. Regular exercise is one of the most importanat and effective ways to reduce your diabetes risk. Exercise also reduces the risk of cardiovascular disease, depressive complaints, breast cancer, colon cancer, mental decline and dementia. 
+	 	<answer value="SportMore">We advice you to increase the amount of exercise you do significantly. Regular exercise is one of the most importanat and effective ways to reduce your diabetes risk. Exercise also reduces the risk of cardiovascular disease, depressive complaints, breast cancer, colon cancer, mental decline and dementia.
 		Ideally, you should exercise actively for at least 2.5 hours a week (for example walking, cycling, running, playing football, fitness, dancing, martial arts). Also do activities that strengthen muscles and bones, such as exercise or strength training. And avoid sitting still a lot. Choose exercise / sports activities that suit you, but do not set your goals too high in the beginning. Even already doing a short walk everyday is a good start!</answer>
-	 	<answer value="SportaBitMore">Your answers seem to indicate that you already do quite some exercise and active movement, still we advice you to increase your active exercise a bit. Regular exercise is one of the most importanat and effective ways to reduce your diabetes risk. Exercise also reduces the risk of cardiovascular disease, depressive complaints, breast cancer, colon cancer, mental decline and dementia. 
+	 	<answer value="SportaBitMore">Your answers seem to indicate that you already do quite some exercise and active movement, still we advice you to increase your active exercise a bit. Regular exercise is one of the most importanat and effective ways to reduce your diabetes risk. Exercise also reduces the risk of cardiovascular disease, depressive complaints, breast cancer, colon cancer, mental decline and dementia.
 	 	It is healthy to exercise for at least 30 minutes at least five days a week. Try to find out what kind of exercise forms you prefere, because when you like it, you can last longer.  </answer>
 	    <answer value="no">It is great that you exercise so much! You probably already notice that you feel good by exercising, keep it up! If you keep exercising regularly, you have signitfiacntly less chance of forming cardiovascular disease and diabetes.</answer>
 </goal>
@@ -127,7 +127,7 @@
 <!-- below follow the rules, split up in lifestyle rules and diabetes rules -->
 
 <!-- Every lifestyle rule has a type 1 check, as in the case of diabetes type 1, we do not offer lifestyle advice-->
-<!-- Also, there is a diabetestype 2 check, so that these questions will be asked first --> 
+<!-- Also, there is a diabetestype 2 check, so that these questions will be asked first -->
 
 <!-- Rules for lifestyle tips for exercise -->
   	<rule>
@@ -290,7 +290,7 @@
 
 
 <!-- Rules for lifestyle tips for fat -->
-	
+
 	<!-- as stated by our expert, it is very hard to differentiate between just enough and too much fat intake
 	our experts advive was to use these rules, which are not scientifically proven, but for our case comprehensive enough-->
   	<rule>
@@ -336,7 +336,7 @@
 					<fact name="fried">lot</fact>
 					<fact name="cheese">lot</fact>
 					<fact name="CheeseKind">fat</fact>
-				</and>	
+				</and>
 				<and>
 					<fact name="type1">no</fact>
 					<fact name="type2">yes</fact>
@@ -367,7 +367,7 @@
 	  	</if>
 	  	<then>
 		  	<fact name="AdviceFat">LessFat</fact>
-		  	<!-- used for the other case, fat intake = good (see next rule) --> 
+		  	<!-- used for the other case, fat intake = good (see next rule) -->
 		  	<fact name="FatIntake">bad</fact>
 	  </then>
   	</rule>
@@ -392,7 +392,7 @@
 
 <!-- Rules for lifestyle tips for sugar & sweets -->
 
-	<!-- again here: cases as adviced by expert for counting as too much sugar --> 
+	<!-- again here: cases as adviced by expert for counting as too much sugar -->
   	<rule>
 	  	<description>Lifestyle advice: too much sugar and sweets</description>
 	  	<if>
@@ -525,12 +525,12 @@
 
 
 <!-- Rules for lifestyle tips for stress -->
-<!-- Again here, very hard to differentiate between stress cases, differentiating is based on advice by expert (not scientifically proven) --> 
+<!-- Again here, very hard to differentiate between stress cases, differentiating is based on advice by expert (not scientifically proven) -->
 <rule>
 	  	<description>Lifestyle advice: too much stress</description>
 	  	<if>
 	  		<or>
-	  			<!-- first cases, when you experience a lot of stress in one aspect of your life it is bad--> 
+	  			<!-- first cases, when you experience a lot of stress in one aspect of your life it is bad-->
       			<and>
       				<fact name="type1">no</fact>
       				<fact name="type2">yes</fact>
@@ -546,7 +546,7 @@
 					<fact name="type2">yes</fact>
       				<fact name="stressother">lot</fact>
 				</and>
-				<!-- other forms of too much stress combinations --> 
+				<!-- other forms of too much stress combinations -->
 				<and>
 					<fact name="type1">no</fact>
 					<fact name="type2">yes</fact>
@@ -602,7 +602,7 @@
 	  	<description>Lifestyle advice: bit too much stress</description>
 	  	<if>
 	  		<or>
-				<!-- forms of bit too much stress combinations --> 
+				<!-- forms of bit too much stress combinations -->
 				<and>
 					<fact name="type1">no</fact>
 					<fact name="type2">yes</fact>
@@ -809,16 +809,16 @@
 
 
 <!-- Rules for Diabetes Type 2 Diagnoses
-	Note: As our expert indicated, it is very hard to effectively distinguish between risk types. 
+	Note: As our expert indicated, it is very hard to effectively distinguish between risk types.
 	These risk assessments were made by consulting our expert and via the advice of the Dutch general practicioners, via our main source: thuisarts.nl -->
 <!-- And only if fact type1=no, we asess type 2 risk cases -->
 
-<!-- First check for symptoms that were asked in the very first question for type 1 risk that correspond to type 2 symptoms as well and for the tired question--> 
+<!-- First check for symptoms that were asked in the very first question for type 1 risk that correspond to type 2 symptoms as well and for the tired question-->
 
     <rule>
 	  	<description>Diagnose high Risk type 2</description>
 	  	<if>
-			<or>	
+			<or>
 		  		<fact name="urinating">yes</fact>
 	 			<fact name="eye-sight">yes</fact>
 	 			<fact name="drymouth">yes</fact>
@@ -834,7 +834,7 @@
 	  	<description>Diagnose high Risk type 2</description>
 	  	<if>
 			<or>
-				<!-- High age and high BMI in combination with symptoms = high risk --> 
+				<!-- High age and high BMI in combination with symptoms = high risk -->
 				<and>
 		  			<fact name="type1">no</fact>
 		  			<fact name="type2Symptoms">yes</fact>
@@ -853,7 +853,7 @@
 						<fact name="Age">high</fact>
 					</or>
 				</and>
-				<!-- high age, high BMI & one of the other most important risk factors = definitely high risk, even if no symptoms --> 
+				<!-- high age, high BMI & one of the other most important risk factors = definitely high risk, even if no symptoms -->
 				<and>
 		  			<fact name="type1">no</fact>
 		  			<fact name="BMI">high</fact>
@@ -884,7 +884,7 @@
 	  	<then>
 		  	<fact name="RiskDiabetesType2">highRisk2</fact>
 		  	<fact name="CheckForType2">risk</fact>
-		  	<!-- set type2 to yes, so that the lifestyle questions will be asked --> 
+		  	<!-- set type2 to yes, so that the lifestyle questions will be asked -->
 		  	<fact name="type2">yes</fact>
 	  </then>
   	</rule>
@@ -894,8 +894,8 @@
 	  	<description>Diagnose medium Risk type 2</description>
 	  	<if>
 			<or>
-				<!-- Some other combinations of cases that could lead to a medium risk. As our expert stated, differentiating for a medium risk is even less clear, so these cases are by no means scientifically proven and it is important to state that clearly to the user at the beginning and the end.--> 
-				<!-- medium BMI in combination with high age and symptoms = medium risk, if you have other risk factors--> 
+				<!-- Some other combinations of cases that could lead to a medium risk. As our expert stated, differentiating for a medium risk is even less clear, so these cases are by no means scientifically proven and it is important to state that clearly to the user at the beginning and the end.-->
+				<!-- medium BMI in combination with high age and symptoms = medium risk, if you have other risk factors-->
 				<and>
 		  			<fact name="type1">no</fact>
 		  			<fact name="type2Symptoms">yes</fact>
@@ -923,18 +923,18 @@
 					<fact name="BMI">high</fact>
 					<fact name="Age">low</fact>
 					<or>
-						<fact name="family2">yes</fact>	
+						<fact name="family2">yes</fact>
 						<fact name="descent">yes</fact>
-					</or>	
+					</or>
 				</and>
-				<!-- or in case of medium BMI -> a lot of other factors --> 
+				<!-- or in case of medium BMI -> a lot of other factors -->
 				<and>
 		  			<fact name="type1">no</fact>
 		  			<fact name="type2Symptoms">yes</fact>
 					<fact name="BMI">medium</fact>
 					<fact name="Age">low</fact>
-					<fact name="family2">yes</fact>	
-					<fact name="descent">yes</fact>	
+					<fact name="family2">yes</fact>
+					<fact name="descent">yes</fact>
 					<fact name="smoke2">yes</fact>
 				</and>
 
@@ -948,7 +948,7 @@
 		  			<fact name="descent">yes</fact>
 	 				<fact name="diseases">yes</fact>
 				</and>
-				<!-- even with no symptoms, pregnancy diabetes could still lead to a medium risk, but you would need high BMI or high Age--> 
+				<!-- even with no symptoms, pregnancy diabetes could still lead to a medium risk, but you would need high BMI or high Age-->
 		  		<and>
 		  			<fact name="type1">no</fact>
 					<fact name="pregnancy">yes</fact>
@@ -962,11 +962,11 @@
 	  	<then>
 		  	<fact name="RiskDiabetesType2">mediumRisk2</fact>
 		  	<fact name="CheckForType2">risk</fact>
-		  	<!-- set type2 to yes, so that the lifestyle questions will be asked --> 
+		  	<!-- set type2 to yes, so that the lifestyle questions will be asked -->
 		  	<fact name="type2">yes</fact>
 	  </then>
   	</rule>
-  	
+
     <rule>
 	  	<description>Diagnose low Risk type 2:
 	  	Other cases = low risk </description>
@@ -977,7 +977,7 @@
 	  	</if>
 	  	<then>
 		  	<fact name="RiskDiabetesType2">lowRisk2</fact>
-		  	<!-- set type2 to yes, so that the lifestyle questions will be asked --> 
+		  	<!-- set type2 to yes, so that the lifestyle questions will be asked -->
 		  	<fact name="type2">yes</fact>
 	  </then>
   	</rule>
@@ -985,7 +985,7 @@
 
 <!-- Rules for specific Diabetes Type 1 Diagnoses -->
 
-<!-- As indicated by our expert, type 1 diabetes is quite rare, so you would need quite some symptoms and risk factors, otherwise it is better to assess for type 2 and the symptoms probably relate to something else. therefore this first rule is to check if there were at least 3 symptoms indicated  --> 
+<!-- As indicated by our expert, type 1 diabetes is quite rare, so you would need quite some symptoms and risk factors, otherwise it is better to assess for type 2 and the symptoms probably relate to something else. therefore this first rule is to check if there were at least 3 symptoms indicated  -->
 	<rule>
 	  <description>Type 1 at least 3 symptoms:
 	 	</description>
@@ -1005,7 +1005,7 @@
 									</or>
 								</and>
 							</and>
-						
+
 							<and>
 							<fact name="hungry">yes</fact>
 								<and>
@@ -1015,7 +1015,7 @@
 									</or>
 								</and>
 							</and>
-						
+
 							<and>
 								<fact name="weight">yes</fact>
 								<fact name="eye-sight">yes</fact>
@@ -1036,14 +1036,14 @@
 									</or>
 								</and>
 							</and>
-						
+
 							<and>
 								<fact name="weight">yes</fact>
 								<fact name="eye-sight">yes</fact>
 							</and>
 						</or>
-					</and>	
-					
+					</and>
+
 				</and>
 				<and>
 					<fact name="hungry">yes</fact>
@@ -1057,7 +1057,7 @@
 	  </then>
   	</rule>
 
-<!-- But again here, quite hard to effectively differentiate between specific type 1 risk assesmments (not scientific) --> 
+<!-- But again here, quite hard to effectively differentiate between specific type 1 risk assesmments (not scientific) -->
   	<rule>
 	  	<description>Type 1 ketoacidose:
 	 	When someone suffers from the type 1 symptoms in the past weeks and has passed out, we move directly to a ketoacidose advice, as you cannot waste time with this, even if only 1 symptom is given. We skip the lifestyle questions</description>
@@ -1102,7 +1102,7 @@
 	  	<description>Type 1 Medium Risk:
 	  	If we find someone with a medium risk of diabetes type 1, we skip the lifestyle questions, as adviced by our expert.</description>
 	  	<if>
-	  		
+
 		   	<and>
 	 			<fact name="type1Check">yes</fact>
 	  	  		<fact name="PassOut">no</fact>
@@ -1225,7 +1225,7 @@
 				<fact name="type1Symptoms">no</fact>
 			</then>
 		</option>
-	</question>  
+	</question>
 <!--
  Alternative question if multiple does not work
 	<question>
@@ -1242,7 +1242,7 @@
 				<fact name="type1Symptoms">no</fact>
 			</then>
 		</option>
-	</question> 
+	</question>
 -->
 
 	<question>
@@ -1295,11 +1295,11 @@
 		</option>
 	</question>
 
-<!-- Question used for type 1 and type 2 classification --> 
+<!-- Question used for type 1 and type 2 classification -->
 	<question>
 		<description> What is your age? </description>
 		<option>
-			<!-- is risk group for type 2 and less common for type 1 --> 
+			<!-- is risk group for type 2 and less common for type 1 -->
 			<description> 45 years or older </description>
 			<then>
 				<fact name="Age">high</fact>
@@ -1315,7 +1315,7 @@
 
 <!-- These are questions related only to assessing the risk of diabetes type 2-->
 
-<!-- As adviced by expert, do not use abdominal girth, but simple BMI only --> 
+<!-- As adviced by expert, do not use abdominal girth, but simple BMI only -->
 <!--
 	<question>
 		<description> Do you identify as male or female?</description>
@@ -1371,7 +1371,7 @@
 				<fact name="mengirth">high</fact>
 			</then>
 		</option>
-	</question> --> 
+	</question> -->
 
 	<question>
 		<description> What is your BMI? You can calculate your BMI via the following website https://www.voedingscentrum.nl/nl/bmi-meter.aspx </description>
@@ -1486,7 +1486,7 @@
 		</option>
 	</question>
 
-<!-- multiple aanzetten 
+<!-- multiple aanzetten
 	<question>
 		<description> Have you been treated for any of the following diseases in the past: high glucose leels, high blood pressure, high cholesterol, heart and/or vascular diseases? </description>
 		<multiple> yes </multiple>
@@ -2225,7 +2225,7 @@
 		</option>
 	</question>
 
-<!-- do not use this question, as adviced by expert 
+<!-- do not use this question, as adviced by expert
 	<question>
 		<description>Which education did you finish?
 		With finish, we mean where did you get a diploma from</description>
@@ -2277,7 +2277,7 @@
 				<fact name="education">phd</fact>
 			</then>
 		</option>
-	</question> --> 
+	</question> -->
 
 
 </knowledge>
