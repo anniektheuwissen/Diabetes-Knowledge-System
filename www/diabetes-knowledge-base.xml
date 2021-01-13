@@ -832,8 +832,7 @@
 				<and>
 		  			<fact name="type1">no</fact>
 		  			<fact name="type2Symptoms">yes</fact>
-		  			<fact name="gender">female</fact>
-					<fact name="pregnancy">yes</fact>
+		  			<fact name="pregnancyChecked">yes</fact>
 					<or>
 						<fact name="BMI">high</fact>
 						<fact name="BMI">medium</fact>
@@ -850,10 +849,7 @@
 		  				<fact name="family2">yes</fact>
 		  				<fact name="descent">yes</fact>
 		  				<fact name="diseases">yes</fact>
-		  				<and>
-		  					<fact name="gender">female</fact>
-		  					<fact name="pregnancy">yes</fact>
-		  				</and>
+		  				<fact name="pregnancyChecked">yes</fact>
 		  			</or>
 				</and>
 				<and>
@@ -866,10 +862,7 @@
 		  				<fact name="family2">yes</fact>
 		  				<fact name="descent">yes</fact>
 		  				<fact name="diseases">yes</fact>
-		  				<and>
-		  					<fact name="gender">female</fact>
-		  					<fact name="pregnancy">yes</fact>
-		  				</and>
+		  				<fact name="pregnancyChecked">yes</fact>
 		  			</or>
 				</and>
 			</or>
@@ -944,8 +937,7 @@
 				<!-- even with no symptoms, pregnancy diabetes could still lead to a medium risk, but you would need high BMI or high Age--> 
 		  		<and>
 		  			<fact name="type1">no</fact>
-		  			<fact name="gender">female</fact>
-					<fact name="pregnancy">yes</fact>
+		  			<fact name="pregnancyChecked">yes</fact>
 					<or>
 						<fact name="BMI">high</fact>
 						<fact name="Age">high</fact>
@@ -974,6 +966,19 @@
 		  	<fact name="RiskDiabetesType2">lowRisk2</fact>
 		  	<!-- set type2 to yes, so that the lifestyle questions will be asked -->
 		  	<fact name="type2">yes</fact>
+	  </then>
+  	</rule>
+
+    <rule>
+	  	<description>Rule for pregnancy diabetes</description>
+	  	<if>
+	  		<and>
+	  			<fact name="gender">female</fact>
+	  			<fact name="pregnancy">yes</fact>
+	  		</and>
+	  	</if>
+	  	<then>
+		  	<fact name="pregnancyChecked">yes</fact>
 	  </then>
   	</rule>
 
