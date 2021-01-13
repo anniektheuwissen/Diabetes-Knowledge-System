@@ -1162,6 +1162,7 @@
 	  </then>
   	</rule>
 
+<!--
   	<rule>
 	  	<description>Type 1 Low Risk:
 	  	If we find someone with a low risk of diabetes type 1 -> we state that the symptoms might be related to another disease, and we also check for diabetes type 2, after which we move to lifestyle questions.</description>
@@ -1180,7 +1181,7 @@
 		  	<fact name="type1Check">off</fact>
 	  </then>
   	</rule>
-
+-->
 
 
 
