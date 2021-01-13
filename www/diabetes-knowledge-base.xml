@@ -39,9 +39,9 @@
 <!-- As adviced by our expert, also positive advice and feedback is given -->
 <goal name="AdviceSport">
  	<description>Lifestyle Advice: Exercise</description>
-	 	<answer value="SportMore">We advice you to increase the amount of exercise you do significantly. Regular exercise is one of the most importanat and effective ways to reduce your diabetes risk. Exercise also reduces the risk of cardiovascular disease, depressive complaints, breast cancer, colon cancer, mental decline and dementia.
+	 	<answer value="SportMore">We advice you to increase the amount of exercise you do significantly. Regular exercise is one of the most important and effective ways to reduce your diabetes risk. Exercise also reduces the risk of cardiovascular disease, depressive complaints, breast cancer, colon cancer, mental decline and dementia.
 		Ideally, you should exercise actively for at least 2.5 hours a week (for example walking, cycling, running, playing football, fitness, dancing, martial arts). Also do activities that strengthen muscles and bones, such as exercise or strength training. And avoid sitting still a lot. Choose exercise / sports activities that suit you, but do not set your goals too high in the beginning. Even already doing a short walk everyday is a good start!</answer>
-	 	<answer value="SportaBitMore">Your answers seem to indicate that you already do quite some exercise and active movement, still we advice you to increase your active exercise a bit. Regular exercise is one of the most importanat and effective ways to reduce your diabetes risk. Exercise also reduces the risk of cardiovascular disease, depressive complaints, breast cancer, colon cancer, mental decline and dementia.
+	 	<answer value="SportaBitMore">Your answers seem to indicate that you already do quite some exercise and active movement, still we advice you to increase your active exercise a bit. Regular exercise is one of the most important and effective ways to reduce your diabetes risk. Exercise also reduces the risk of cardiovascular disease, depressive complaints, breast cancer, colon cancer, mental decline and dementia.
 	 	It is healthy to exercise for at least 30 minutes at least five days a week. Try to find out what kind of exercise forms you prefere, because when you like it, you can last longer.  </answer>
 	    <answer value="no">It is great that you exercise so much! You probably already notice that you feel good by exercising, keep it up! If you keep exercising regularly, you have signitfiacntly less chance of forming cardiovascular disease and diabetes.</answer>
 </goal>
@@ -72,7 +72,7 @@
 
 <goal name="AdviceFruit">
  	<description>Lifestyle Advice: Fruit</description>
- 		<answer value="MoreFruit">For your health it is very important to eat at least 2 pieces of fruit per day (200 gram). Fruit provides few calories and many nutrients. Fruit is good for your health and is associated with a lower risk of cardiovascular disease. In addition, eating fruit is associated with a lower risk of type 2 diabetes, colon cancer and lung cancer.</answer>
+ 		<answer value="MoreFruit">We advice you to eat more fruit. For your health it is very important to eat at least 2 pieces of fruit per day (200 gram). Fruit provides few calories and many nutrients. Fruit is good for your health and is associated with a lower risk of cardiovascular disease. In addition, eating fruit is associated with a lower risk of type 2 diabetes, colon cancer and lung cancer.</answer>
 	    <answer value="no">You eat at least two pieces of fruit every day. That is very healthy! If you eat a lot of fruit, you have less chance of health problems such as cardiovascular disease and diabetes.</answer>
 </goal>
 
@@ -85,19 +85,19 @@
 <goal name="AdviceFish">
  	<description>Lifestyle Advice: Fish</description>
  		<answer value="MoreFish">You don't eat enough (oily) fish. Try to change this! Fish contains omega-3 fatty acids (EPA and DHA). That is good for your heart and your cholesterol, which also helps to lower your diabetes risks. Omega-3 fatty acids are mainly found in oily fish such as herring, mackerel, salmon, sardines and halibut.</answer>
-	    <answer value="LittleMoreFish">You are some fish, but not enough. It would be healthy to increase your intake a bit. Eating fish reguarly is good for your heart, cholesterol and your diabetes risks. The best types of fish are herring, mackerel, salmon, sardines and halibut. </answer>
+	    <answer value="LittleMoreFish">You eat some fish, but not enough. It would be healthy to increase your intake a bit. Eating fish reguarly is good for your heart, cholesterol and your diabetes risks. The best types of fish are herring, mackerel, salmon, sardines and halibut. </answer>
 	    <answer value="no">You are eating enough fish, that is very healthy! Eating fish reguarly is good for your heart, cholesterol and your diabetes risks. The best types of fish are herring, mackerel, salmon, sardines and halibut. </answer>
 </goal>
 
 <goal name="AdviceBreakfast">
  	<description>Lifestyle Advice: Breakfast</description>
- 		<answer value="MoreBreakfast">It is important to eat breakfast every day, eating breakfast every day gives you energy and allows you to concentrate better. If you do not eat breakfast every day, you are more likely to get diabetes. If you do have breakfast every day, your body will get energy at different times of the day. Moreover, you eat less (unhealthy) snacks when you have breakfast. </answer>
+ 		<answer value="MoreBreakfast">You do not eat breakfast every day. We advice you to eat breakfast more often. It is important to eat breakfast every day, eating breakfast every day gives you energy and allows you to concentrate better. If you do not eat breakfast every day, you are more likely to get diabetes. If you do have breakfast every day, your body will get energy at different times of the day. Moreover, you eat less (unhealthy) snacks when you have breakfast. </answer>
 	    <answer value="no">You have breakfast every day. That is very healthy! Eating breakfast every day gives you energy and allows you to concentrate better. If you do not eat breakfast every day, you are more likely to get diabetes. If you have breakfast every day, your body will get energy at different times of the day. Moreover, you eat less (unhealthy) snacks when you have breakfast.</answer>
 </goal>
 
 <goal name="AdviceNuts">
  	<description>Lifestyle Advice: Nuts</description>
- 		<answer value="MoreNuts">It is healthy to eat about 15 grams of nuts every day. That's about a hand. People who occasionally eat nuts are less likely to develop cardiovascular disease and have healthier cholesterol, which lowers your diabetes risk. It is important to eat only unsalted nuts.</answer>
+ 		<answer value="MoreNuts">You do not eat much nuts. It is healthy to eat about 15 grams of nuts every day. That's about a hand. People who occasionally eat nuts are less likely to develop cardiovascular disease and have healthier cholesterol, which lowers your diabetes risk. It is important to eat only unsalted nuts.</answer>
 	    <answer value="no">You are eating enough nuts already, very good! Nuts help to lower your cholesterol and thus your diabtes risk. Try to eat only unsalted nuts.</answer>
 </goal>
 
@@ -119,7 +119,7 @@
  	<description>Lifestyle Advice: Alcohol</description>
 	 	<answer value="TooMuchAlcohol">From your answers it seems that you drink a lot of alcohol, far above the adviced norm. We advivce you to lower this intake, concrete tips can be found on this website: https://minderdrinken.nl
 	 	People who drink a lot of alcohol are more likely to have health problems. The more alcohol you drink, the more likely you are to have these health problems. Examples of these health problems are diabetes, cardiovascular disease, cancer and damage to the brain and nerves. Drinking more than five glasses of alcohol every day can damage your coronary arteries. If you drink more than two glasses of alcohol a day, you are more likely to have a stroke. Drinking a lot of alcohol in a short period of time increases the risk of cardiovascular disease, kidney problems and damage to the brain. </answer>
-	 	<answer value="JustTooMuchAlcohol">It is better for your health if you do not drink more alcohol than one glass of alcohol per day. Then you adhere to the Moderate Alcohol Use Norm. We call this moderate drinking.</answer>
+	 	<answer value="JustTooMuchAlcohol">We advice you to drink less alcohol. It is better for your health if you do not drink more alcohol than one glass of alcohol per day. Then you adhere to the Moderate Alcohol Use Norm. We call this moderate drinking.</answer>
 	    <answer value="no">Your alcohol intake is below the maximum adviced norms, very good! Drinking more than one glass of alcohol per day can increase your risks on all kinds of diseases. </answer>
 </goal>
 
@@ -1187,7 +1187,7 @@
 
 <!-- These 2 questions are posed at the start to filter between possibilities of type 1, type 2-->
 	<question>
-		<description> Do you experience any of the following symptoms? You can select each one that you experience, if you do not have any of these symptoms, please select the last symptom.</description>
+		<description> Do you experience any of the following symptoms? You can select each one that you experience, if you do not have any of these symptoms, please select the last item.</description>
 		<multiple> yes </multiple>
 		<option>
 			<description>Dry mouth and/or more than usually thirsty</description>
@@ -2220,7 +2220,7 @@
 	</question>
 
 	<question>
-		<description>Do you feel excitment when starting the day in the morning?</description>
+		<description>Do you feel excitement when starting the day in the morning?</description>
 		<option>
 			<description>Almost never</description>
 			<then>
