@@ -816,13 +816,26 @@
 <!-- First check for symptoms that were asked in the very first question for type 1 risk that correspond to type 2 symptoms as well and for the tired question-->
 
     <rule>
-	  	<description>Diagnose high Risk type 2</description>
+	  	<description>Diagnose type 2 symbols</description>
 	  	<if>
 			<or>
-		  		<fact name="urinating">yes</fact>
-	 			<fact name="eye-sight">yes</fact>
-	 			<fact name="drymouth">yes</fact>
-	 			<fact name="tired">yes</fact>
+				<and>
+					<fact name="type1Symptoms">no</fact>
+					<fact name="type1">no</fact>
+					<fact name="tired">yes</fact>
+				</and>
+				<and>
+					<fact name="type1">no</fact>
+					<fact name="type1Symptoms">yes</fact>
+					<and>
+						<or>
+							<fact name="urinating">yes</fact>
+		 					<fact name="eye-sight">yes</fact>
+		 					<fact name="drymouth">yes</fact>
+		 					<fact name="tired">yes</fact>
+		 				</or>
+					</and>
+	 			</and>
 			</or>
 	  	</if>
 	  	<then>
