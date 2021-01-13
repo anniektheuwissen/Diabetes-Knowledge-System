@@ -981,15 +981,14 @@
 <!-- Rules for specific Diabetes Type 1 Diagnoses -->
 
 <!-- As indicated by our expert, type 1 diabetes is quite rare, so you would need quite some symptoms and risk factors, otherwise it is better to assess for type 2 and the symptoms probably relate to something else. therefore this first rule is to check if there were at least 3 symptoms indicated  -->
+	
+
 	<rule>
 	  <description>Type 1 at least 3 symptoms:
 	 	</description>
 	  	<if>
 	      	<or>
 	      		<and>
-	      			
-	      			<fact name="random">random</fact>
-	      			
 					<fact name="drymouth">yes</fact>
 					<and>
 						<or>
@@ -1022,9 +1021,7 @@
 					</and>
 				</and>
 				<and>
-					
-	      			<fact name="random">random</fact>
-	      			
+					      			
 					<fact name="urinating">yes</fact>
 					<and>
 						<or>
@@ -1046,10 +1043,7 @@
 					</and>
 
 				</and>
-				<and>
-					
-	      			<fact name="random">random</fact>
-	      			
+				<and>	      			
 					<fact name="hungry">yes</fact>
 					<fact name="weight">yes</fact>
 					<fact name="eye-sight">yes</fact>
@@ -1057,7 +1051,23 @@
 			</or>
 	  	</if>
 	  	<then>
+	  		<fact name="checkcheck">yes</fact>
 		  	<fact name="3Type1symptoms">yes</fact>
+	  </then>
+  	</rule>
+
+  	 <rule>
+	  	<description>symptoms no</description>
+	  	<if>
+	      	<and>
+	  			<fact name="type1Symptoms">yes</fact>
+				<not>
+					<fact name="checkcheck">yes</fact>
+				</not>
+			</and>
+	  	</if>
+	  	<then>
+		  	<fact name="3Type1symptoms">no</fact>
 	  </then>
   	</rule>
 
@@ -1142,11 +1152,10 @@
 			</and>
 	  	</if>
 	  	<then>
-	  		<fact name="random">random</fact>
 		  	<fact name="type1Check">yes</fact>
 	  </then>
   	</rule>
-  	
+
   	<rule>
 	  	<description>Type 1 Low Risk:
 	  	If we find someone with a low risk of diabetes type 1 -> we state that the symptoms might be related to another disease, and we also check for diabetes type 2, after which we move to lifestyle questions.</description>
@@ -1159,7 +1168,6 @@
 			</and>
 	  	</if>
 	  	<then>
-	  		<fact name="random">uit</fact>
 	  		<fact name="type1">no</fact>
 	  		<fact name="Risk1Advice">given</fact>
 		  	<fact name="RiskDiabetesType1">OtherSymptoms</fact>
