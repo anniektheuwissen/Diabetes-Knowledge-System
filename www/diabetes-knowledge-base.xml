@@ -1248,8 +1248,7 @@
 			</then>
 		</option>
 		<option>
-		<option>
-			<description>Frequently tired</description>
+			<description>Frequently tired or drained</description>
 			<then>
 				<fact name="tired">yes</fact>
 				<fact name="checked">yes</fact>
