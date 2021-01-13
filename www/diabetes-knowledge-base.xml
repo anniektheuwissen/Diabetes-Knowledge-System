@@ -1082,6 +1082,9 @@
 	  		<or>
 	  			<!-- Classic case of type 1, low age & family with diabetes 1 and symptoms = better to check with doctor -->
 	  	    	<and>
+	  	    		<not>
+						<fact name="RiskDiabetesType1">OtherSymptoms</fact>
+					</not>
 			  		<fact name="type1Check">yes</fact>
 			  		<fact name="PassOut">no</fact>
 			  		<fact name="3Type1symptoms">yes</fact>
@@ -1104,6 +1107,9 @@
 	  	<if>
 	  		<or>
 			   	<and>
+			   		<not>
+						<fact name="RiskDiabetesType1">OtherSymptoms</fact>
+					</not>
 		 			<fact name="type1Check">yes</fact>
 		  	  		<fact name="PassOut">no</fact>
 		  	  		<fact name="3Type1symptoms">yes</fact>
@@ -1111,6 +1117,9 @@
 					<fact name="family1">yes</fact>
 				</and>
 				<and>
+					<not>
+						<fact name="RiskDiabetesType1">OtherSymptoms</fact>
+					</not>
 		 			<fact name="type1Check">yes</fact>
 		  	  		<fact name="PassOut">no</fact>
 		  	  		<fact name="3Type1symptoms">yes</fact>
