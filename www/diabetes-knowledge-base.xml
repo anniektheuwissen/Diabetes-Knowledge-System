@@ -987,6 +987,7 @@
 	  	<if>
 	      	<or>
 	      		<and>
+	      			<fact name="random">random</fact>
 					<fact name="drymouth">yes</fact>
 					<and>
 						<or>
@@ -1019,6 +1020,7 @@
 					</and>
 				</and>
 				<and>
+					<fact name="random">random</fact>
 					<fact name="urinating">yes</fact>
 					<and>
 						<or>
@@ -1041,6 +1043,7 @@
 
 				</and>
 				<and>
+					<fact name="random">random</fact>
 					<fact name="hungry">yes</fact>
 					<fact name="weight">yes</fact>
 					<fact name="eye-sight">yes</fact>
@@ -1134,9 +1137,9 @@
 			</and>
 	  	</if>
 	  	<then>
+	  		<fact name="type1">no</fact>
 		  	<fact name="RiskDiabetesType1">OtherSymptoms</fact>
 		  	<fact name="type1Check">off</fact>
-		  	<fact name="type1">no</fact>
 	  </then>
   	</rule>
 
