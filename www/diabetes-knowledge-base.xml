@@ -987,7 +987,6 @@
 	  	<if>
 	      	<or>
 	      		<and>
-	      			<not>
 	      			<fact name="type1Check">yes</fact>
 					<fact name="drymouth">yes</fact>
 					<and>
