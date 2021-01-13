@@ -1131,6 +1131,22 @@
 	  </then>
   	</rule>
 
+<!-- Rules for assessing if diabetes 1 or 2  -->
+    <rule>
+	  	<description>Diagnose type 1:
+	  	If someone suffers from diabetes related symptoms and these have started in the past few weeks, we check for diabetes type 1 risk first, if this turns out a dead end -> we also check for type 2. </description>
+	  	<if>
+	  		<and>
+		  		<fact name="type1Symptoms">yes</fact>
+		  		<fact name="lastweeks">yes</fact>
+			</and>
+	  	</if>
+	  	<then>
+	  		<fact name="random">random</fact>
+		  	<fact name="type1Check">yes</fact>
+	  </then>
+  	</rule>
+  	
   	<rule>
 	  	<description>Type 1 Low Risk:
 	  	If we find someone with a low risk of diabetes type 1 -> we state that the symptoms might be related to another disease, and we also check for diabetes type 2, after which we move to lifestyle questions.</description>
@@ -1152,24 +1168,7 @@
   	</rule>
 
 
-<!-- Rules for assessing if diabetes 1 or 2  -->
-    <rule>
-	  	<description>Diagnose type 1:
-	  	If someone suffers from diabetes related symptoms and these have started in the past few weeks, we check for diabetes type 1 risk first, if this turns out a dead end -> we also check for type 2. </description>
-	  	<if>
-	  		<and>
-		  		<fact name="type1Symptoms">yes</fact>
-		  		<fact name="lastweeks">yes</fact>
-		  		<not>
-		  			<fact name="Risk1Advice">given</fact>
-		  		</not>
-			</and>
-	  	</if>
-	  	<then>
-	  		<fact name="random">random</fact>
-		  	<fact name="type1Check">yes</fact>
-	  </then>
-  	</rule>
+
 
     <rule>
 	  	<description>Diagnose type 2:
