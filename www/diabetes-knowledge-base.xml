@@ -987,9 +987,9 @@
 	  	<if>
 	      	<or>
 	      		<and>
-	      			<not>
-	      				<fact name="Risk1Advice">given</fact>
-	      			</not>
+	      			
+	      			<fact name="random">random</fact>
+	      			
 					<fact name="drymouth">yes</fact>
 					<and>
 						<or>
@@ -1022,9 +1022,9 @@
 					</and>
 				</and>
 				<and>
-					<not>
-	      				<fact name="Risk1Advice">given</fact>
-	      			</not>
+					
+	      			<fact name="random">random</fact>
+	      			
 					<fact name="urinating">yes</fact>
 					<and>
 						<or>
@@ -1047,9 +1047,9 @@
 
 				</and>
 				<and>
-					<not>
-	      				<fact name="Risk1Advice">given</fact>
-	      			</not>
+					
+	      			<fact name="random">random</fact>
+	      			
 					<fact name="hungry">yes</fact>
 					<fact name="weight">yes</fact>
 					<fact name="eye-sight">yes</fact>
@@ -1137,12 +1137,14 @@
 	  	<if>
 	  		<and>
 	  			<fact name="type1Check">yes</fact>
+	  			<fact name="PassOut">no</fact>
 	      		<not>
 	      			<fact name="Risk1Advice">given</fact>
 				</not>
 			</and>
 	  	</if>
 	  	<then>
+	  		<fact name="random">uit</fact>
 	  		<fact name="type1">no</fact>
 	  		<fact name="Risk1Advice">given</fact>
 		  	<fact name="RiskDiabetesType1">OtherSymptoms</fact>
@@ -1159,9 +1161,13 @@
 	  		<and>
 		  		<fact name="type1Symptoms">yes</fact>
 		  		<fact name="lastweeks">yes</fact>
+		  		<not>
+		  			<fact name="Risk1Advice">given</fact>
+		  		</not>
 			</and>
 	  	</if>
 	  	<then>
+	  		<fact name="random">random</fact>
 		  	<fact name="type1Check">yes</fact>
 	  </then>
   	</rule>
@@ -1190,9 +1196,6 @@
 	  		<fact name="type1">no</fact>
 	  </then>
   	</rule>
-
-
-
 
 
 <!-- Start of the questions-->
