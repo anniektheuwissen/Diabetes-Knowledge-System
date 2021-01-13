@@ -1227,7 +1227,7 @@
 			
 	  	</if>
 	  	<then>
-		  	<fact name="type2Symptoms">no</fact>
+		  	<fact name="type2Symptoms">yes</fact>
 	  </then>
   	</rule>
 
