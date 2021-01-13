@@ -1076,24 +1076,81 @@
 	  	</if>
 	  	<then>
 		  	<fact name="3Type1symptoms">yes</fact>
-			<fact name="checkcheck">yes</fact>
 	  </then>
   	</rule>
 
 	<rule>
-	  	<description>Not 3 symptoms</description>
+	  <description>Type 1 at least 3 symptoms:
+	 	</description>
 	  	<if>
-	      	<and>
-	  			<fact name="type1Symptoms">yes</fact>
-				<not>
-					<fact name="checkcheck">yes</fact>
-				</not>
-			</and>
+		  	<not>
+				<or>
+					<and>
+						<fact name="drymouth">yes</fact>
+						<and>
+							<or>
+								<and>
+								<fact name="urinating">yes</fact>
+									<and>
+										<or>
+											<fact name="hungry">yes</fact>
+											<fact name="weight">yes</fact>
+											<fact name="eye-sight">yes</fact>
+										</or>
+									</and>
+								</and>
+
+								<and>
+								<fact name="hungry">yes</fact>
+									<and>
+										<or>
+											<fact name="weight">yes</fact>
+											<fact name="eye-sight">yes</fact>
+										</or>
+									</and>
+								</and>
+
+								<and>
+									<fact name="weight">yes</fact>
+									<fact name="eye-sight">yes</fact>
+								</and>
+							</or>
+						</and>
+					</and>
+					<and>
+						<fact name="urinating">yes</fact>
+						<and>
+							<or>
+								<and>
+								<fact name="hungry">yes</fact>
+									<and>
+										<or>
+											<fact name="weight">yes</fact>
+											<fact name="eye-sight">yes</fact>
+										</or>
+									</and>
+								</and>
+
+								<and>
+									<fact name="weight">yes</fact>
+									<fact name="eye-sight">yes</fact>
+								</and>
+							</or>
+						</and>
+
+					</and>
+					<and>
+						<fact name="hungry">yes</fact>
+						<fact name="weight">yes</fact>
+						<fact name="eye-sight">yes</fact>
+					</and>
+				</or>
+			</not>
 	  	</if>
 	  	<then>
 		  	<fact name="3Type1symptoms">no</fact>
 	  </then>
-  	</rule>
+  	</rule> 
 
 <!-- But again here, quite hard to effectively differentiate between specific type 1 risk assesmments (not scientific) -->
   	<rule>
