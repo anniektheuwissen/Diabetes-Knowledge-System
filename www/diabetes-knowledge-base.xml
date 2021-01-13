@@ -816,7 +816,7 @@
 <!-- First check for symptoms that were asked in the very first question for type 1 risk that correspond to type 2 symptoms as well and for the tired question-->
 
     <rule>
-	  	<description>Diagnose type 2 symbols</description>
+	  	<description>Diagnose High Risk type 2</description>
 	  	<if>
 			<or>
 				<and>
