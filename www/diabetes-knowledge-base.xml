@@ -17,7 +17,7 @@
         <answer value="lowRisk2">You have a low risk of diabetes type 2, that is very good! Be sure to check out the lifestyle tips given below, as this can help you to keep your risk low! Also, if you are older than 45, we advice you to take this test every year. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG assocation for general practioners in the Netherlands. It is a general risk assesment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advice you to visit your general practioner and take an actual diabetes test) </answer>
         <answer value="mediumRisk2">You have a medium risk of  diabetes type 2. We advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm your actual diabetes risk. It will be especially valuable to also follow the lifestyle given below. A good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also significantly improve your life if you suffer from diabetes. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG assocation for general practioners in the Netherlands. It is a general risk assesment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advice you to visit your general practioner and take an actual diabetes test)
         </answer>
-        <answer value="highRisk2">You have a high risk of diabetes type 2. YWe advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm your actual diabetes risk. It will be especially valuable to follow the lifestyle tips given below. A good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also significantly improve your life if you suffer from diabetes. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG assocation for general practioners in the Netherlands. It is a general risk assesment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advice you to visit your general practioner and take an actual diabetes test)
+        <answer value="highRisk2">You have a high risk of diabetes type 2. We advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm your actual diabetes risk. It will be especially valuable to follow the lifestyle tips given below. A good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also significantly improve your life if you suffer from diabetes. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG assocation for general practioners in the Netherlands. It is a general risk assesment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advice you to visit your general practioner and take an actual diabetes test)
         </answer>
         <answer value="no"></answer>
 </goal>
@@ -136,7 +136,7 @@
       		<and>
       			<fact name="type1">no</fact>
       			<fact name="type2">yes</fact>
-  				<fact name="Exercise">yes</fact>
+  				<fact name="Exercise">no</fact>
 			</and>
 	  	</if>
 	  	<then>
@@ -164,7 +164,7 @@
       		<and>
       			<fact name="type1">no</fact>
       			<fact name="type2">yes</fact>
-  				<fact name="Exercise">no</fact>
+  				<fact name="Exercise">yes</fact>
 			</and>
 	  	</if>
 	  	<then>
@@ -821,11 +821,11 @@
 			<or>
 				<and>
 					<fact name="type1Symptoms">no</fact>
-					<fact name="type1">no</fact>
+					<fact name="Check1">finished</fact>
 					<fact name="tired">yes</fact>
 				</and>
 				<and>
-					<fact name="type1">no</fact>
+					<fact name="Check1">finished</fact>
 					<fact name="type1Symptoms">yes</fact>
 					<and>
 						<or>
@@ -1162,6 +1162,7 @@
 	  	</if>
 	  	<then>
 		  	<fact name="RiskDiabetesType1">OtherSymptoms</fact>
+		  	<fact name="Check1">finished</fact>
 		  	<fact name="type1">no</fact>
 	  </then>
   	</rule>
@@ -1193,6 +1194,7 @@
 	  	</if>
 	  	<then>
 		  	<fact name="type1">no</fact>
+		  	<fact name="Check1">finished</fact>
 	  </then>
   	</rule>
 
@@ -1204,6 +1206,7 @@
 	  	</if>
 	  	<then>
 	  		<fact name="type1">no</fact>
+	  		<fact name="Check1">finished</fact>
 	  </then>
   	</rule>
 
