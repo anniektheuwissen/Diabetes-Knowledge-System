@@ -117,7 +117,7 @@
 
 <goal name="AdviceAlcohol">
  	<description>Lifestyle Advice: Alcohol</description>
-	 	<answer value="TooMuchAlcohol">From your answers it seems that you drink a lot of alcohol, far above the adviced norm. We advivce you to lower this intake, concrete tips can be found on this website: https://minderdrinken.nl
+	 	<answer value="TooMuchAlcohol">From your answers it seems that you drink a lot of alcohol, far above the adviced norm. We advice you to lower this intake, concrete tips can be found on this website: https://minderdrinken.nl
 	 	People who drink a lot of alcohol are more likely to have health problems. The more alcohol you drink, the more likely you are to have these health problems. Examples of these health problems are diabetes, cardiovascular disease, cancer and damage to the brain and nerves. Drinking more than five glasses of alcohol every day can damage your coronary arteries. If you drink more than two glasses of alcohol a day, you are more likely to have a stroke. Drinking a lot of alcohol in a short period of time increases the risk of cardiovascular disease, kidney problems and damage to the brain. </answer>
 	 	<answer value="JustTooMuchAlcohol">We advice you to drink less alcohol. It is better for your health if you do not drink more alcohol than one glass of alcohol per day. Then you adhere to the Moderate Alcohol Use Norm. We call this moderate drinking.</answer>
 	    <answer value="no">Your alcohol intake is below the maximum adviced norms, very good! Drinking more than one glass of alcohol per day can increase your risks on all kinds of diseases. </answer>
@@ -1590,7 +1590,7 @@
 		</option>
 
 		<option>
-			<description> Less than 100 minutes minutes (average of less then 15 minutes per day)</description>
+			<description> Less than 100 minutes (average of less then 15 minutes per day)</description>
 			<then>
 				<fact name="Exercise">no</fact>
 			</then>
