@@ -1135,6 +1135,7 @@
 	  	</if>
 	  	<then>
 		  	<fact name="RiskDiabetesType1">OtherSymptoms</fact>
+		  	<fact name="type1Check">off</fact>
 		  	<fact name="type1">no</fact>
 	  </then>
   	</rule>
