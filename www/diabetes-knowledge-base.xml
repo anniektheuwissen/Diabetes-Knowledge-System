@@ -1056,20 +1056,7 @@
 	  </then>
   	</rule>
 
-  	 <rule>
-	  	<description>symptoms no</description>
-	  	<if>
-	      	<and>
-	  			<fact name="type1Symptoms">yes</fact>
-				<not>
-					<fact name="checkcheck">yes</fact>
-				</not>
-			</and>
-	  	</if>
-	  	<then>
-		  	<fact name="3Type1symptoms">no</fact>
-	  </then>
-  	</rule>
+
 
 <!-- But again here, quite hard to effectively differentiate between specific type 1 risk assesmments (not scientific) -->
   	<rule>
@@ -1138,6 +1125,25 @@
 		  	<fact name="type1">yes</fact>
 		  	<fact name="RiskDiabetesType1">mediumRisk1</fact>
 		  	<fact name="Risk1Advice">given</fact>
+	  </then>
+  	</rule>
+
+  	 <rule>
+	  	<description>symptoms no</description>
+	  	<if>
+	      	<and>
+	  			<fact name="type1Symptoms">yes</fact>
+	  			<not>
+					<fact name="RiskDiabetesType1">ketoacidose</fact>
+				</not>
+				<not>
+					<fact name="checkcheck">yes</fact>
+				</not>
+			</and>
+	  	</if>
+	  	<then>
+	  		<fact name="type1">no</fact>
+	  		<fact name="RiskDiabetesType1">OtherSymptoms</fact>
 	  </then>
   	</rule>
 
