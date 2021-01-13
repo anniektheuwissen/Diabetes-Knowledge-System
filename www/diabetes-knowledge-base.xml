@@ -813,95 +813,17 @@
 	These risk assessments were made by consulting our expert and via the advice of the Dutch general practicioners, via our main source: thuisarts.nl -->
 <!-- And only if fact type1=no, we asess type 2 risk cases -->
 
-<!-- First check for symptoms that were asked in the very first question for type 1 risk that correspond to type 2 symptoms as well and for the tired question: these are written out in 3 seperate rules, otherwise the system will ask the first question again-->
-
-  	 <rule>
-	  	<description>Type 1 symbols first question -> check for type 2 symptoms: urinating </description>
-	  	<if>
-
-			<and>
-				<fact name="checked">yes</fact>
-				<not>
-					<fact name="urinating">yes</fact>
-				</not>
-			 </and>
-	  	</if>
-	  	<then>
-		  	<fact name="urinating">no</fact>
-	  </then>
-  	</rule>
-
-  	 <rule>
-	  	<description>Type 1 symbols first question -> check for type 2 symptoms: urinating </description>
-	  	<if>
-
-			<and>
-				<fact name="checked">yes</fact>
-				<not>
-					<fact name="eye-sight">yes</fact>
-				</not>
-			 </and>
-	  	</if>
-	  	<then>
-		  	<fact name="eye-sight">no</fact>
-	  </then>
-  	</rule>
-
-  	 <rule>
-	  	<description>Type 1 symbols first question -> check for type 2 symptoms: urinating </description>
-	  	<if>
-
-			<and>
-				<fact name="checked">yes</fact>
-				<not>
-					<fact name="drymouth">yes</fact>
-				</not>
-			 </and>
-	  	</if>
-	  	<then>
-		  	<fact name="drymouth">no</fact>
-	  </then>
-  	</rule>
+<!-- First check for symptoms that were asked in the very first question for type 1 risk that correspond to type 2 symptoms as well and for the tired question -> in that case type2Symptoms is set to yes-->
 
   	 <rule>
 	  	<description>Type 1 symbols first question -> check for type 2 symptoms </description>
-	  	<if>
-			<or>
-				<and>
-					<fact name="tired">yes</fact>
-				</and>
-				<and>
-					<fact name="checked">yes</fact>
-					<fact name="type1Symptoms">yes</fact>
-						<and>
-							<or>
-								<fact name="urinating">yes</fact>
-				 				<fact name="eye-sight">yes</fact>
-								<fact name="drymouth">yes</fact>
-				 			</or>
-				 		</and>
-			 	</and>
-			</or>
-	  	</if>
-	  	<then>
-		  	<fact name="type2Symptoms">yes</fact>
-		  	<fact name="checkedForType2Symptoms">yes</fact>
-	  </then>
-  	</rule>
-
-  	<rule>
-	  	<description>Rule for no type 2 symptoms </description>
-	  	<if>
-	  		<and>
-	  			<fact name="checked">yes</fact>
-	  			<fact name="tired">no</fact>
-				<not>
-					<fact name="checkedForType2Symptoms">yes</fact>
-				</not>
+	  	<if>	
+			<and>
+				<fact name="tired">yes</fact>
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="type2Symptoms">no</fact>
+		  	<fact name="type2Symptoms">yes</fact>
 	  </then>
   	</rule>
 
@@ -1280,7 +1202,7 @@
 			<description>Dry mouth and/or more than usually thirsty</description>
 			<then>
 				<fact name="drymouth">yes</fact>
-				<fact name="checked">yes</fact>
+				<fact name="type2Symptoms">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
@@ -1288,7 +1210,7 @@
 			<description>Frequently urinating</description>
 			<then>
 				<fact name="urinating">yes</fact>
-				<fact name="checked">yes</fact>
+				<fact name="type2Symptoms">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
@@ -1296,7 +1218,6 @@
 			<description>More than usually hungry</description>
 			<then>
 				<fact name="hungry">yes</fact>
-				<fact name="checked">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
@@ -1304,7 +1225,6 @@
 			<description>Sudden weight losses/gains</description>
 			<then>
 				<fact name="weight">yes</fact>
-				<fact name="checked">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
@@ -1312,7 +1232,7 @@
 			<description>Blurry eye-sight</description>
 			<then>
 				<fact name="eye-sight">yes</fact>
-				<fact name="checked">yes</fact>
+				<fact name="type2Symptoms">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
@@ -1320,7 +1240,6 @@
 			<description>None of these</description>
 			<then>
 				<fact name="type1Symptoms">no</fact>
-				<fact name="checked">yes</fact>
 			</then>
 		</option>
 	</question>
