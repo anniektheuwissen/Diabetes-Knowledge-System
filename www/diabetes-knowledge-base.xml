@@ -1187,23 +1187,49 @@
 	  	<description>Directly to lifestyle questions:
 	  	If someone does not have type 1 symptoms, the risk is too low to pose unneccesarry questions about this, so we directly move to risk 2 assessment and lifestyle advices afterwards.</description>
 	  	<if>
-		  	<and>
-			  	<not>
-			  		<fact name="type1">no</fact>
-				</not>
-				<or>
-					<fact name="drymouth">yes</fact>
-					<fact name="urinating">yes</fact>
-					<fact name="hungry">yes</fact>
-					<fact name="weight">yes</fact>
-					<fact name="eye-sight">yes</fact>
-					<fact name="tired">yes</fact>
-				</or>
-			</and>
+	  		<or>
+				<fact name="drymouth">yes</fact>
+				<fact name="urinating">yes</fact>
+				<fact name="hungry">yes</fact>
+				<fact name="weight">yes</fact>
+				<fact name="eye-sight">yes</fact>
+				<fact name="tired">yes</fact>
+			</or>
 	  	</if>
 	  	<then>
 	  		<fact name="type1Symptoms">yes</fact>
 	  		<fact name="type2Symptoms">yes</fact>
+	  </then>
+  	</rule>
+
+	<rule>
+	  	<description>Directly to lifestyle questions:
+	  	If someone does not have type 1 symptoms, the risk is too low to pose unneccesarry questions about this, so we directly move to risk 2 assessment and lifestyle advices afterwards.</description>
+	  	<if>
+	  		<and>
+	  			<not>
+					<fact name="drymouth">yes</fact>
+				</not>
+				<not>
+					<fact name="urinating">yes</fact>
+				</not>
+				<not>
+					<fact name="hungry">yes</fact>
+				</not>
+				<not>
+					<fact name="weight">yes</fact>
+				</not>
+				<not>
+					<fact name="eye-sight">yes</fact>
+				</not>
+				<not>
+					<fact name="tired">yes</fact>
+				</not>
+			</and>
+	  	</if>
+	  	<then>
+	  		<fact name="type1Symptoms">no</fact>
+	  		<fact name="type2Symptoms">no</fact>
 	  </then>
   	</rule>
 
