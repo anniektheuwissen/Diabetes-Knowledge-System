@@ -980,7 +980,7 @@
 
 <!-- Rules for specific Diabetes Type 1 Diagnoses -->
 
-<!-- As indicated by our expert, type 1 diabetes is quite rare, so you would need quite some symptoms and risk factors, otherwise it is better to assess for type 2 and the symptoms probably relate to something else. therefore this first rule is to check if there were at least 3 symptoms indicated  -->
+<!-- As indicated by our expert, type 1 diabetes is quite rare, so you would need quite some symptoms and risk factors, otherwise it is better to assess for type 2 and the symptoms probably relate to something else. therefore this first rule is to check if there were at least 3 symptoms indicated 
 	
 
 	<rule>
@@ -1052,10 +1052,11 @@
 	  	</if>
 	  	<then>
 		  	<fact name="3Type1symptoms">yes</fact>
-	  </then>
-  	</rule>
+	  </then> 
+  	</rule>-->
 
 
+<!-- As indicated by our expert, type 1 diabetes is quitre rare and very hard to identify, so you would need quite some risk factors and at least some symptoms, otherwise it is better to assess for type 2 -->
 
 <!-- But again here, quite hard to effectively differentiate between specific type 1 risk assesmments (not scientific) -->
   	<rule>
@@ -1084,7 +1085,7 @@
 	  	    	<and>
 			  		<fact name="type1Check">yes</fact>
 			  		<fact name="PassOut">no</fact>
-			  		<fact name="3Type1symptoms">yes</fact>
+			  		<fact name="type1Symptoms">yes</fact>
 					<fact name="Age">low</fact>
 					<fact name="family1">yes</fact>
 				</and>
@@ -1103,22 +1104,14 @@
 	  	If we find someone with a medium risk of diabetes type 1, we skip the lifestyle questions, as adviced by our expert.</description>
 	  	<if>
 	  		<or>
+	  			<!-- other case of type 1, high age & family with diabetes 1 and symptoms = better to check with doctor -->
+
 			   	<and>
 		 			<fact name="type1Check">yes</fact>
 		  	  		<fact name="PassOut">no</fact>
-		  	  		<fact name="3Type1symptoms">yes</fact>
+		  	  		<fact name="type1Symptoms">yes</fact>
 					<fact name="Age">high</fact>
 					<fact name="family1">yes</fact>
-				</and>
-				<and>
-					<not>
-						<fact name="RiskDiabetesType1">OtherSymptoms</fact>
-					</not>
-		 			<fact name="type1Check">yes</fact>
-		  	  		<fact name="PassOut">no</fact>
-		  	  		<fact name="3Type1symptoms">yes</fact>
-					<fact name="Age">low</fact>
-					<fact name="family1">no</fact>
 				</and>
 			</or>
 	  	</if>
@@ -1137,7 +1130,7 @@
 	  		<and>
 	  			<fact name="type1Check">yes</fact>
 	      		<not>
-	      			<fact name="3Type1symptoms">yes</fact>
+	      			<fact name="Risk1Advice">given</fact>
 				</not>
 			</and>
 	  	</if>
@@ -1190,6 +1183,25 @@
 	  </then>
   	</rule>
 
+  	<rule>
+	  	<description>Directly to lifestyle questions:
+	  	If someone does not have type 1 symptoms, the risk is too low to pose unneccesarry questions about this, so we directly move to risk 2 assessment and lifestyle advices afterwards.</description>
+	  	<if>
+	  		<or>
+				<fact name="drymouth">yes</fact>
+				<fact name="urinating">yes</fact>
+				<fact name="hungry">yes</fact>
+				<fact name="weight">yes</fact>
+				<fact name="eye-sight">yes</fact>
+				<fact name="tired">yes</fact>
+			</or>
+	  	</if>
+	  	<then>
+	  		<fact name="type1Symptoms">yes</fact>
+	  		<fact name="type2Symptoms">yes</fact>
+	  </then>
+  	</rule>
+
 
 <!-- Start of the questions-->
 
@@ -1201,48 +1213,36 @@
 			<description>Dry mouth and/or more than usually thirsty</description>
 			<then>
 				<fact name="drymouth">yes</fact>
-				<fact name="type1Symptoms">yes</fact>
-				<fact name="type2Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
 			<description>Frequently urinating</description>
 			<then>
 				<fact name="urinating">yes</fact>
-				<fact name="type1Symptoms">yes</fact>
-				<fact name="type2Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
 			<description>More than usually hungry</description>
 			<then>
 				<fact name="hungry">yes</fact>
-				<fact name="type1Symptoms">yes</fact>
-				<fact name="type2Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
 			<description>Sudden weight losses/gains</description>
 			<then>
 				<fact name="weight">yes</fact>
-				<fact name="type1Symptoms">yes</fact>
-				<fact name="type2Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
 			<description>Blurry eye-sight</description>
 			<then>
 				<fact name="eye-sight">yes</fact>
-				<fact name="type1Symptoms">yes</fact>
-				<fact name="type2Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
 			<description>Frequently tired or drained</description>
 			<then>
 				<fact name="tired">yes</fact>
-				<fact name="type1Symptoms">yes</fact>
-				<fact name="type2Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
@@ -1273,7 +1273,7 @@
 -->
 
 	<question>
-		<description> Have these symptoms started suddenly in the last few weeks or shorter? </description>
+		<description> Have these symptoms started very suddenly in the last few weeks or shorter? </description>
 		<option>
 			<description> Yes, since a couple a weeks or less </description>
 			<then>
