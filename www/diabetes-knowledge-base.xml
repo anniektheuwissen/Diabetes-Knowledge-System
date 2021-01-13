@@ -815,20 +815,6 @@
 
 <!-- First check for symptoms that were asked in the very first question for type 1 risk that correspond to type 2 symptoms as well and for the tired question -> in that case type2Symptoms is set to yes-->
 
-  	 <rule>
-	  	<description>Type 1 symbols first question -> check for type 2 symptoms </description>
-	  	<if>	
-			<and>
-				<fact name="check2">yes</fact>
-			</and>
-	  	</if>
-	  	<then>
-		  	<fact name="type2Symptoms">yes</fact>
-	  </then>
-  	</rule>
-
-
-
 
     <rule>
 	  	<description>Diagnose high Risk type 2</description>
@@ -1204,16 +1190,16 @@
 		<option>
 			<description>Dry mouth and/or more than usually thirsty</description>
 			<then>
+				<fact name="type2Symptoms">yes</fact>
 				<fact name="drymouth">yes</fact>
-				<fact name="check2">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
 			<description>Frequently urinating</description>
 			<then>
+				<fact name="type2Symptoms">yes</fact>
 				<fact name="urinating">yes</fact>
-				<fact name="check2">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
@@ -1234,23 +1220,23 @@
 		<option>
 			<description>Blurry eye-sight</description>
 			<then>
+				<fact name="type2Symptoms">yes</fact>
 				<fact name="eye-sight">yes</fact>
-				<fact name="check2">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
 			<description>Frequently tired or drained</description>
 			<then>
+				<fact name="type2Symptoms">yes</fact>
 				<fact name="tired">yes</fact>
-				<fact name="check2">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
 		<option>
 			<description>None of these</description>
 			<then>
-				<fact name="checked">yes</fact>
+				<fact name="type2Symptoms">no</fact>
 				<fact name="type1Symptoms">no</fact>
 			</then>
 		</option>
