@@ -1098,18 +1098,26 @@
 	  </then>
   	</rule>
 
-  	<rule>
+		<rule>
 	  	<description>Type 1 Medium Risk:
 	  	If we find someone with a medium risk of diabetes type 1, we skip the lifestyle questions, as adviced by our expert.</description>
 	  	<if>
-
-		   	<and>
-	 			<fact name="type1Check">yes</fact>
-	  	  		<fact name="PassOut">no</fact>
-	  	  		<fact name="3Type1symptoms">yes</fact>
-				<fact name="Age">high</fact>
-				<fact name="family1">yes</fact>
-			</and>
+	  		<or>
+			   	<and>
+		 			<fact name="type1Check">yes</fact>
+		  	  		<fact name="PassOut">no</fact>
+		  	  		<fact name="3Type1symptoms">yes</fact>
+					<fact name="Age">high</fact>
+					<fact name="family1">yes</fact>
+				</and>
+				<and>
+		 			<fact name="type1Check">yes</fact>
+		  	  		<fact name="PassOut">no</fact>
+		  	  		<fact name="3Type1symptoms">yes</fact>
+					<fact name="Age">low</fact>
+					<fact name="family1">no</fact>
+				</and>
+			</or>
 	  	</if>
 	  	<then>
 	  		<fact name="RiskDiabetesType2">undefined</fact>
