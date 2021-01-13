@@ -1051,7 +1051,6 @@
 			</or>
 	  	</if>
 	  	<then>
-	  		<fact name="checkcheck">yes</fact>
 		  	<fact name="3Type1symptoms">yes</fact>
 	  </then>
   	</rule>
@@ -1137,12 +1136,13 @@
 					<fact name="RiskDiabetesType1">ketoacidose</fact>
 				</not>
 				<not>
-					<fact name="checkcheck">yes</fact>
+					<fact name="3Type1symptoms">yes</fact>
 				</not>
 			</and>
 	  	</if>
 	  	<then>
 	  		<fact name="type1">no</fact>
+	  		<fact name="type1Check">off</fact>
 	  		<fact name="RiskDiabetesType1">OtherSymptoms</fact>
 	  </then>
   	</rule>
