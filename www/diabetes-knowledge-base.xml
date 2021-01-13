@@ -1131,7 +1131,7 @@
 	  	<description>symptoms no</description>
 	  	<if>
 	      	<and>
-	  			<fact name="type1Symptoms">yes</fact>
+	      		<fact name="type1Check">yes</fact>
 	  			<not>
 					<fact name="RiskDiabetesType1">ketoacidose</fact>
 				</not>
