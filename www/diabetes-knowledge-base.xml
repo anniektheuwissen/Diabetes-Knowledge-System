@@ -814,7 +814,7 @@
 <!-- And only if fact type1=no, we asess type 2 risk cases -->
 
 <!-- First check for symptoms that were asked in the very first question for type 1 risk that correspond to type 2 symptoms as well and for the tired question -> in that case type2Symptoms is set to yes-->
-
+<!--
   	 <rule>
 	  	<description>Type 1 symbols first question -> check for type 2 symptoms </description>
 	  	<if>	
@@ -844,7 +844,7 @@
 	  	<then>
 		  	<fact name="type2Symptoms">NO</fact>
 	  </then>
-  	</rule>
+  	</rule> -->
 
 
 
@@ -1225,7 +1225,7 @@
 			<then>
 				<fact name="drymouth">yes</fact>
 				<fact name="checked">yes</fact>
-				<fact name="check2">yes</fact>
+				<fact name="type2Symptoms">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
@@ -1234,7 +1234,7 @@
 			<then>
 				<fact name="urinating">yes</fact>
 				<fact name="checked">yes</fact>
-				<fact name="check2">yes</fact>
+				<fact name="type2Symptoms">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
@@ -1259,7 +1259,7 @@
 			<then>
 				<fact name="eye-sight">yes</fact>
 				<fact name="checked">yes</fact>
-				<fact name="check2">yes</fact>
+				<fact name="type2Symptoms">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
@@ -1268,7 +1268,7 @@
 			<then>
 				<fact name="tired">yes</fact>
 				<fact name="checked">yes</fact>
-				<fact name="check2">yes</fact>
+				<fact name="type2Symptoms">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
 			</then>
 		</option>
