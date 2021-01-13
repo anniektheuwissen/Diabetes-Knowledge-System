@@ -1013,7 +1013,9 @@
 	 	</description>
 	  	<if>
 		  	<and>
-			  	<fact name="asked">yes</fact>
+			  	<not>
+				  	<fact name="asked">done</fact>
+				</not>
 				<or>
 					<and>
 						<fact name="drymouth">yes</fact>
@@ -1083,20 +1085,17 @@
   	</rule>
 
 	<rule>
-	  <description>Type 1 at least 3 symptoms:
-	 	</description>
-	  	<if>
-		  	<and>
-			  	<fact name="asked">yes</fact>
-				<not>
-					<fact name="3Type1symptoms">yes</fact>
-				</not>
-			</and>
+	  	<description> try </description>
+		<if>
+	      	<or>
+	  			<fact name="type1Symptoms">yes</fact>
+				<fact name="type1Symptoms">no</fact>
+			</or>
 	  	</if>
 	  	<then>
-		  	<fact name="3Type1symptoms">no</fact>
+		  	<fact name="ask">done</fact>
 	  </then>
-  	</rule> 
+  	</rule>
 
 <!-- But again here, quite hard to effectively differentiate between specific type 1 risk assesmments (not scientific) -->
   	<rule>
@@ -1238,7 +1237,6 @@
 			<then>
 				<fact name="drymouth">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
-				<fact name="asked">yes</fact>
 			</then>
 		</option>
 		<option>
@@ -1246,7 +1244,6 @@
 			<then>
 				<fact name="urinating">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
-				<fact name="asked">yes</fact>
 			</then>
 		</option>
 		<option>
@@ -1254,7 +1251,6 @@
 			<then>
 				<fact name="hungry">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
-				<fact name="asked">yes</fact>
 			</then>
 		</option>
 		<option>
@@ -1262,7 +1258,6 @@
 			<then>
 				<fact name="weight">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
-				<fact name="asked">yes</fact>
 			</then>
 		</option>
 		<option>
@@ -1270,14 +1265,12 @@
 			<then>
 				<fact name="eye-sight">yes</fact>
 				<fact name="type1Symptoms">yes</fact>
-				<fact name="asked">yes</fact>
 			</then>
 		</option>
 		<option>
 			<description>None of these</description>
 			<then>
 				<fact name="type1Symptoms">no</fact>
-				<fact name="asked">yes</fact>
 			</then>
 		</option>
 	</question>
