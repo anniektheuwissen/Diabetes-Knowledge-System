@@ -837,10 +837,9 @@
 			<and>
 				<fact name="checked">yes</fact>
 				<not>
-					<fact name="check2">n</fact>
+					<fact name="check2">yes</fact>
 				</not>
 			</and>
-
 	  	</if>
 	  	<then>
 		  	<fact name="type2Symptoms">NO</fact>
