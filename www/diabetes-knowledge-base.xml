@@ -1,10 +1,10 @@
 <knowledge>
 	<title>Diagnosing Diabetes</title>
-	<description>This test will assess your diabetes type 1 and/or type 2 risk and will offer lifestyle improvement tips on the basis of your answers to a set of questions. For an optimal treatment and/or prevention of diabetes, it is is extremely important to be aware of your diabetes condition or risk in time. Also, your life with diabetes and your risk of getting diabetes can be significantly improved by adjusting your lifestyle.
+	<description>This test will assess your diabetes type 1 and/or type 2 risk and will offer lifestyle improvement tips on the basis of your answers to a set of questions. For optimal treatment and/or prevention of diabetes, it is extremely important to be aware of your diabetes condition or risk in time. Also, your life with diabetes and your risk of getting diabetes can be significantly improved by adjusting your lifestyle.
 
 	This test will take approximately 10 minutes.
 
-	(Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG assocation for general practioners in the Netherlands. It is a general risk assesment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advice you to visit your general practioner and take an actual diabetes test)</description>
+	(Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG association for general practitioners in the Netherlands. It is a general risk assessment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advise you to visit your general practitioner and take an actual diabetes test)</description>
 
 
 
@@ -13,114 +13,114 @@
 
 <goal name="RiskDiabetesType2">
  	<description>Diabetes type 2 risk</description>
-        <!-- These are the goal values of diagnosing diabetes type 2. There are 3 risk assessment values, as adviced by our expert.  -->
-        <answer value="lowRisk2">You have a low risk of diabetes type 2, that is very good! Be sure to check out the lifestyle tips given below, as this can help you to keep your risk low! Also we advice you to take this test every year. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG assocation for general practioners in the Netherlands. It is a general risk assesment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advice you to visit your general practioner and take an actual diabetes test) </answer>
-        <answer value="mediumRisk2">You have a medium risk of  diabetes type 2. We advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm your actual diabetes risk. It will be especially valuable to also follow the lifestyle given below. A good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also significantly improve your life if you suffer from diabetes. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG assocation for general practioners in the Netherlands. It is a general risk assesment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advice you to visit your general practioner and take an actual diabetes test)
+        <!-- These are the goal values of diagnosing diabetes type 2. There are 3 risk assessment values, as advised by our expert.  -->
+        <answer value="lowRisk2">You have a low risk of diabetes type 2, that is very good! Be sure to check out the lifestyle tips given below, as this can help you to keep your risk low! Also, we advise you to take this test every year. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG association for general practitioners in the Netherlands. It is a general risk assessment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advise you to visit your general practitioner and take an actual diabetes test) </answer>
+        <answer value="mediumRisk2">You have a medium risk of  diabetes type 2. We advise you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm your actual diabetes risk. It will be especially valuable to also follow the lifestyle given below. A good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also significantly improve your life if you suffer from diabetes. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG association for general practitioners in the Netherlands. It is a general risk assessment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advise you to visit your general practitioner and take an actual diabetes test)
         </answer>
-        <answer value="highRisk2">You have a high risk of diabetes type 2. We advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm your actual diabetes risk. It will be especially valuable to follow the lifestyle tips given below. A good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also significantly improve your life if you suffer from diabetes. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG assocation for general practioners in the Netherlands. It is a general risk assesment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advice you to visit your general practioner and take an actual diabetes test)
+        <answer value="highRisk2">You have a high risk of diabetes type 2. We advise you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm your actual diabetes risk. It will be especially valuable to follow the lifestyle tips given below. A good and healthy lifestyle can help to decrease the risk of forming diabetes type 2 and can also significantly improve your life if you suffer from diabetes. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG association for general practitioners in the Netherlands. It is a general risk assessment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advise you to visit your general practitioner and take an actual diabetes test)
         </answer>
         <answer value="no"></answer>
 </goal>
 
-<!-- As adviced by our expert, we first assess the risk of having diabetes type 1, as in that case, many diabetes type 2 and lifestyle related questions are unneccesary to ask. -->
+<!-- As advised by our expert, we first assess the risk of having diabetes type 1, as in that case, many diabetes type 2 and lifestyle related questions are unneccesary to ask. -->
   <goal name="RiskDiabetesType1">
  	<description>Diabetes Type 1 risk</description>
-      	<!-- There are 2 possible forms of diabetes that can occur in our test. Here are first the possibilities of answers for a risk assesment of diabetes type 1. No lifestyle advice is given here, as that does not apply to people with (a risk of) diabetes 1. -->
-	    <answer value="mediumRisk1">You have a medium risk of diabetes type 1. We advice you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG assocation for general practioners in the Netherlands. It is a general risk assesment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advice you to visit your general practioner and take an actual diabetes test) </answer>
-	    <answer value="highRisk1">You have a high risk of diabetes type 1. We advice you to visit a doctor and take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG assocation for general practioners in the Netherlands. It is a general risk assesment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advice you to visit your general practioner and take an actual diabetes test)</answer>
-	    <answer value="ketoacidose">You are experiencing the symptoms of a ketoacidose, this an advanced and dangerous stage of diabetes type 1. We advice you to go to call a doctor as soon as possible or possibly call the emergency services. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG assocation for general practioners in the Netherlands. It is a general risk assesment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advice you to visit your general practioner and take an actual diabetes test)</answer>
+      	<!-- There are 2 possible forms of diabetes that can occur in our test. Here are first the possibilities of answers for a risk assessment of diabetes type 1. No lifestyle advice is given here, as that does not apply to people with (a risk of) diabetes 1. -->
+	    <answer value="mediumRisk1">You have a medium risk of diabetes type 1. We advise you to visit a doctor to take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG association for general practitioners in the Netherlands. It is a general risk assessment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advise you to visit your general practitioner and take an actual diabetes test) </answer>
+	    <answer value="highRisk1">You have a high risk of diabetes type 1. We advise you to visit a doctor and take a diabetes test. A simple blood test at your general practitioner can quickly confirm this. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG association for general practitioners in the Netherlands. It is a general risk assessment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advise you to visit your general practitioner and take an actual diabetes test)</answer>
+	    <answer value="ketoacidose">You are experiencing the symptoms of a ketoacidose, this an advanced and dangerous stage of diabetes type 1. We advise you to go to call a doctor as soon as possible or possibly call the emergency services. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG association for general practitioners in the Netherlands. It is a general risk assessment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advise you to visit your general practitioner and take an actual diabetes test)</answer>
         <!-- It could also be that a person does not have diabetes type 1 symptoms, but the symptoms relate to some other disease, our test is incapalbe of assesssing these other possible diseases as our expert lacks knowledge about this -->
-        <answer value="OtherSymptoms">Your symptoms seem to be unrelated to diabetes type 1, but could be caused by another diseases such as diabetes type 2 (see the test result for your risk on diabetes type 2), or something else, we do advice you to see a doctor about this. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG assocation for general practioners in the Netherlands. It is a general risk assesment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advice you to visit your general practioner and take an actual diabetes test)</answer>
+        <answer value="OtherSymptoms">Your symptoms seem to be unrelated to diabetes type 1, but could be caused by another disease such as diabetes type 2 (see the test result for your risk on diabetes type 2), or something else, we do advise you to see a doctor about this. (Disclaimer: This risk assessment is based on the expertise provided by a national diabetes expert. This system hereby follows the general diabetes risk guidelines, as provided by the NHG association for general practitioners in the Netherlands. It is a general risk assessment and not a 100% accurate diabetes test. If you have any doubts or worries about this risk assessment, we advise you to visit your general practitioner and take an actual diabetes test)</answer>
         <answer value="No"></answer>
   </goal>
 
 
 <!-- Based on the answers to the lifestyle questions, we offer specific advice to users. There are many different answer values, as there are many different forms of advice-->
-<!-- As adviced by our expert, also positive advice and feedback is given -->
-<goal name="AdviceSport">
- 	<description>Lifestyle Advice: Exercise</description>
-	 	<answer value="SportMore">We advice you to increase the amount of exercise you do significantly. Regular exercise is one of the most important and effective ways to reduce your diabetes risk. Exercise also reduces the risk of cardiovascular disease, depressive complaints, breast cancer, colon cancer, mental decline and dementia.
-		Ideally, you should exercise actively for at least 2.5 hours a week (for example walking, cycling, running, playing football, fitness, dancing, martial arts). Also do activities that strengthen muscles and bones, such as exercise or strength training. And avoid sitting still a lot. Choose exercise / sports activities that suit you, but do not set your goals too high in the beginning. Even already doing a short walk everyday is a good start!</answer>
-	 	<answer value="SportaBitMore">Your answers seem to indicate that you already do quite some exercise and active movement, still we advice you to increase your active exercise a bit. Regular exercise is one of the most important and effective ways to reduce your diabetes risk. Exercise also reduces the risk of cardiovascular disease, depressive complaints, breast cancer, colon cancer, mental decline and dementia.
+<!-- As advised by our expert, also positive advice and feedback is given -->
+<goal name="adviceSport">
+ 	<description>Lifestyle advice: Exercise</description>
+	 	<answer value="SportMore">we advise you to increase the amount of exercise you do significantly. Regular exercise is one of the most important and effective ways to reduce your diabetes risk. Exercise also reduces the risk of cardiovascular disease, depressive complaints, breast cancer, colon cancer, mental decline and dementia.
+		Ideally, you should exercise actively for at least 2.5 hours a week (for example walking, cycling, running, playing football, fitness, dancing, martial arts). Also do activities that strengthen muscles and bones, such as exercise or strength training. And avoid sitting still a lot. Choose exercise/sports activities that suit you, but do not set your goals too high in the beginning. Even already doing a short walk every day is a good start!</answer>
+	 	<answer value="SportaBitMore">Your answers seem to indicate that you already do quite some exercise and active movement, still we advise you to increase your active exercise a bit. Regular exercise is one of the most important and effective ways to reduce your diabetes risk. Exercise also reduces the risk of cardiovascular disease, depressive complaints, breast cancer, colon cancer, mental decline, and dementia.
 	 	It is healthy to exercise for at least 30 minutes at least five days a week. Try to find out what kind of exercise forms you prefere, because when you like it, you can last longer.  </answer>
-	    <answer value="no">It is great that you exercise so much! You probably already notice that you feel good by exercising, keep it up! If you keep exercising regularly, you have signitfiacntly less chance of forming cardiovascular disease and diabetes.</answer>
+	    <answer value="no">It is great that you exercise so much! You probably already notice that you feel good by exercising, keep it up! If you keep exercising regularly, you have significantly less chance of forming cardiovascular disease and diabetes.</answer>
 </goal>
 
-<goal name="AdviceStress">
- 	<description>Lifestyle Advice: Stress</description>
+<goal name="adviceStress">
+ 	<description>Lifestyle advice: Stress</description>
 	 	<answer value="TooMuchStress">From your answers it seems that you experience problems from stress.
-	 	Stress is a natural response of the body and mind to tensions. Stress can be both positive and negative. Stress is negative when you suffer from it. If you have a lot of stress for a long time, you can suffer from it both mentally and physically. Examples of physical complaints are headaches, muscle pain, sleeping problems and a greater risk of diabetes. Examples of mental complaints are depression, anxiety and burnout.
+	 	Stress is a natural response of the body and mind to tensions. Stress can be both positive and negative. Stress is negative when you suffer from it. If you have a lot of stress for a long time, you can suffer from it both mentally and physically. Examples of physical complaints are headaches, muscle pain, sleeping problems, and a greater risk of diabetes. Examples of mental complaints are depression, anxiety, and burnout.
 	 	We recommend that you discuss your concerns with someone you trust. That often relieves you and gives you support. This gives you a better overview, which gives you stress. Do you find talking difficult? It also helps to write down problems and how you feel. You can also seek professional help from an institution or organization. </answer>
-	 	<answer value="JustTooMuchStress">Your answers show that you experience some problems that may be related to an imbalance between what you can handle and what you have to do in your daily life. If you have many obligations, problems and appointments for a longer period of time, this can cause a lot of tension (stress). If you also suffer from a reduced vitality, you can get overwhelmed. If you are overworked, you suffer from stress complaints and you function less well. It is important to think about this and talk to friends, family and experts about your situation.</answer>
+	 	<answer value="JustTooMuchStress">Your answers show that you experience some problems that may be related to an imbalance between what you can handle and what you have to do in your daily life. If you have many obligations, problems, and appointments for a longer period of time, this can cause a lot of tension (stress). If you also suffer from a reduced vitality, you can get overwhelmed. If you are overworked, you suffer from stress complaints and you function less well. It is important to think about this and talk to friends, family and experts about your situation.</answer>
 	    <answer value="no">You do not seem to suffer from too much stress, that is very good. A little bit of stress does not have to be negative, only if you suffer from it. </answer>
 </goal>
 
-<goal name="AdviceFat">
- 	<description>Lifestyle Advice: Saturated and Trans Fat</description>
+<goal name="adviceFat">
+ 	<description>Lifestyle advice: Saturated and Trans Fat</description>
 	 	<answer value="LessFat">You eat too much fat, try to change this!
-	 	Products with saturated and trans fat are very unhealthy. Saturated fat is commonly found in products as 48+ cheese, sausages, buttercream and chocalate, while trans fat is found in cookies, cake, chips and products from the fryer.
-	 	Saturated fat and trans fat raise cholesterol. This increases the risk of obesity and arteriosclerosis and therefore more risk of cardiovascular disease, diabetes and problems with the kidneys.
+	 	Products with saturated and trans fat are very unhealthy. Saturated fat is commonly found in products as 48+ cheese, sausages, buttercream and chocolate, while trans fat is found in cookies, cake, chips and products from the fryer.
+	 	Saturated fat and trans fat raise cholesterol. This increases the risk of obesity and arteriosclerosis and therefore more risk of cardiovascular disease, diabetes, and problems with the kidneys.
 	 	Unsaturated fat is healthier than saturated fat. It is important that you eat enough unsaturated fat. This can lower cholesterol. This reduces the risk of cardiovascular disease. Unsaturated fat is usually liquid. Unsaturated fat is, for example, in vegetable oils such as sunflower and olive oil.</answer>
 	    <answer value="no">You do not eat too much fat, that is very healthy!</answer>
 </goal>
 
-<goal name="AdviceSugar">
- 	<description>Lifestyle Advice: Sugar</description>
-	 	<answer value="LessSugar">You eat too much sugar. The advice of the WHO is too eat less than 50 grams of added sugar per day. Sugars are basically energy and excess energy is stored in your body as fat. Products with added sugars often contain so much energy that you get more energy than you need. This energy is therefore stored in our body as fat. Overweight and obesity (serious overweight) is therefore lurking when you get too much energy through sugars and overweight is strongly associated with higher risks of many types of diseases, so try to lower your suger intake!</answer>
+<goal name="adviceSugar">
+ 	<description>Lifestyle advice: Sugar</description>
+	 	<answer value="LessSugar">You eat too much sugar. The advice of the WHO is to eat less than 50 grams of added sugar per day. Sugars are basically energy and excess energy is stored in your body as fat. Products with added sugars often contain so much energy that you get more energy than you need. This energy is therefore stored in our body as fat. Overweight and obesity (serious overweight) is therefore lurking when you get too much energy through sugars and overweight is strongly associated with higher risks of many types of diseases, so try to lower your sugar intake!</answer>
 	    <answer value="no">You do not eat too much sugar. That is very healthy!</answer>
 </goal>
 
-<goal name="AdviceFruit">
- 	<description>Lifestyle Advice: Fruit</description>
- 		<answer value="MoreFruit">We advice you to eat more fruit. For your health it is very important to eat at least 2 pieces of fruit per day (200 gram). Fruit provides few calories and many nutrients. Fruit is good for your health and is associated with a lower risk of cardiovascular disease. In addition, eating fruit is associated with a lower risk of type 2 diabetes, colon cancer and lung cancer.</answer>
+<goal name="adviceFruit">
+ 	<description>Lifestyle advice: Fruit</description>
+ 		<answer value="MoreFruit">we advise you to eat more fruit. For your health, it is very important to eat at least 2 pieces of fruit per day (200 gram). Fruit provides few calories and many nutrients. Fruit is good for your health and is associated with a lower risk of cardiovascular disease. In addition, eating fruit is associated with a lower risk of type 2 diabetes, colon cancer, and lung cancer.</answer>
 	    <answer value="no">You eat at least two pieces of fruit every day. That is very healthy! If you eat a lot of fruit, you have less chance of health problems such as cardiovascular disease and diabetes.</answer>
 </goal>
 
-<goal name="AdviceVegetables">
- 	<description>Lifestyle Advice: Vegetables</description>
+<goal name="adviceVegetables">
+ 	<description>Lifestyle advice: Vegetables</description>
  		<answer value="MoreVegetables">You don't eat enough vegetables. The general advice is to eat at least 250 grams of vegetables per day. Vegetables provide few calories and many nutrients. Vegetables have many health benefits and are associated with a lower risk of chronic disease and diabetes. It is also important to eat a different type of vegetable every day. Through variation, your body receives different types of vitamins and minerals.</answer>
-	    <answer value="no">You eat at least 200 grams of vegetables every day. That is very healthy! If you eat a lot of vegetables, you have less chance of health problems such as cardiovascular disease, high blood pressure and diabetes. Vegetables contain many vitamins and minerals. These help you stay healthy. It is also important to eat a different type of vegetable every day. Through variation, your body receives different types of vitamins and minerals. That is even healthier.</answer>
+	    <answer value="no">You eat at least 200 grams of vegetables every day. That is very healthy! If you eat a lot of vegetables, you have less chance of health problems such as cardiovascular disease, high blood pressure, and diabetes. Vegetables contain many vitamins and minerals. These help you stay healthy. It is also important to eat a different type of vegetable every day. Through variation, your body receives different types of vitamins and minerals. That is even healthier.</answer>
 </goal>
 
-<goal name="AdviceFish">
- 	<description>Lifestyle Advice: Fish</description>
- 		<answer value="MoreFish">You don't eat enough (oily) fish. Try to change this! Fish contains omega-3 fatty acids (EPA and DHA). That is good for your heart and your cholesterol, which also helps to lower your diabetes risks. Omega-3 fatty acids are mainly found in oily fish such as herring, mackerel, salmon, sardines and halibut.</answer>
-	    <answer value="LittleMoreFish">You eat some fish, but not enough. It would be healthy to increase your intake a bit. Eating fish reguarly is good for your heart, cholesterol and your diabetes risks. The best types of fish are herring, mackerel, salmon, sardines and halibut. </answer>
-	    <answer value="no">You are eating enough fish, that is very healthy! Eating fish reguarly is good for your heart, cholesterol and your diabetes risks. The best types of fish are herring, mackerel, salmon, sardines and halibut. </answer>
+<goal name="adviceFish">
+ 	<description>Lifestyle advice: Fish</description>
+ 		<answer value="MoreFish">You don't eat enough (oily) fish. Try to change this! Fish contains omega-3 fatty acids (EPA and DHA). That is good for your heart and your cholesterol, which also helps to lower your diabetes risks. Omega-3 fatty acids are mainly found in oily fish such as herring, mackerel, salmon, sardines, and halibut.</answer>
+	    <answer value="LittleMoreFish">You eat some fish, but not enough. It would be healthy to increase your intake a bit. Eating fish regularly is good for your heart, cholesterol and your diabetes risks. The best types of fish are herring, mackerel, salmon, sardines and halibut. </answer>
+	    <answer value="no">You are eating enough fish, that is very healthy! Eating fish regularly is good for your heart, cholesterol and your diabetes risks. The best types of fish are herring, mackerel, salmon, sardines and halibut. </answer>
 </goal>
 
-<goal name="AdviceBreakfast">
- 	<description>Lifestyle Advice: Breakfast</description>
- 		<answer value="MoreBreakfast">You do not eat breakfast every day. We advice you to eat breakfast more often. It is important to eat breakfast every day, eating breakfast every day gives you energy and allows you to concentrate better. If you do not eat breakfast every day, you are more likely to get diabetes. If you do have breakfast every day, your body will get energy at different times of the day. Moreover, you eat less (unhealthy) snacks when you have breakfast. </answer>
+<goal name="adviceBreakfast">
+ 	<description>Lifestyle advice: Breakfast</description>
+ 		<answer value="MoreBreakfast">You do not eat breakfast every day. we advise you to eat breakfast more often. It is important to eat breakfast every day, eating breakfast every day gives you energy and allows you to concentrate better. If you do not eat breakfast every day, you are more likely to get diabetes. If you do have breakfast every day, your body will get energy at different times of the day. Moreover, you eat less (unhealthy) snacks when you have breakfast. </answer>
 	    <answer value="no">You have breakfast every day. That is very healthy! Eating breakfast every day gives you energy and allows you to concentrate better. If you do not eat breakfast every day, you are more likely to get diabetes. If you have breakfast every day, your body will get energy at different times of the day. Moreover, you eat less (unhealthy) snacks when you have breakfast.</answer>
 </goal>
 
-<goal name="AdviceNuts">
- 	<description>Lifestyle Advice: Nuts</description>
+<goal name="adviceNuts">
+ 	<description>Lifestyle advice: Nuts</description>
  		<answer value="MoreNuts">You do not eat much nuts. It is healthy to eat about 15 grams of nuts every day. That's about a hand. People who occasionally eat nuts are less likely to develop cardiovascular disease and have healthier cholesterol, which lowers your diabetes risk. It is important to eat only unsalted nuts.</answer>
 	    <answer value="no">You are eating enough nuts already, very good! Nuts help to lower your cholesterol and thus your diabtes risk. Try to eat only unsalted nuts.</answer>
 </goal>
 
-<!-- Delete this advice, as adviced by our expert
-<goal name="AdviceTea">
- 	<description>Lifestyle Advice: Tea</description>
+<!-- Delete this advice, as advised by our expert
+<goal name="adviceTea">
+ 	<description>Lifestyle advice: Tea</description>
  		<answer value="MoreTea">It is healthy to drink 3 or 4 cups of green or black tea every day. This can lower your blood pressure and reduce your risk of stroke.</answer>
 	    <answer value="no"></answer>
 </goal> -->
 
-<goal name="AdviceSmoking">
- 	<description>Lifestyle Advice: Smoking</description>
-	 	<answer value="Smoking">Smoking can cause all types of disaeases and is heavility related to the risk of forming diabates. We advice you to try and stop smoking. This website contians a lot of useful tips to help you quit: www.ikstopnu.nl </answer>
-	 	<answer value="JustQuit">People who smoke have more chanches of forming chronic diseases, like diabetes and usually have a shorter life expectancy. It is therefore great that you quit smoking and we advice you to keep this up! After 1 year your chance of forming hart- and vascular diseases lowers by 50%, together with many other benefits.</answer>
+<goal name="adviceSmoking">
+ 	<description>Lifestyle advice: Smoking</description>
+	 	<answer value="Smoking">Smoking can cause all types of diseases and is heavily related to the risk of forming diabetes. we advise you to try and stop smoking. This website contains a lot of useful tips to help you quit: www.ikstopnu.nl </answer>
+	 	<answer value="JustQuit">People who smoke have more chances of forming chronic diseases, like diabetes and usually have a shorter life expectancy. It is therefore great that you quit smoking and we advise you to keep this up! After 1 year your chance of forming hart- and vascular diseases lowers by 50%, together with many other benefits.</answer>
 	    <answer value="no">Great that you don't smoke, keep this up! Smoking is one of the biggest risk factors in forming diabetes and other diseases.</answer>
 </goal>
 
-<goal name="AdviceAlcohol">
- 	<description>Lifestyle Advice: Alcohol</description>
-	 	<answer value="TooMuchAlcohol">From your answers it seems that you drink a lot of alcohol, far above the adviced norm. We advice you to lower this intake, concrete tips can be found on this website: https://minderdrinken.nl
+<goal name="adviceAlcohol">
+ 	<description>Lifestyle advice: Alcohol</description>
+	 	<answer value="TooMuchAlcohol">From your answers it seems that you drink a lot of alcohol, far above the advised norm. we advise you to lower this intake, concrete tips can be found on this website: https://minderdrinken.nl
 	 	People who drink a lot of alcohol are more likely to have health problems. The more alcohol you drink, the more likely you are to have these health problems. Examples of these health problems are diabetes, cardiovascular disease, cancer and damage to the brain and nerves. Drinking more than five glasses of alcohol every day can damage your coronary arteries. If you drink more than two glasses of alcohol a day, you are more likely to have a stroke. Drinking a lot of alcohol in a short period of time increases the risk of cardiovascular disease, kidney problems and damage to the brain. </answer>
-	 	<answer value="JustTooMuchAlcohol">We advice you to drink less alcohol. It is better for your health if you do not drink more alcohol than one glass of alcohol per day. Then you adhere to the Moderate Alcohol Use Norm. We call this moderate drinking.</answer>
-	    <answer value="no">Your alcohol intake is below the maximum adviced norms, very good! Drinking more than one glass of alcohol per day can increase your risks on all kinds of diseases. </answer>
+	 	<answer value="JustTooMuchAlcohol">we advise you to drink less alcohol. It is better for your health if you do not drink more alcohol than one glass of alcohol per day. Then you adhere to the Moderate Alcohol Use Norm. We call this moderate drinking.</answer>
+	    <answer value="no">Your alcohol intake is below the maximum advised norms, very good! Drinking more than one glass of alcohol per day can increase your risks on all kinds of diseases. </answer>
 </goal>
 
 
@@ -140,7 +140,7 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceSport">SportMore</fact>
+		  	<fact name="adviceSport">SportMore</fact>
 	  </then>
   	</rule>
 
@@ -154,7 +154,7 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceSport">SportaBitMore</fact>
+		  	<fact name="adviceSport">SportaBitMore</fact>
 	  </then>
   	</rule>
 
@@ -168,7 +168,7 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceSport">no</fact>
+		  	<fact name="adviceSport">no</fact>
 	  </then>
   	</rule>
 
@@ -184,7 +184,7 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceBreakfast">MoreBreakfast</fact>
+		  	<fact name="adviceBreakfast">MoreBreakfast</fact>
 	  </then>
   	</rule>
 
@@ -198,7 +198,7 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceBreakfast">no</fact>
+		  	<fact name="adviceBreakfast">no</fact>
 	  </then>
   	</rule>
 
@@ -214,7 +214,7 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceNuts">MoreNuts</fact>
+		  	<fact name="adviceNuts">MoreNuts</fact>
 	  </then>
   	</rule>
 
@@ -228,11 +228,11 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceNuts">no</fact>
+		  	<fact name="adviceNuts">no</fact>
 	  </then>
   	</rule>
 
-<!-- delete as adviced by exoert
+<!-- delete as advised by exoert
   	<rule>
 	  	<description>Lifestyle advice: more tea</description>
 	  	<if>
@@ -242,7 +242,7 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceTea">MoreTea</fact>
+		  	<fact name="adviceTea">MoreTea</fact>
 	  </then>
   	</rule> -->
 
@@ -256,7 +256,7 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceFish">MoreFish</fact>
+		  	<fact name="adviceFish">MoreFish</fact>
 	  </then>
   	</rule>
 
@@ -270,7 +270,7 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceFish">LittleMoreFish</fact>
+		  	<fact name="adviceFish">LittleMoreFish</fact>
 	  </then>
   	</rule>
 
@@ -284,7 +284,7 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceFish">no</fact>
+		  	<fact name="adviceFish">no</fact>
 	  </then>
   	</rule>
 
@@ -366,7 +366,7 @@
 			</or>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceFat">LessFat</fact>
+		  	<fact name="adviceFat">LessFat</fact>
 		  	<!-- used for the other case, fat intake = good (see next rule) -->
 		  	<fact name="FatIntake">bad</fact>
 	  </then>
@@ -385,14 +385,14 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceFat">no</fact>
+		  	<fact name="adviceFat">no</fact>
 	  </then>
   	</rule>
 
 
 <!-- Rules for lifestyle tips for sugar & sweets -->
 
-	<!-- again here: cases as adviced by expert for counting as too much sugar -->
+	<!-- again here: cases as advised by expert for counting as too much sugar -->
   	<rule>
 	  	<description>Lifestyle advice: too much sugar and sweets</description>
 	  	<if>
@@ -428,7 +428,7 @@
 			</or>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceSugar">LessSugar</fact>
+		  	<fact name="adviceSugar">LessSugar</fact>
 		  	<fact name="SugarIntake">bad</fact>
 	  </then>
   	</rule>
@@ -446,7 +446,7 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceSugar">no</fact>
+		  	<fact name="adviceSugar">no</fact>
 	  </then>
   	</rule>
 
@@ -463,7 +463,7 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceFruit">MoreFruit</fact>
+		  	<fact name="adviceFruit">MoreFruit</fact>
 	  </then>
   	</rule>
 
@@ -477,7 +477,7 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceFruit">no</fact>
+		  	<fact name="adviceFruit">no</fact>
 	  </then>
   	</rule>
 
@@ -505,7 +505,7 @@
 			</or>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceVegetables">MoreVegetables</fact>
+		  	<fact name="adviceVegetables">MoreVegetables</fact>
 	  </then>
   	</rule>
 
@@ -519,13 +519,13 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceVegetables">no</fact>
+		  	<fact name="adviceVegetables">no</fact>
 	  </then>
   	</rule>
 
 
 <!-- Rules for lifestyle tips for stress -->
-<!-- Again here, very hard to differentiate between stress cases, differentiating is based on advice by expert (not scientifically proven) -->
+<!-- Again here, very hard to differentiate between stress cases, differentiating is based on advise by expert (not scientifically proven) -->
 <rule>
 	  	<description>Lifestyle advice: too much stress</description>
 	  	<if>
@@ -593,8 +593,8 @@
 			</or>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceStress">TooMuchStress</fact>
-		  	<fact name="StressAdvice">bad</fact>
+		  	<fact name="adviceStress">TooMuchStress</fact>
+		  	<fact name="Stressadvice">bad</fact>
 	  </then>
   	</rule>
 
@@ -607,7 +607,7 @@
 					<fact name="type1">no</fact>
 					<fact name="type2">yes</fact>
 					<not>
-						<fact name="StressAdvice">bad</fact>
+						<fact name="Stressadvice">bad</fact>
 					</not>
       				<fact name="stress">some</fact>
       				<fact name="stresswork">some</fact>
@@ -617,7 +617,7 @@
 					<fact name="type1">no</fact>
 					<fact name="type2">yes</fact>
 					<not>
-						<fact name="StressAdvice">bad</fact>
+						<fact name="Stressadvice">bad</fact>
 					</not>
       				<fact name="stress">bit</fact>
       				<fact name="stresswork">some</fact>
@@ -627,7 +627,7 @@
 					<fact name="type1">no</fact>
 					<fact name="type2">yes</fact>
 					<not>
-						<fact name="StressAdvice">bad</fact>
+						<fact name="Stressadvice">bad</fact>
 					</not>
       				<fact name="stress">some</fact>
       				<fact name="stresswork">bit</fact>
@@ -637,7 +637,7 @@
 					<fact name="type1">no</fact>
 					<fact name="type2">yes</fact>
 					<not>
-						<fact name="StressAdvice">bad</fact>
+						<fact name="Stressadvice">bad</fact>
 					</not>
       				<fact name="stress">some</fact>
       				<fact name="stresswork">bit</fact>
@@ -652,7 +652,7 @@
 					<fact name="type1">no</fact>
 					<fact name="type2">yes</fact>
 					<not>
-						<fact name="StressAdvice">bad</fact>
+						<fact name="Stressadvice">bad</fact>
 					</not>
       				<fact name="stress">bit</fact>
       				<fact name="stresswork">bit</fact>
@@ -667,7 +667,7 @@
 					<fact name="type1">no</fact>
 					<fact name="type2">yes</fact>
 					<not>
-						<fact name="StressAdvice">bad</fact>
+						<fact name="Stressadvice">bad</fact>
 					</not>
       				<fact name="stress">bit</fact>
       				<fact name="stresswork">some</fact>
@@ -681,8 +681,8 @@
 			</or>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceStress">JustTooMuchStress</fact>
-		  	<fact name="StressAdvice">littleBad</fact>
+		  	<fact name="adviceStress">JustTooMuchStress</fact>
+		  	<fact name="Stressadvice">littleBad</fact>
 	    </then>
   	</rule>
 
@@ -693,13 +693,13 @@
 	  			<fact name="type1">no</fact>
 	  			<fact name="type2">yes</fact>
 					<not>
-						<fact name="StressAdvice">bad</fact>
-						<fact name="StressAdvice">littleBad</fact>
+						<fact name="Stressadvice">bad</fact>
+						<fact name="Stressadvice">littleBad</fact>
 					</not>
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceStress">no</fact>
+		  	<fact name="adviceStress">no</fact>
 	  </then>
   	</rule>
 
@@ -725,7 +725,7 @@
 			</or>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceAlcohol">TooMuchAlcohol</fact>
+		  	<fact name="adviceAlcohol">TooMuchAlcohol</fact>
 		  	<fact name="AlcoholLevel">bad</fact>
 	  </then>
   	</rule>
@@ -741,7 +741,7 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceAlcohol">JustTooMuchAlcohol</fact>
+		  	<fact name="adviceAlcohol">JustTooMuchAlcohol</fact>
 		  	<fact name="AlcoholLevel">littleBad</fact>
 	  </then>
   	</rule>
@@ -759,7 +759,7 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceAlcohol">no</fact>
+		  	<fact name="adviceAlcohol">no</fact>
 	  </then>
   	</rule>
 
@@ -775,7 +775,7 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceSmoking">Smoking</fact>
+		  	<fact name="adviceSmoking">Smoking</fact>
 	  </then>
   	</rule>
 
@@ -789,7 +789,7 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceSmoking">JustQuit</fact>
+		  	<fact name="adviceSmoking">JustQuit</fact>
 	  </then>
   	</rule>
 
@@ -803,7 +803,7 @@
 			</and>
 	  	</if>
 	  	<then>
-		  	<fact name="AdviceSmoking">no</fact>
+		  	<fact name="adviceSmoking">no</fact>
 	  </then>
   	</rule>
 
@@ -1077,13 +1077,13 @@
 		  	<fact name="RiskDiabetesType1">ketoacidose</fact>
 		  	<fact name="RiskDiabetesType2">undefined</fact>
 		  	<fact name="type1">yes</fact>
-		  	<fact name="Risk1Advice">given</fact>
+		  	<fact name="Risk1advice">given</fact>
 	  </then>
   	</rule>
 
   	<rule>
 	  	<description>Type 1 High Risk:
-	  	If we find someone with a high risk of diabetes type 1, we skip the lifestyle questions, as adviced by our expert.</description>
+	  	If we find someone with a high risk of diabetes type 1, we skip the lifestyle questions, as advised by our expert.</description>
 	  	<if>
 	  		<or>
 	  			<!-- Classic case of type 1, low age & family with diabetes 1 and symptoms = better to check with doctor -->
@@ -1100,13 +1100,13 @@
 	  		<fact name="RiskDiabetesType2">undefined</fact>
 		  	<fact name="type1">yes</fact>
 		  	<fact name="RiskDiabetesType1">highRisk1</fact>
-		  	<fact name="Risk1Advice">given</fact>
+		  	<fact name="Risk1advice">given</fact>
 	  </then>
   	</rule>
 
 		<rule>
 	  	<description>Type 1 Medium Risk:
-	  	If we find someone with a medium risk of diabetes type 1, we skip the lifestyle questions, as adviced by our expert.</description>
+	  	If we find someone with a medium risk of diabetes type 1, we skip the lifestyle questions, as advised by our expert.</description>
 	  	<if>
 	  		<or>
 	  			<!-- other case of type 1, high age & family with diabetes 1 and symptoms = better to check with doctor -->
@@ -1124,7 +1124,7 @@
 	  		<fact name="RiskDiabetesType2">undefined</fact>
 		  	<fact name="type1">yes</fact>
 		  	<fact name="RiskDiabetesType1">mediumRisk1</fact>
-		  	<fact name="Risk1Advice">given</fact>
+		  	<fact name="Risk1advice">given</fact>
 	  </then>
   	</rule>
 
@@ -1135,7 +1135,7 @@
 	  		<and>
 	  			<fact name="type1Check">yes</fact>
 	      		<not>
-	      			<fact name="Risk1Advice">given</fact>
+	      			<fact name="Risk1advice">given</fact>
 				</not>
 			</and>
 	  	</if>
@@ -1362,7 +1362,7 @@
 		</option>
 	</question> 
 
-<!-- As adviced by expert, do not use abdominal girth, but simple BMI only -->
+<!-- As advsced by expert, do not use abdominal girth, but simple BMI only -->
 <!--	
 
 	<question>
@@ -1666,7 +1666,7 @@
 		</option>
 	</question>
 
-<!-- do not use this question, as adviced by expert
+<!-- do not use this question, as advised by expert
 	<question>
 		<description>How many cups of tea do you drink per day?</description>
 		<option>
@@ -2252,7 +2252,7 @@
 		</option>
 	</question>
 
-<!-- do not use this question, as adviced by expert
+<!-- do not use this question, as advised by expert
 	<question>
 		<description>Which education did you finish?
 		With finish, we mean where did you get a diploma from</description>
